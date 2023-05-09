@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.RemoveStudent = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.VivisibilitiShowPanelStudent = new System.Windows.Forms.Button();
             this.CountStudent = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Students = new System.Windows.Forms.ListBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -94,6 +94,20 @@
             this.Post = new System.Windows.Forms.Label();
             this.Class = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.RefreshStudent = new System.Windows.Forms.Button();
+            this.StudentGrid = new System.Windows.Forms.DataGridView();
+            this.trackingStudentProgressBDDataSet = new TrackingStudentProgress.TrackingStudentProgressBDDataSet();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.studentTableAdapter = new TrackingStudentProgress.TrackingStudentProgressBDDataSetTableAdapters.StudentTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idShoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateCreateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telegramDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.ShowStudent.SuspendLayout();
@@ -101,6 +115,9 @@
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.Dzpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -113,27 +130,29 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 60);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1237, 641);
+            this.tabControl1.Size = new System.Drawing.Size(981, 641);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.StudentGrid);
+            this.tabPage5.Controls.Add(this.RefreshStudent);
             this.tabPage5.Controls.Add(this.RemoveStudent);
             this.tabPage5.Controls.Add(this.AddStudent);
             this.tabPage5.Controls.Add(this.ShowStudent);
             this.tabPage5.Controls.Add(this.CountStudent);
             this.tabPage5.Controls.Add(this.label1);
-            this.tabPage5.Controls.Add(this.Students);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1229, 615);
+            this.tabPage5.Size = new System.Drawing.Size(973, 615);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Мой класс";
             this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // RemoveStudent
             // 
-            this.RemoveStudent.Location = new System.Drawing.Point(411, 7);
+            this.RemoveStudent.Location = new System.Drawing.Point(877, 7);
             this.RemoveStudent.Name = "RemoveStudent";
             this.RemoveStudent.Size = new System.Drawing.Size(37, 23);
             this.RemoveStudent.TabIndex = 5;
@@ -142,7 +161,7 @@
             // 
             // AddStudent
             // 
-            this.AddStudent.Location = new System.Drawing.Point(365, 7);
+            this.AddStudent.Location = new System.Drawing.Point(831, 7);
             this.AddStudent.Name = "AddStudent";
             this.AddStudent.Size = new System.Drawing.Size(40, 23);
             this.AddStudent.TabIndex = 4;
@@ -179,15 +198,15 @@
             this.ShowStudent.Controls.Add(this.FStudent);
             this.ShowStudent.Controls.Add(this.SaveStudent);
             this.ShowStudent.Controls.Add(this.VivisibilitiShowPanelStudent);
-            this.ShowStudent.Location = new System.Drawing.Point(454, 7);
+            this.ShowStudent.Location = new System.Drawing.Point(17, 394);
             this.ShowStudent.Name = "ShowStudent";
-            this.ShowStudent.Size = new System.Drawing.Size(772, 605);
+            this.ShowStudent.Size = new System.Drawing.Size(945, 217);
             this.ShowStudent.TabIndex = 3;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(142, 105);
+            this.label14.Location = new System.Drawing.Point(499, 14);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(65, 13);
             this.label14.TabIndex = 30;
@@ -195,7 +214,7 @@
             // 
             // Telegram
             // 
-            this.Telegram.Location = new System.Drawing.Point(145, 121);
+            this.Telegram.Location = new System.Drawing.Point(502, 30);
             this.Telegram.Name = "Telegram";
             this.Telegram.Size = new System.Drawing.Size(100, 20);
             this.Telegram.TabIndex = 29;
@@ -203,7 +222,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(26, 105);
+            this.label16.Location = new System.Drawing.Point(383, 14);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(37, 13);
             this.label16.TabIndex = 27;
@@ -211,7 +230,7 @@
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(29, 121);
+            this.Email.Location = new System.Drawing.Point(386, 30);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(100, 20);
             this.Email.TabIndex = 26;
@@ -226,7 +245,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(383, 208);
+            this.label11.Location = new System.Drawing.Point(383, 157);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 13);
             this.label11.TabIndex = 24;
@@ -235,7 +254,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(383, 158);
+            this.label12.Location = new System.Drawing.Point(383, 107);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 13);
             this.label12.TabIndex = 23;
@@ -243,14 +262,14 @@
             // 
             // Telegram1
             // 
-            this.Telegram1.Location = new System.Drawing.Point(386, 174);
+            this.Telegram1.Location = new System.Drawing.Point(386, 123);
             this.Telegram1.Name = "Telegram1";
             this.Telegram1.Size = new System.Drawing.Size(100, 20);
             this.Telegram1.TabIndex = 22;
             // 
             // Telegram2
             // 
-            this.Telegram2.Location = new System.Drawing.Point(386, 224);
+            this.Telegram2.Location = new System.Drawing.Point(386, 173);
             this.Telegram2.Name = "Telegram2";
             this.Telegram2.Size = new System.Drawing.Size(100, 20);
             this.Telegram2.TabIndex = 21;
@@ -258,7 +277,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(267, 208);
+            this.label10.Location = new System.Drawing.Point(267, 157);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 20;
@@ -267,7 +286,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 208);
+            this.label9.Location = new System.Drawing.Point(23, 157);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 13);
             this.label9.TabIndex = 19;
@@ -276,7 +295,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(267, 158);
+            this.label8.Location = new System.Drawing.Point(267, 107);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 18;
@@ -285,7 +304,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 158);
+            this.label7.Location = new System.Drawing.Point(26, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
             this.label7.TabIndex = 17;
@@ -345,28 +364,28 @@
             // 
             // Emal1
             // 
-            this.Emal1.Location = new System.Drawing.Point(270, 174);
+            this.Emal1.Location = new System.Drawing.Point(270, 123);
             this.Emal1.Name = "Emal1";
             this.Emal1.Size = new System.Drawing.Size(100, 20);
             this.Emal1.TabIndex = 9;
             // 
             // Emal2
             // 
-            this.Emal2.Location = new System.Drawing.Point(270, 224);
+            this.Emal2.Location = new System.Drawing.Point(270, 173);
             this.Emal2.Name = "Emal2";
             this.Emal2.Size = new System.Drawing.Size(100, 20);
             this.Emal2.TabIndex = 8;
             // 
             // Parent2
             // 
-            this.Parent2.Location = new System.Drawing.Point(26, 224);
+            this.Parent2.Location = new System.Drawing.Point(26, 173);
             this.Parent2.Name = "Parent2";
             this.Parent2.Size = new System.Drawing.Size(238, 20);
             this.Parent2.TabIndex = 7;
             // 
             // Parent1
             // 
-            this.Parent1.Location = new System.Drawing.Point(26, 174);
+            this.Parent1.Location = new System.Drawing.Point(26, 123);
             this.Parent1.Name = "Parent1";
             this.Parent1.Size = new System.Drawing.Size(238, 20);
             this.Parent1.TabIndex = 6;
@@ -394,7 +413,7 @@
             // 
             // SaveStudent
             // 
-            this.SaveStudent.Location = new System.Drawing.Point(26, 285);
+            this.SaveStudent.Location = new System.Drawing.Point(650, 173);
             this.SaveStudent.Name = "SaveStudent";
             this.SaveStudent.Size = new System.Drawing.Size(82, 28);
             this.SaveStudent.TabIndex = 2;
@@ -404,7 +423,7 @@
             // 
             // VivisibilitiShowPanelStudent
             // 
-            this.VivisibilitiShowPanelStudent.Location = new System.Drawing.Point(720, 4);
+            this.VivisibilitiShowPanelStudent.Location = new System.Drawing.Point(880, 4);
             this.VivisibilitiShowPanelStudent.Name = "VivisibilitiShowPanelStudent";
             this.VivisibilitiShowPanelStudent.Size = new System.Drawing.Size(49, 23);
             this.VivisibilitiShowPanelStudent.TabIndex = 1;
@@ -428,14 +447,6 @@
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Всего учеников: ";
-            // 
-            // Students
-            // 
-            this.Students.FormattingEnabled = true;
-            this.Students.Location = new System.Drawing.Point(14, 36);
-            this.Students.Name = "Students";
-            this.Students.Size = new System.Drawing.Size(434, 576);
-            this.Students.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -690,7 +701,7 @@
             // FIOTeacher
             // 
             this.FIOTeacher.AutoSize = true;
-            this.FIOTeacher.Location = new System.Drawing.Point(1047, 9);
+            this.FIOTeacher.Location = new System.Drawing.Point(765, 9);
             this.FIOTeacher.Name = "FIOTeacher";
             this.FIOTeacher.Size = new System.Drawing.Size(0, 13);
             this.FIOTeacher.TabIndex = 5;
@@ -698,7 +709,7 @@
             // Post
             // 
             this.Post.AutoSize = true;
-            this.Post.Location = new System.Drawing.Point(1047, 32);
+            this.Post.Location = new System.Drawing.Point(765, 32);
             this.Post.Name = "Post";
             this.Post.Size = new System.Drawing.Size(0, 13);
             this.Post.TabIndex = 6;
@@ -706,7 +717,7 @@
             // Class
             // 
             this.Class.AutoSize = true;
-            this.Class.Location = new System.Drawing.Point(1195, 32);
+            this.Class.Location = new System.Drawing.Point(913, 32);
             this.Class.Name = "Class";
             this.Class.Size = new System.Drawing.Size(0, 13);
             this.Class.TabIndex = 7;
@@ -721,12 +732,114 @@
             this.label25.TabIndex = 8;
             this.label25.Text = "Отслеживание успеваемости обучающихся";
             // 
+            // RefreshStudent
+            // 
+            this.RefreshStudent.Location = new System.Drawing.Point(920, 7);
+            this.RefreshStudent.Name = "RefreshStudent";
+            this.RefreshStudent.Size = new System.Drawing.Size(40, 23);
+            this.RefreshStudent.TabIndex = 6;
+            this.RefreshStudent.Text = "0";
+            this.RefreshStudent.UseVisualStyleBackColor = true;
+            // 
+            // StudentGrid
+            // 
+            this.StudentGrid.AllowUserToAddRows = false;
+            this.StudentGrid.AllowUserToDeleteRows = false;
+            this.StudentGrid.AutoGenerateColumns = false;
+            this.StudentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.midleNameDataGridViewTextBoxColumn,
+            this.idShoolDataGridViewTextBoxColumn,
+            this.dateCreateDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.telegramDataGridViewTextBoxColumn,
+            this.idClassDataGridViewTextBoxColumn});
+            this.StudentGrid.DataSource = this.studentBindingSource;
+            this.StudentGrid.Location = new System.Drawing.Point(17, 36);
+            this.StudentGrid.Name = "StudentGrid";
+            this.StudentGrid.ReadOnly = true;
+            this.StudentGrid.Size = new System.Drawing.Size(945, 352);
+            this.StudentGrid.TabIndex = 7;
+            this.StudentGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentGrid_CellContentClick);
+            // 
+            // trackingStudentProgressBDDataSet
+            // 
+            this.trackingStudentProgressBDDataSet.DataSetName = "TrackingStudentProgressBDDataSet";
+            this.trackingStudentProgressBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataMember = "Student";
+            this.studentBindingSource.DataSource = this.trackingStudentProgressBDDataSet;
+            // 
+            // studentTableAdapter
+            // 
+            this.studentTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // midleNameDataGridViewTextBoxColumn
+            // 
+            this.midleNameDataGridViewTextBoxColumn.DataPropertyName = "MidleName";
+            this.midleNameDataGridViewTextBoxColumn.HeaderText = "MidleName";
+            this.midleNameDataGridViewTextBoxColumn.Name = "midleNameDataGridViewTextBoxColumn";
+            // 
+            // idShoolDataGridViewTextBoxColumn
+            // 
+            this.idShoolDataGridViewTextBoxColumn.DataPropertyName = "idShool";
+            this.idShoolDataGridViewTextBoxColumn.HeaderText = "idShool";
+            this.idShoolDataGridViewTextBoxColumn.Name = "idShoolDataGridViewTextBoxColumn";
+            // 
+            // dateCreateDataGridViewTextBoxColumn
+            // 
+            this.dateCreateDataGridViewTextBoxColumn.DataPropertyName = "DateCreate";
+            this.dateCreateDataGridViewTextBoxColumn.HeaderText = "DateCreate";
+            this.dateCreateDataGridViewTextBoxColumn.Name = "dateCreateDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // telegramDataGridViewTextBoxColumn
+            // 
+            this.telegramDataGridViewTextBoxColumn.DataPropertyName = "Telegram";
+            this.telegramDataGridViewTextBoxColumn.HeaderText = "Telegram";
+            this.telegramDataGridViewTextBoxColumn.Name = "telegramDataGridViewTextBoxColumn";
+            // 
+            // idClassDataGridViewTextBoxColumn
+            // 
+            this.idClassDataGridViewTextBoxColumn.DataPropertyName = "idClass";
+            this.idClassDataGridViewTextBoxColumn.HeaderText = "idClass";
+            this.idClassDataGridViewTextBoxColumn.Name = "idClassDataGridViewTextBoxColumn";
+            // 
             // Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1255, 713);
+            this.ClientSize = new System.Drawing.Size(1000, 713);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.Class);
             this.Controls.Add(this.Post);
@@ -735,6 +848,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Desktop";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.Desktop_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
@@ -747,6 +861,9 @@
             this.tabPage3.ResumeLayout(false);
             this.Dzpanel.ResumeLayout(false);
             this.Dzpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -762,7 +879,6 @@
         private System.Windows.Forms.Label FIOTeacher;
         private System.Windows.Forms.Label Post;
         private System.Windows.Forms.Label Class;
-        private System.Windows.Forms.ListBox Students;
         private System.Windows.Forms.Panel ShowStudent;
         private System.Windows.Forms.Label CountStudent;
         private System.Windows.Forms.Label label1;
@@ -819,5 +935,19 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.DataGridView StudentGrid;
+        private System.Windows.Forms.Button RefreshStudent;
+        private TrackingStudentProgressBDDataSet trackingStudentProgressBDDataSet;
+        private System.Windows.Forms.BindingSource studentBindingSource;
+        private TrackingStudentProgressBDDataSetTableAdapters.StudentTableAdapter studentTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midleNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idShoolDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateCreateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telegramDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClassDataGridViewTextBoxColumn;
     }
 }

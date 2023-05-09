@@ -26,9 +26,11 @@ namespace TrackingStudentProgress
         {
             InitializeComponent();
             DBProvider = dBProvider;
-            if (account.Login != null) { FIOTeacher.Text = account.Id.ToString(); }
-            if (account.Login != null) { Post.Text = account.Id.ToString(); }
-            if (account.Login != null) { Class.Text = account.Id.ToString(); }
+            if (account.SurName != null) { FIOTeacher.Text = account.SurName.ToString(); }
+            if (account.MidleName != null) { FIOTeacher.Text = FIOTeacher.Text + " " +account.MidleName.ToString(); }
+            if (account.LastName != null) { FIOTeacher.Text = FIOTeacher.Text + " " + account.LastName.ToString(); }
+            if (account.Position != null) { Post.Text = "Должность: "+account.Position.ToString(); }
+            if (account.Class != null) { Class.Text = "Класс: " + account.Class.ToString(); }
         }
 
         private void VivisibilitiShowPanelStudent_Click(object sender, EventArgs e)
@@ -44,6 +46,23 @@ namespace TrackingStudentProgress
         private void button1_Click(object sender, EventArgs e)
         {
             this.Size = new Size(500,300);
+        }
+
+        private void Desktop_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "trackingStudentProgressBDDataSet.Student". При необходимости она может быть перемещена или удалена.
+            this.studentTableAdapter.Fill(this.trackingStudentProgressBDDataSet.Student);
+
+        }
+
+        private void StudentGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

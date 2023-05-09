@@ -32,5 +32,16 @@ namespace TrackingStudentProgress.Properties {
                 return ((string)(this["testConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-7T5TKDF;Initial Catalog=TrackingStudentProgressBD;Integrated " +
+            "Security=True")]
+        public string TrackingStudentProgressBDConnectionString {
+            get {
+                return ((string)(this["TrackingStudentProgressBDConnectionString"]));
+            }
+        }
     }
 }

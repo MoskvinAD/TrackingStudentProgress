@@ -11,11 +11,7 @@ namespace DBProvider.Model
         /// <summary>
         /// Ид сотудника
         /// </summary>
-        public int Id { get; set; }
-        /// <summary>
-        /// ФИО сотрудника
-        /// </summary>
-        public string Name { get; set; }
+        public int Id { get; set; }     
         /// <summary>
         /// Логин сотрудника
         /// </summary>
@@ -25,8 +21,24 @@ namespace DBProvider.Model
         /// </summary>
         public string Password { get; set; }
         /// <summary>
-        /// Флаг администратора
+        /// Фамилия сотрудника
         /// </summary>
-        public bool Administration { get; set; }
+        public string SurName { get; set; }
+        /// <summary>
+        /// Имя сотрудника
+        /// </summary>
+        public string MidleName { get; set; }
+        /// <summary>
+        /// Отчество сотрудника
+        /// </summary>
+        public string LastName { get; set; }
+        /// <summary>
+        /// Должность
+        /// </summary>
+        public string Position { get; set; }
+        /// <summary>
+        /// Класс
+        /// </summary>
+        public string Class { get; set; }
     }
 }

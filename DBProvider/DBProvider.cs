@@ -12,7 +12,7 @@ namespace DBProvider
     public class DBProvider
     {
         SqlConnection _connection;
-        string sqlConnection = @"Data Source=DESKTOP-7T5TKDF;Initial Catalog=test;Integrated Security=True";
+        string sqlConnection = @"Data Source=DESKTOP-7T5TKDF;Initial Catalog=TrackingStudentProgressBD;Integrated Security=True";
 
 
         public DBProvider()
@@ -26,19 +26,40 @@ namespace DBProvider
             _connection.Close();
         }
 
-        /// <summary>
-        /// Вход в аккаунт
-        /// </summary>
-        /// <param name="Login"></param>
-        /// <param name="pass"></param>
-        /// <returns></returns>
         public Account InputAccaunt(string Login, string pass)
         {
             Account account = new Account();              
             using (var cmd = _connection.CreateCommand())
             {
-                cmd.CommandText = $"SELECT top 1 * FROM Table_1 where name = '{Login}'";
-                account.Id = (cmd.ExecuteScalar() as int?).GetValueOrDefault();
+                cmd.CommandText = $"SELECT top 1 "
+                    + "Account.id, "
+                    + "Account.Login, "
+                    + "Account.Password, "
+                    + "Account.Surname, "
+                    + "Account.FirstName, "
+                    + "Account.MidlleName, "
+                    + "Position.Position_Name, "
+                    + "Class.NumberClass "
+                    + "FROM Account "
+                    + "left join Position "
+                    + "on Position.id = Account.Position "
+                    + "left join Class "
+                    + "on Class.id = Account.Class "
+                    + "where Login = 'admin' and Password = 'admin'";
+                using (SqlDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        account.Id = rdr.GetInt32(0);
+                        account.Login = rdr.GetString(1);
+                        account.Password = rdr.GetString(2);
+                        account.SurName = rdr.GetString(3);
+                        account.MidleName = rdr.GetString(4);
+                        account.LastName = rdr.GetString(5);
+                        account.Position = rdr.GetString(6);
+                        account.Class = rdr.GetString(7);
+                    }
+                }
             }
 
             return account;
