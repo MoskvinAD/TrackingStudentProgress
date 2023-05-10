@@ -52,6 +52,7 @@
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(140, 20);
             this.Login.TabIndex = 1;
+            this.Login.Text = "admin";
             // 
             // Password
             // 
@@ -59,6 +60,7 @@
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(140, 20);
             this.Password.TabIndex = 2;
+            this.Password.Text = "admin";
             // 
             // label1
             // 

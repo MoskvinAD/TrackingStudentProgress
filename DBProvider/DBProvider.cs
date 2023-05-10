@@ -64,6 +64,79 @@ namespace DBProvider
 
             return account;
         }
+        public List<ProjectModel> GetProject()
+        {
+            List<ProjectModel> projectsList = new List<ProjectModel>();
+            using (var cmd = _connection.CreateCommand())
+            {
+                cmd.CommandText = $"SELECT "                   
+                    + "Project.id,"
+                    + "Project.Name "
+                    + "FROM Project";
+                using (SqlDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        ProjectModel project = new ProjectModel();
+                        project.Id = rdr.GetInt32(0);
+                        project.Name = rdr.GetString(1);
+                        projectsList.Add(project);
+                    }
+                }
+            }
+            return projectsList;
+        }
+
+        public bool SetSchedule(ScheduleModel schedule)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"INSERT INTO Schedule VALUES ('{schedule.Date.ToString("yyyy-dd-MM HH:mm:ss:fff")}',{schedule.idClass},{schedule.idProject})";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+               return false;
+            }
+            return true;
+        }
+
+        public bool DeliteSchedule(ScheduleModel schedule)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"Delete from Schedule Where id = '{schedule.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool UpdareSchedule(ScheduleModel schedule)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"Update Schedule set Date = '{schedule.Date}' ,  idClass = '{schedule.idClass}' ,  idProject = '{schedule.idProject}'  Where id = '{schedule.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
 
     }
 }

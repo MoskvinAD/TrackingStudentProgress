@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TrackingStudentProgressBDDataSet2" targetNamespace="http://tempuri.org/TrackingStudentProgressBDDataSet2.xsd" xmlns:mstns="http://tempuri.org/TrackingStudentProgressBDDataSet2.xsd" xmlns="http://tempuri.org/TrackingStudentProgressBDDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TrackingStudentProgressBDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TrackingStudentProgressBDConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TrackingStudentProgress.Properties.Settings.GlobalReference.Default.TrackingStudentProgressBDConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dataGridViewHomeworkTableAdapter" GeneratorDataComponentClassName="dataGridViewHomeworkTableAdapter" Name="dataGridViewHomework" UserDataComponentName="dataGridViewHomeworkTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TrackingStudentProgressBDConnectionString (Settings)" DbObjectName="TrackingStudentProgressBD.dbo.dataGridViewHomework" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, idProject, idClass, DateFrom, DateTo, Description, Name, NumberClass FROM dbo.dataGridViewHomework</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="idProject" DataSetColumn="idProject" />
+              <Mapping SourceColumn="idClass" DataSetColumn="idClass" />
+              <Mapping SourceColumn="DateFrom" DataSetColumn="DateFrom" />
+              <Mapping SourceColumn="DateTo" DataSetColumn="DateTo" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="NumberClass" DataSetColumn="NumberClass" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TrackingStudentProgressBDDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="TrackingStudentProgressBDDataSet2" msprop:Generator_DataSetName="TrackingStudentProgressBDDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dataGridViewHomework" msprop:Generator_RowEvHandlerName="dataGridViewHomeworkRowChangeEventHandler" msprop:Generator_RowDeletedName="dataGridViewHomeworkRowDeleted" msprop:Generator_RowDeletingName="dataGridViewHomeworkRowDeleting" msprop:Generator_RowEvArgName="dataGridViewHomeworkRowChangeEvent" msprop:Generator_TablePropName="dataGridViewHomework" msprop:Generator_RowChangedName="dataGridViewHomeworkRowChanged" msprop:Generator_RowChangingName="dataGridViewHomeworkRowChanging" msprop:Generator_TableClassName="dataGridViewHomeworkDataTable" msprop:Generator_RowClassName="dataGridViewHomeworkRow" msprop:Generator_TableVarName="tabledataGridViewHomework" msprop:Generator_UserTableName="dataGridViewHomework">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="idProject" msprop:Generator_ColumnPropNameInRow="idProject" msprop:Generator_ColumnPropNameInTable="idProjectColumn" msprop:Generator_ColumnVarNameInTable="columnidProject" msprop:Generator_UserColumnName="idProject" type="xs:int" />
+              <xs:element name="idClass" msprop:Generator_ColumnPropNameInRow="idClass" msprop:Generator_ColumnPropNameInTable="idClassColumn" msprop:Generator_ColumnVarNameInTable="columnidClass" msprop:Generator_UserColumnName="idClass" type="xs:int" />
+              <xs:element name="DateFrom" msprop:Generator_ColumnPropNameInRow="DateFrom" msprop:Generator_ColumnPropNameInTable="DateFromColumn" msprop:Generator_ColumnVarNameInTable="columnDateFrom" msprop:Generator_UserColumnName="DateFrom" type="xs:dateTime" />
+              <xs:element name="DateTo" msprop:Generator_ColumnPropNameInRow="DateTo" msprop:Generator_ColumnPropNameInTable="DateToColumn" msprop:Generator_ColumnVarNameInTable="columnDateTo" msprop:Generator_UserColumnName="DateTo" type="xs:dateTime" />
+              <xs:element name="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumberClass" msprop:Generator_ColumnPropNameInRow="NumberClass" msprop:Generator_ColumnPropNameInTable="NumberClassColumn" msprop:Generator_ColumnVarNameInTable="columnNumberClass" msprop:Generator_UserColumnName="NumberClass">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dataGridViewHomework" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

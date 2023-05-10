@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="DBProvider.cs" />
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\ProjectModel.cs" />
+    <Compile Include="Model\ScheduleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
