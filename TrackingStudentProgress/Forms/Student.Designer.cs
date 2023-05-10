@@ -257,6 +257,7 @@
             this.add.TabIndex = 57;
             this.add.Text = "Добавить";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // delite
             // 
@@ -266,6 +267,7 @@
             this.delite.TabIndex = 56;
             this.delite.Text = "Удалить";
             this.delite.UseVisualStyleBackColor = true;
+            this.delite.Click += new System.EventHandler(this.delite_Click);
             // 
             // edit
             // 
@@ -275,6 +277,7 @@
             this.edit.TabIndex = 55;
             this.edit.Text = "Изменить";
             this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // Student
             // 

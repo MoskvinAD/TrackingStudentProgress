@@ -210,6 +210,7 @@
             this.StudentGrid.ReadOnly = true;
             this.StudentGrid.Size = new System.Drawing.Size(746, 576);
             this.StudentGrid.TabIndex = 7;
+            this.StudentGrid.Click += new System.EventHandler(this.StudentGrid_Click);
             // 
             // studentBindingSource
             // 

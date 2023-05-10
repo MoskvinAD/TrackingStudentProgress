@@ -117,5 +117,36 @@ namespace TrackingStudentProgress
         {            
             getHomeWorkTableAdapter1.Fill(trackingStudentProgressBDDataSet6.GetHomeWork, int.Parse(Account.Class));
         }
+
+        private void StudentGrid_Click(object sender, EventArgs e)
+        {
+            if (StudentGrid.CurrentRow == null) { return; }
+            int IndexClick = StudentGrid.CurrentRow.Index;
+
+            if (IndexClick > -1)
+            {
+                StudentModel studentmodel = new StudentModel();
+                studentmodel.Id = Convert.ToInt32(StudentGrid[0, IndexClick].Value);
+                studentmodel.LastName = Convert.ToString(StudentGrid[1, IndexClick].Value);
+                studentmodel.FirstName = Convert.ToString(StudentGrid[2, IndexClick].Value);
+                studentmodel.MidleName = Convert.ToString(StudentGrid[3, IndexClick].Value);
+                studentmodel.DateCreate = Convert.ToDateTime(StudentGrid[4, IndexClick].Value);
+                studentmodel.Email = Convert.ToString(StudentGrid[5, IndexClick].Value);
+                studentmodel.Telegram = Convert.ToString(StudentGrid[6, IndexClick].Value);
+                studentmodel.idClass = int.Parse(Account.Class);
+                studentmodel.NumberClass = Convert.ToString(StudentGrid[8, IndexClick].Value);
+                studentmodel.FioM = Convert.ToString(StudentGrid[9, IndexClick].Value);
+                studentmodel.EmalM = Convert.ToString(StudentGrid[10, IndexClick].Value);
+                studentmodel.TelegramM = Convert.ToString(StudentGrid[11, IndexClick].Value);
+                studentmodel.idM = Convert.ToInt32(StudentGrid[12, IndexClick].Value);
+                studentmodel.FioF = Convert.ToString(StudentGrid[13, IndexClick].Value);
+                studentmodel.EmalF = Convert.ToString(StudentGrid[14, IndexClick].Value);
+                studentmodel.TelegramF = Convert.ToString(StudentGrid[15, IndexClick].Value);
+                studentmodel.idF = Convert.ToInt32(StudentGrid[16, IndexClick].Value);
+
+                Student student = new Student(IndexClick, studentmodel, DBProvider, Account);
+                student.ShowDialog();
+            }
+        }
     }
 }
