@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace TrackingStudentProgress {
+namespace TrackingStudentProgress.Helper {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace TrackingStudentProgress {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TrackingStudentProgressBDDataSet5")]
+    [global::System.Xml.Serialization.XmlRootAttribute("TrackingStudentProgressBDDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TrackingStudentProgressBDDataSet5 : global::System.Data.DataSet {
+    public partial class TrackingStudentProgressBDDataSet2 : global::System.Data.DataSet {
         
-        private GetHomeWorkDataTable tableGetHomeWork;
+        private dataGridViewHomeworkDataTable tabledataGridViewHomework;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TrackingStudentProgressBDDataSet5() {
+        public TrackingStudentProgressBDDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TrackingStudentProgress {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected TrackingStudentProgressBDDataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected TrackingStudentProgressBDDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace TrackingStudentProgress {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["GetHomeWork"] != null)) {
-                    base.Tables.Add(new GetHomeWorkDataTable(ds.Tables["GetHomeWork"]));
+                if ((ds.Tables["dataGridViewHomework"] != null)) {
+                    base.Tables.Add(new dataGridViewHomeworkDataTable(ds.Tables["dataGridViewHomework"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TrackingStudentProgress {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GetHomeWorkDataTable GetHomeWork {
+        public dataGridViewHomeworkDataTable dataGridViewHomework {
             get {
-                return this.tableGetHomeWork;
+                return this.tabledataGridViewHomework;
             }
         }
         
@@ -127,7 +127,7 @@ namespace TrackingStudentProgress {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TrackingStudentProgressBDDataSet5 cln = ((TrackingStudentProgressBDDataSet5)(base.Clone()));
+            TrackingStudentProgressBDDataSet2 cln = ((TrackingStudentProgressBDDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace TrackingStudentProgress {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["GetHomeWork"] != null)) {
-                    base.Tables.Add(new GetHomeWorkDataTable(ds.Tables["GetHomeWork"]));
+                if ((ds.Tables["dataGridViewHomework"] != null)) {
+                    base.Tables.Add(new dataGridViewHomeworkDataTable(ds.Tables["dataGridViewHomework"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TrackingStudentProgress {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableGetHomeWork = ((GetHomeWorkDataTable)(base.Tables["GetHomeWork"]));
+            this.tabledataGridViewHomework = ((dataGridViewHomeworkDataTable)(base.Tables["dataGridViewHomework"]));
             if ((initTable == true)) {
-                if ((this.tableGetHomeWork != null)) {
-                    this.tableGetHomeWork.InitVars();
+                if ((this.tabledataGridViewHomework != null)) {
+                    this.tabledataGridViewHomework.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace TrackingStudentProgress {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TrackingStudentProgressBDDataSet5";
+            this.DataSetName = "TrackingStudentProgressBDDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TrackingStudentProgressBDDataSet5.xsd";
+            this.Namespace = "http://tempuri.org/TrackingStudentProgressBDDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableGetHomeWork = new GetHomeWorkDataTable();
-            base.Tables.Add(this.tableGetHomeWork);
+            this.tabledataGridViewHomework = new dataGridViewHomeworkDataTable();
+            base.Tables.Add(this.tabledataGridViewHomework);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeGetHomeWork() {
+        private bool ShouldSerializedataGridViewHomework() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace TrackingStudentProgress {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TrackingStudentProgressBDDataSet5 ds = new TrackingStudentProgressBDDataSet5();
+            TrackingStudentProgressBDDataSet2 ds = new TrackingStudentProgressBDDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace TrackingStudentProgress {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void GetHomeWorkRowChangeEventHandler(object sender, GetHomeWorkRowChangeEvent e);
+        public delegate void dataGridViewHomeworkRowChangeEventHandler(object sender, dataGridViewHomeworkRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GetHomeWorkDataTable : global::System.Data.TypedTableBase<GetHomeWorkRow> {
+        public partial class dataGridViewHomeworkDataTable : global::System.Data.TypedTableBase<dataGridViewHomeworkRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -285,20 +285,20 @@ namespace TrackingStudentProgress {
             
             private global::System.Data.DataColumn columnidClass;
             
-            private global::System.Data.DataColumn columnNumberClass;
-            
-            private global::System.Data.DataColumn columnName;
-            
             private global::System.Data.DataColumn columnDateFrom;
             
             private global::System.Data.DataColumn columnDateTo;
             
             private global::System.Data.DataColumn columnDescription;
             
+            private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnNumberClass;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetHomeWorkDataTable() {
-                this.TableName = "GetHomeWork";
+            public dataGridViewHomeworkDataTable() {
+                this.TableName = "dataGridViewHomework";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +306,7 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal GetHomeWorkDataTable(global::System.Data.DataTable table) {
+            internal dataGridViewHomeworkDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,7 +323,7 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected GetHomeWorkDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dataGridViewHomeworkDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -354,22 +354,6 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NumberClassColumn {
-                get {
-                    return this.columnNumberClass;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
-                get {
-                    return this.columnName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn DateFromColumn {
                 get {
                     return this.columnDateFrom;
@@ -394,6 +378,22 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NameColumn {
+                get {
+                    return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NumberClassColumn {
+                get {
+                    return this.columnNumberClass;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -403,59 +403,59 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetHomeWorkRow this[int index] {
+            public dataGridViewHomeworkRow this[int index] {
                 get {
-                    return ((GetHomeWorkRow)(this.Rows[index]));
+                    return ((dataGridViewHomeworkRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GetHomeWorkRowChangeEventHandler GetHomeWorkRowChanging;
+            public event dataGridViewHomeworkRowChangeEventHandler dataGridViewHomeworkRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GetHomeWorkRowChangeEventHandler GetHomeWorkRowChanged;
+            public event dataGridViewHomeworkRowChangeEventHandler dataGridViewHomeworkRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GetHomeWorkRowChangeEventHandler GetHomeWorkRowDeleting;
+            public event dataGridViewHomeworkRowChangeEventHandler dataGridViewHomeworkRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GetHomeWorkRowChangeEventHandler GetHomeWorkRowDeleted;
+            public event dataGridViewHomeworkRowChangeEventHandler dataGridViewHomeworkRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddGetHomeWorkRow(GetHomeWorkRow row) {
+            public void AdddataGridViewHomeworkRow(dataGridViewHomeworkRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetHomeWorkRow AddGetHomeWorkRow(int idProject, int idClass, string NumberClass, string Name, System.DateTime DateFrom, System.DateTime DateTo, string Description) {
-                GetHomeWorkRow rowGetHomeWorkRow = ((GetHomeWorkRow)(this.NewRow()));
+            public dataGridViewHomeworkRow AdddataGridViewHomeworkRow(int id, int idProject, int idClass, System.DateTime DateFrom, System.DateTime DateTo, string Description, string Name, string NumberClass) {
+                dataGridViewHomeworkRow rowdataGridViewHomeworkRow = ((dataGridViewHomeworkRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        id,
                         idProject,
                         idClass,
-                        NumberClass,
-                        Name,
                         DateFrom,
                         DateTo,
-                        Description};
-                rowGetHomeWorkRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGetHomeWorkRow);
-                return rowGetHomeWorkRow;
+                        Description,
+                        Name,
+                        NumberClass};
+                rowdataGridViewHomeworkRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdataGridViewHomeworkRow);
+                return rowdataGridViewHomeworkRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetHomeWorkRow FindByid(int id) {
-                return ((GetHomeWorkRow)(this.Rows.Find(new object[] {
+            public dataGridViewHomeworkRow FindByid(int id) {
+                return ((dataGridViewHomeworkRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                GetHomeWorkDataTable cln = ((GetHomeWorkDataTable)(base.Clone()));
+                dataGridViewHomeworkDataTable cln = ((dataGridViewHomeworkDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,7 +463,7 @@ namespace TrackingStudentProgress {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new GetHomeWorkDataTable();
+                return new dataGridViewHomeworkDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -472,11 +472,11 @@ namespace TrackingStudentProgress {
                 this.columnid = base.Columns["id"];
                 this.columnidProject = base.Columns["idProject"];
                 this.columnidClass = base.Columns["idClass"];
-                this.columnNumberClass = base.Columns["NumberClass"];
-                this.columnName = base.Columns["Name"];
                 this.columnDateFrom = base.Columns["DateFrom"];
                 this.columnDateTo = base.Columns["DateTo"];
                 this.columnDescription = base.Columns["Description"];
+                this.columnName = base.Columns["Name"];
+                this.columnNumberClass = base.Columns["NumberClass"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -488,58 +488,56 @@ namespace TrackingStudentProgress {
                 base.Columns.Add(this.columnidProject);
                 this.columnidClass = new global::System.Data.DataColumn("idClass", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidClass);
-                this.columnNumberClass = new global::System.Data.DataColumn("NumberClass", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNumberClass);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
                 this.columnDateFrom = new global::System.Data.DataColumn("DateFrom", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateFrom);
                 this.columnDateTo = new global::System.Data.DataColumn("DateTo", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateTo);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnNumberClass = new global::System.Data.DataColumn("NumberClass", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumberClass);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
-                this.columnid.AutoIncrement = true;
                 this.columnid.AllowDBNull = false;
-                this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
                 this.columnidProject.AllowDBNull = false;
                 this.columnidClass.AllowDBNull = false;
-                this.columnNumberClass.AllowDBNull = false;
-                this.columnNumberClass.MaxLength = 50;
-                this.columnName.AllowDBNull = false;
-                this.columnName.MaxLength = 2147483647;
                 this.columnDateFrom.AllowDBNull = false;
                 this.columnDateTo.AllowDBNull = false;
                 this.columnDescription.AllowDBNull = false;
                 this.columnDescription.MaxLength = 2147483647;
+                this.columnName.AllowDBNull = false;
+                this.columnName.MaxLength = 2147483647;
+                this.columnNumberClass.AllowDBNull = false;
+                this.columnNumberClass.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetHomeWorkRow NewGetHomeWorkRow() {
-                return ((GetHomeWorkRow)(this.NewRow()));
+            public dataGridViewHomeworkRow NewdataGridViewHomeworkRow() {
+                return ((dataGridViewHomeworkRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GetHomeWorkRow(builder);
+                return new dataGridViewHomeworkRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(GetHomeWorkRow);
+                return typeof(dataGridViewHomeworkRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.GetHomeWorkRowChanged != null)) {
-                    this.GetHomeWorkRowChanged(this, new GetHomeWorkRowChangeEvent(((GetHomeWorkRow)(e.Row)), e.Action));
+                if ((this.dataGridViewHomeworkRowChanged != null)) {
+                    this.dataGridViewHomeworkRowChanged(this, new dataGridViewHomeworkRowChangeEvent(((dataGridViewHomeworkRow)(e.Row)), e.Action));
                 }
             }
             
@@ -547,8 +545,8 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.GetHomeWorkRowChanging != null)) {
-                    this.GetHomeWorkRowChanging(this, new GetHomeWorkRowChangeEvent(((GetHomeWorkRow)(e.Row)), e.Action));
+                if ((this.dataGridViewHomeworkRowChanging != null)) {
+                    this.dataGridViewHomeworkRowChanging(this, new dataGridViewHomeworkRowChangeEvent(((dataGridViewHomeworkRow)(e.Row)), e.Action));
                 }
             }
             
@@ -556,8 +554,8 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.GetHomeWorkRowDeleted != null)) {
-                    this.GetHomeWorkRowDeleted(this, new GetHomeWorkRowChangeEvent(((GetHomeWorkRow)(e.Row)), e.Action));
+                if ((this.dataGridViewHomeworkRowDeleted != null)) {
+                    this.dataGridViewHomeworkRowDeleted(this, new dataGridViewHomeworkRowChangeEvent(((dataGridViewHomeworkRow)(e.Row)), e.Action));
                 }
             }
             
@@ -565,14 +563,14 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.GetHomeWorkRowDeleting != null)) {
-                    this.GetHomeWorkRowDeleting(this, new GetHomeWorkRowChangeEvent(((GetHomeWorkRow)(e.Row)), e.Action));
+                if ((this.dataGridViewHomeworkRowDeleting != null)) {
+                    this.dataGridViewHomeworkRowDeleting(this, new dataGridViewHomeworkRowChangeEvent(((dataGridViewHomeworkRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveGetHomeWorkRow(GetHomeWorkRow row) {
+            public void RemovedataGridViewHomeworkRow(dataGridViewHomeworkRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -581,7 +579,7 @@ namespace TrackingStudentProgress {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TrackingStudentProgressBDDataSet5 ds = new TrackingStudentProgressBDDataSet5();
+                TrackingStudentProgressBDDataSet2 ds = new TrackingStudentProgressBDDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -599,7 +597,7 @@ namespace TrackingStudentProgress {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GetHomeWorkDataTable";
+                attribute2.FixedValue = "dataGridViewHomeworkDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -643,25 +641,25 @@ namespace TrackingStudentProgress {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class GetHomeWorkRow : global::System.Data.DataRow {
+        public partial class dataGridViewHomeworkRow : global::System.Data.DataRow {
             
-            private GetHomeWorkDataTable tableGetHomeWork;
+            private dataGridViewHomeworkDataTable tabledataGridViewHomework;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal GetHomeWorkRow(global::System.Data.DataRowBuilder rb) : 
+            internal dataGridViewHomeworkRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableGetHomeWork = ((GetHomeWorkDataTable)(this.Table));
+                this.tabledataGridViewHomework = ((dataGridViewHomeworkDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tableGetHomeWork.idColumn]));
+                    return ((int)(this[this.tabledataGridViewHomework.idColumn]));
                 }
                 set {
-                    this[this.tableGetHomeWork.idColumn] = value;
+                    this[this.tabledataGridViewHomework.idColumn] = value;
                 }
             }
             
@@ -669,10 +667,10 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int idProject {
                 get {
-                    return ((int)(this[this.tableGetHomeWork.idProjectColumn]));
+                    return ((int)(this[this.tabledataGridViewHomework.idProjectColumn]));
                 }
                 set {
-                    this[this.tableGetHomeWork.idProjectColumn] = value;
+                    this[this.tabledataGridViewHomework.idProjectColumn] = value;
                 }
             }
             
@@ -680,32 +678,10 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int idClass {
                 get {
-                    return ((int)(this[this.tableGetHomeWork.idClassColumn]));
+                    return ((int)(this[this.tabledataGridViewHomework.idClassColumn]));
                 }
                 set {
-                    this[this.tableGetHomeWork.idClassColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string NumberClass {
-                get {
-                    return ((string)(this[this.tableGetHomeWork.NumberClassColumn]));
-                }
-                set {
-                    this[this.tableGetHomeWork.NumberClassColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Name {
-                get {
-                    return ((string)(this[this.tableGetHomeWork.NameColumn]));
-                }
-                set {
-                    this[this.tableGetHomeWork.NameColumn] = value;
+                    this[this.tabledataGridViewHomework.idClassColumn] = value;
                 }
             }
             
@@ -713,10 +689,10 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime DateFrom {
                 get {
-                    return ((global::System.DateTime)(this[this.tableGetHomeWork.DateFromColumn]));
+                    return ((global::System.DateTime)(this[this.tabledataGridViewHomework.DateFromColumn]));
                 }
                 set {
-                    this[this.tableGetHomeWork.DateFromColumn] = value;
+                    this[this.tabledataGridViewHomework.DateFromColumn] = value;
                 }
             }
             
@@ -724,10 +700,10 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime DateTo {
                 get {
-                    return ((global::System.DateTime)(this[this.tableGetHomeWork.DateToColumn]));
+                    return ((global::System.DateTime)(this[this.tabledataGridViewHomework.DateToColumn]));
                 }
                 set {
-                    this[this.tableGetHomeWork.DateToColumn] = value;
+                    this[this.tabledataGridViewHomework.DateToColumn] = value;
                 }
             }
             
@@ -735,10 +711,32 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Description {
                 get {
-                    return ((string)(this[this.tableGetHomeWork.DescriptionColumn]));
+                    return ((string)(this[this.tabledataGridViewHomework.DescriptionColumn]));
                 }
                 set {
-                    this[this.tableGetHomeWork.DescriptionColumn] = value;
+                    this[this.tabledataGridViewHomework.DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Name {
+                get {
+                    return ((string)(this[this.tabledataGridViewHomework.NameColumn]));
+                }
+                set {
+                    this[this.tabledataGridViewHomework.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NumberClass {
+                get {
+                    return ((string)(this[this.tabledataGridViewHomework.NumberClassColumn]));
+                }
+                set {
+                    this[this.tabledataGridViewHomework.NumberClassColumn] = value;
                 }
             }
         }
@@ -747,22 +745,22 @@ namespace TrackingStudentProgress {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class GetHomeWorkRowChangeEvent : global::System.EventArgs {
+        public class dataGridViewHomeworkRowChangeEvent : global::System.EventArgs {
             
-            private GetHomeWorkRow eventRow;
+            private dataGridViewHomeworkRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetHomeWorkRowChangeEvent(GetHomeWorkRow row, global::System.Data.DataRowAction action) {
+            public dataGridViewHomeworkRowChangeEvent(dataGridViewHomeworkRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetHomeWorkRow Row {
+            public dataGridViewHomeworkRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -778,7 +776,7 @@ namespace TrackingStudentProgress {
         }
     }
 }
-namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters {
+namespace TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet2TableAdapters {
     
     
     /// <summary>
@@ -790,7 +788,7 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GetHomeWorkTableAdapter : global::System.ComponentModel.Component {
+    public partial class dataGridViewHomeworkTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -804,7 +802,7 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public GetHomeWorkTableAdapter() {
+        public dataGridViewHomeworkTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -901,15 +899,15 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "GetHomeWork";
+            tableMapping.DataSetTable = "dataGridViewHomework";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("idProject", "idProject");
             tableMapping.ColumnMappings.Add("idClass", "idClass");
-            tableMapping.ColumnMappings.Add("NumberClass", "NumberClass");
-            tableMapping.ColumnMappings.Add("Name", "Name");
             tableMapping.ColumnMappings.Add("DateFrom", "DateFrom");
             tableMapping.ColumnMappings.Add("DateTo", "DateTo");
             tableMapping.ColumnMappings.Add("Description", "Description");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("NumberClass", "NumberClass");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -926,24 +924,17 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.GetHomeWork";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idClass", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].CommandText = "SELECT id, idProject, idClass, DateFrom, DateTo, Description, Name, NumberClass F" +
+                "ROM dbo.dataGridViewHomework";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TrackingStudentProgressBDDataSet5.GetHomeWorkDataTable dataTable, global::System.Nullable<int> idClass) {
+        public virtual int Fill(TrackingStudentProgressBDDataSet2.dataGridViewHomeworkDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((idClass.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idClass.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -955,15 +946,9 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TrackingStudentProgressBDDataSet5.GetHomeWorkDataTable GetData(global::System.Nullable<int> idClass) {
+        public virtual TrackingStudentProgressBDDataSet2.dataGridViewHomeworkDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((idClass.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idClass.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            TrackingStudentProgressBDDataSet5.GetHomeWorkDataTable dataTable = new TrackingStudentProgressBDDataSet5.GetHomeWorkDataTable();
+            TrackingStudentProgressBDDataSet2.dataGridViewHomeworkDataTable dataTable = new TrackingStudentProgressBDDataSet2.dataGridViewHomeworkDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1037,7 +1022,7 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(TrackingStudentProgressBDDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(TrackingStudentProgressBDDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1047,7 +1032,7 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(TrackingStudentProgressBDDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(TrackingStudentProgressBDDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1057,7 +1042,7 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(TrackingStudentProgressBDDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(TrackingStudentProgressBDDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1091,7 +1076,7 @@ namespace TrackingStudentProgress.TrackingStudentProgressBDDataSet5TableAdapters
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(TrackingStudentProgressBDDataSet5 dataSet) {
+        public virtual int UpdateAll(TrackingStudentProgressBDDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

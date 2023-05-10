@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrackingStudentProgress.Forms;
-using TrackingStudentProgress.TrackingStudentProgressBDDataSet3TableAdapters;
+using TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet3TableAdapters;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace TrackingStudentProgress

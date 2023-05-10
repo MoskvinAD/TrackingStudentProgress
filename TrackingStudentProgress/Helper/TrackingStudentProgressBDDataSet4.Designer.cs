@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace TrackingStudentProgress {
+namespace TrackingStudentProgress.Helper {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace TrackingStudentProgress {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("GetJournalInClassBDDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("TrackingStudentProgressBDDataSet4")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GetJournalInClassBDDataSet : global::System.Data.DataSet {
+    public partial class TrackingStudentProgressBDDataSet4 : global::System.Data.DataSet {
         
-        private GetJournalInClassDataTable tableGetJournalInClass;
+        private GetJournalScheduleDataTable tableGetJournalSchedule;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public GetJournalInClassBDDataSet() {
+        public TrackingStudentProgressBDDataSet4() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace TrackingStudentProgress {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected GetJournalInClassBDDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected TrackingStudentProgressBDDataSet4(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace TrackingStudentProgress {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["GetJournalInClass"] != null)) {
-                    base.Tables.Add(new GetJournalInClassDataTable(ds.Tables["GetJournalInClass"]));
+                if ((ds.Tables["GetJournalSchedule"] != null)) {
+                    base.Tables.Add(new GetJournalScheduleDataTable(ds.Tables["GetJournalSchedule"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace TrackingStudentProgress {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GetJournalInClassDataTable GetJournalInClass {
+        public GetJournalScheduleDataTable GetJournalSchedule {
             get {
-                return this.tableGetJournalInClass;
+                return this.tableGetJournalSchedule;
             }
         }
         
@@ -127,7 +127,7 @@ namespace TrackingStudentProgress {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GetJournalInClassBDDataSet cln = ((GetJournalInClassBDDataSet)(base.Clone()));
+            TrackingStudentProgressBDDataSet4 cln = ((TrackingStudentProgressBDDataSet4)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace TrackingStudentProgress {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["GetJournalInClass"] != null)) {
-                    base.Tables.Add(new GetJournalInClassDataTable(ds.Tables["GetJournalInClass"]));
+                if ((ds.Tables["GetJournalSchedule"] != null)) {
+                    base.Tables.Add(new GetJournalScheduleDataTable(ds.Tables["GetJournalSchedule"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace TrackingStudentProgress {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableGetJournalInClass = ((GetJournalInClassDataTable)(base.Tables["GetJournalInClass"]));
+            this.tableGetJournalSchedule = ((GetJournalScheduleDataTable)(base.Tables["GetJournalSchedule"]));
             if ((initTable == true)) {
-                if ((this.tableGetJournalInClass != null)) {
-                    this.tableGetJournalInClass.InitVars();
+                if ((this.tableGetJournalSchedule != null)) {
+                    this.tableGetJournalSchedule.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace TrackingStudentProgress {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "GetJournalInClassBDDataSet";
+            this.DataSetName = "TrackingStudentProgressBDDataSet4";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/GetJournalInClassBDDataSet.xsd";
+            this.Namespace = "http://tempuri.org/TrackingStudentProgressBDDataSet4.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableGetJournalInClass = new GetJournalInClassDataTable();
-            base.Tables.Add(this.tableGetJournalInClass);
+            this.tableGetJournalSchedule = new GetJournalScheduleDataTable();
+            base.Tables.Add(this.tableGetJournalSchedule);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeGetJournalInClass() {
+        private bool ShouldSerializeGetJournalSchedule() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace TrackingStudentProgress {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GetJournalInClassBDDataSet ds = new GetJournalInClassBDDataSet();
+            TrackingStudentProgressBDDataSet4 ds = new TrackingStudentProgressBDDataSet4();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,37 +270,31 @@ namespace TrackingStudentProgress {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void GetJournalInClassRowChangeEventHandler(object sender, GetJournalInClassRowChangeEvent e);
+        public delegate void GetJournalScheduleRowChangeEventHandler(object sender, GetJournalScheduleRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GetJournalInClassDataTable : global::System.Data.TypedTableBase<GetJournalInClassRow> {
+        public partial class GetJournalScheduleDataTable : global::System.Data.TypedTableBase<GetJournalScheduleRow> {
             
             private global::System.Data.DataColumn columnid;
             
             private global::System.Data.DataColumn columnDate;
             
-            private global::System.Data.DataColumn columnidProject;
-            
-            private global::System.Data.DataColumn columnidStudent;
-            
-            private global::System.Data.DataColumn columnCost;
-            
             private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnLastName;
+            private global::System.Data.DataColumn columnNumberClass;
             
-            private global::System.Data.DataColumn columnFirstName;
+            private global::System.Data.DataColumn columnid1;
             
-            private global::System.Data.DataColumn columnMidleName;
+            private global::System.Data.DataColumn columnid2;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetJournalInClassDataTable() {
-                this.TableName = "GetJournalInClass";
+            public GetJournalScheduleDataTable() {
+                this.TableName = "GetJournalSchedule";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +302,7 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal GetJournalInClassDataTable(global::System.Data.DataTable table) {
+            internal GetJournalScheduleDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,7 +319,7 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected GetJournalInClassDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GetJournalScheduleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -348,30 +342,6 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idProjectColumn {
-                get {
-                    return this.columnidProject;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idStudentColumn {
-                get {
-                    return this.columnidStudent;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CostColumn {
-                get {
-                    return this.columnCost;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn NameColumn {
                 get {
                     return this.columnName;
@@ -380,25 +350,25 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LastNameColumn {
+            public global::System.Data.DataColumn NumberClassColumn {
                 get {
-                    return this.columnLastName;
+                    return this.columnNumberClass;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FirstNameColumn {
+            public global::System.Data.DataColumn id1Column {
                 get {
-                    return this.columnFirstName;
+                    return this.columnid1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MidleNameColumn {
+            public global::System.Data.DataColumn id2Column {
                 get {
-                    return this.columnMidleName;
+                    return this.columnid2;
                 }
             }
             
@@ -413,60 +383,59 @@ namespace TrackingStudentProgress {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetJournalInClassRow this[int index] {
+            public GetJournalScheduleRow this[int index] {
                 get {
-                    return ((GetJournalInClassRow)(this.Rows[index]));
+                    return ((GetJournalScheduleRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GetJournalInClassRowChangeEventHandler GetJournalInClassRowChanging;
+            public event GetJournalScheduleRowChangeEventHandler GetJournalScheduleRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GetJournalInClassRowChangeEventHandler GetJournalInClassRowChanged;
+            public event GetJournalScheduleRowChangeEventHandler GetJournalScheduleRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GetJournalInClassRowChangeEventHandler GetJournalInClassRowDeleting;
+            public event GetJournalScheduleRowChangeEventHandler GetJournalScheduleRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GetJournalInClassRowChangeEventHandler GetJournalInClassRowDeleted;
+            public event GetJournalScheduleRowChangeEventHandler GetJournalScheduleRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddGetJournalInClassRow(GetJournalInClassRow row) {
+            public void AddGetJournalScheduleRow(GetJournalScheduleRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetJournalInClassRow AddGetJournalInClassRow(System.DateTime Date, int idProject, int idStudent, string Cost, string Name, string LastName, string FirstName, string MidleName) {
-                GetJournalInClassRow rowGetJournalInClassRow = ((GetJournalInClassRow)(this.NewRow()));
+            public GetJournalScheduleRow AddGetJournalScheduleRow(System.DateTime Date, string Name, string NumberClass) {
+                GetJournalScheduleRow rowGetJournalScheduleRow = ((GetJournalScheduleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Date,
-                        idProject,
-                        idStudent,
-                        Cost,
                         Name,
-                        LastName,
-                        FirstName,
-                        MidleName};
-                rowGetJournalInClassRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGetJournalInClassRow);
-                return rowGetJournalInClassRow;
+                        NumberClass,
+                        null,
+                        null};
+                rowGetJournalScheduleRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGetJournalScheduleRow);
+                return rowGetJournalScheduleRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetJournalInClassRow FindByid(int id) {
-                return ((GetJournalInClassRow)(this.Rows.Find(new object[] {
-                            id})));
+            public GetJournalScheduleRow FindByidid1id2(int id, int id1, int id2) {
+                return ((GetJournalScheduleRow)(this.Rows.Find(new object[] {
+                            id,
+                            id1,
+                            id2})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                GetJournalInClassDataTable cln = ((GetJournalInClassDataTable)(base.Clone()));
+                GetJournalScheduleDataTable cln = ((GetJournalScheduleDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -474,7 +443,7 @@ namespace TrackingStudentProgress {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new GetJournalInClassDataTable();
+                return new GetJournalScheduleDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -482,13 +451,10 @@ namespace TrackingStudentProgress {
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
                 this.columnDate = base.Columns["Date"];
-                this.columnidProject = base.Columns["idProject"];
-                this.columnidStudent = base.Columns["idStudent"];
-                this.columnCost = base.Columns["Cost"];
                 this.columnName = base.Columns["Name"];
-                this.columnLastName = base.Columns["LastName"];
-                this.columnFirstName = base.Columns["FirstName"];
-                this.columnMidleName = base.Columns["MidleName"];
+                this.columnNumberClass = base.Columns["NumberClass"];
+                this.columnid1 = base.Columns["id1"];
+                this.columnid2 = base.Columns["id2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -498,65 +464,58 @@ namespace TrackingStudentProgress {
                 base.Columns.Add(this.columnid);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
-                this.columnidProject = new global::System.Data.DataColumn("idProject", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidProject);
-                this.columnidStudent = new global::System.Data.DataColumn("idStudent", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidStudent);
-                this.columnCost = new global::System.Data.DataColumn("Cost", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCost);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
-                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLastName);
-                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirstName);
-                this.columnMidleName = new global::System.Data.DataColumn("MidleName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMidleName);
+                this.columnNumberClass = new global::System.Data.DataColumn("NumberClass", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumberClass);
+                this.columnid1 = new global::System.Data.DataColumn("id1", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid1);
+                this.columnid2 = new global::System.Data.DataColumn("id2", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid2);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid}, true));
+                                this.columnid,
+                                this.columnid1,
+                                this.columnid2}, true));
                 this.columnid.AutoIncrement = true;
                 this.columnid.AllowDBNull = false;
                 this.columnid.ReadOnly = true;
-                this.columnid.Unique = true;
                 this.columnDate.AllowDBNull = false;
-                this.columnidProject.AllowDBNull = false;
-                this.columnidStudent.AllowDBNull = false;
-                this.columnCost.AllowDBNull = false;
-                this.columnCost.MaxLength = 50;
                 this.columnName.AllowDBNull = false;
                 this.columnName.MaxLength = 2147483647;
-                this.columnLastName.AllowDBNull = false;
-                this.columnLastName.MaxLength = 2147483647;
-                this.columnFirstName.AllowDBNull = false;
-                this.columnFirstName.MaxLength = 2147483647;
-                this.columnMidleName.AllowDBNull = false;
-                this.columnMidleName.MaxLength = 2147483647;
+                this.columnNumberClass.AllowDBNull = false;
+                this.columnNumberClass.MaxLength = 50;
+                this.columnid1.AutoIncrement = true;
+                this.columnid1.AllowDBNull = false;
+                this.columnid1.ReadOnly = true;
+                this.columnid2.AutoIncrement = true;
+                this.columnid2.AllowDBNull = false;
+                this.columnid2.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetJournalInClassRow NewGetJournalInClassRow() {
-                return ((GetJournalInClassRow)(this.NewRow()));
+            public GetJournalScheduleRow NewGetJournalScheduleRow() {
+                return ((GetJournalScheduleRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GetJournalInClassRow(builder);
+                return new GetJournalScheduleRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(GetJournalInClassRow);
+                return typeof(GetJournalScheduleRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.GetJournalInClassRowChanged != null)) {
-                    this.GetJournalInClassRowChanged(this, new GetJournalInClassRowChangeEvent(((GetJournalInClassRow)(e.Row)), e.Action));
+                if ((this.GetJournalScheduleRowChanged != null)) {
+                    this.GetJournalScheduleRowChanged(this, new GetJournalScheduleRowChangeEvent(((GetJournalScheduleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -564,8 +523,8 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.GetJournalInClassRowChanging != null)) {
-                    this.GetJournalInClassRowChanging(this, new GetJournalInClassRowChangeEvent(((GetJournalInClassRow)(e.Row)), e.Action));
+                if ((this.GetJournalScheduleRowChanging != null)) {
+                    this.GetJournalScheduleRowChanging(this, new GetJournalScheduleRowChangeEvent(((GetJournalScheduleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -573,8 +532,8 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.GetJournalInClassRowDeleted != null)) {
-                    this.GetJournalInClassRowDeleted(this, new GetJournalInClassRowChangeEvent(((GetJournalInClassRow)(e.Row)), e.Action));
+                if ((this.GetJournalScheduleRowDeleted != null)) {
+                    this.GetJournalScheduleRowDeleted(this, new GetJournalScheduleRowChangeEvent(((GetJournalScheduleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -582,14 +541,14 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.GetJournalInClassRowDeleting != null)) {
-                    this.GetJournalInClassRowDeleting(this, new GetJournalInClassRowChangeEvent(((GetJournalInClassRow)(e.Row)), e.Action));
+                if ((this.GetJournalScheduleRowDeleting != null)) {
+                    this.GetJournalScheduleRowDeleting(this, new GetJournalScheduleRowChangeEvent(((GetJournalScheduleRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveGetJournalInClassRow(GetJournalInClassRow row) {
+            public void RemoveGetJournalScheduleRow(GetJournalScheduleRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -598,7 +557,7 @@ namespace TrackingStudentProgress {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GetJournalInClassBDDataSet ds = new GetJournalInClassBDDataSet();
+                TrackingStudentProgressBDDataSet4 ds = new TrackingStudentProgressBDDataSet4();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -616,7 +575,7 @@ namespace TrackingStudentProgress {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GetJournalInClassDataTable";
+                attribute2.FixedValue = "GetJournalScheduleDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -660,25 +619,25 @@ namespace TrackingStudentProgress {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class GetJournalInClassRow : global::System.Data.DataRow {
+        public partial class GetJournalScheduleRow : global::System.Data.DataRow {
             
-            private GetJournalInClassDataTable tableGetJournalInClass;
+            private GetJournalScheduleDataTable tableGetJournalSchedule;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal GetJournalInClassRow(global::System.Data.DataRowBuilder rb) : 
+            internal GetJournalScheduleRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableGetJournalInClass = ((GetJournalInClassDataTable)(this.Table));
+                this.tableGetJournalSchedule = ((GetJournalScheduleDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tableGetJournalInClass.idColumn]));
+                    return ((int)(this[this.tableGetJournalSchedule.idColumn]));
                 }
                 set {
-                    this[this.tableGetJournalInClass.idColumn] = value;
+                    this[this.tableGetJournalSchedule.idColumn] = value;
                 }
             }
             
@@ -686,43 +645,10 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime Date {
                 get {
-                    return ((global::System.DateTime)(this[this.tableGetJournalInClass.DateColumn]));
+                    return ((global::System.DateTime)(this[this.tableGetJournalSchedule.DateColumn]));
                 }
                 set {
-                    this[this.tableGetJournalInClass.DateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int idProject {
-                get {
-                    return ((int)(this[this.tableGetJournalInClass.idProjectColumn]));
-                }
-                set {
-                    this[this.tableGetJournalInClass.idProjectColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int idStudent {
-                get {
-                    return ((int)(this[this.tableGetJournalInClass.idStudentColumn]));
-                }
-                set {
-                    this[this.tableGetJournalInClass.idStudentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Cost {
-                get {
-                    return ((string)(this[this.tableGetJournalInClass.CostColumn]));
-                }
-                set {
-                    this[this.tableGetJournalInClass.CostColumn] = value;
+                    this[this.tableGetJournalSchedule.DateColumn] = value;
                 }
             }
             
@@ -730,43 +656,43 @@ namespace TrackingStudentProgress {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Name {
                 get {
-                    return ((string)(this[this.tableGetJournalInClass.NameColumn]));
+                    return ((string)(this[this.tableGetJournalSchedule.NameColumn]));
                 }
                 set {
-                    this[this.tableGetJournalInClass.NameColumn] = value;
+                    this[this.tableGetJournalSchedule.NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string LastName {
+            public string NumberClass {
                 get {
-                    return ((string)(this[this.tableGetJournalInClass.LastNameColumn]));
+                    return ((string)(this[this.tableGetJournalSchedule.NumberClassColumn]));
                 }
                 set {
-                    this[this.tableGetJournalInClass.LastNameColumn] = value;
+                    this[this.tableGetJournalSchedule.NumberClassColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string FirstName {
+            public int id1 {
                 get {
-                    return ((string)(this[this.tableGetJournalInClass.FirstNameColumn]));
+                    return ((int)(this[this.tableGetJournalSchedule.id1Column]));
                 }
                 set {
-                    this[this.tableGetJournalInClass.FirstNameColumn] = value;
+                    this[this.tableGetJournalSchedule.id1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string MidleName {
+            public int id2 {
                 get {
-                    return ((string)(this[this.tableGetJournalInClass.MidleNameColumn]));
+                    return ((int)(this[this.tableGetJournalSchedule.id2Column]));
                 }
                 set {
-                    this[this.tableGetJournalInClass.MidleNameColumn] = value;
+                    this[this.tableGetJournalSchedule.id2Column] = value;
                 }
             }
         }
@@ -775,22 +701,22 @@ namespace TrackingStudentProgress {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class GetJournalInClassRowChangeEvent : global::System.EventArgs {
+        public class GetJournalScheduleRowChangeEvent : global::System.EventArgs {
             
-            private GetJournalInClassRow eventRow;
+            private GetJournalScheduleRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetJournalInClassRowChangeEvent(GetJournalInClassRow row, global::System.Data.DataRowAction action) {
+            public GetJournalScheduleRowChangeEvent(GetJournalScheduleRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GetJournalInClassRow Row {
+            public GetJournalScheduleRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -806,7 +732,7 @@ namespace TrackingStudentProgress {
         }
     }
 }
-namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
+namespace TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet4TableAdapters {
     
     
     /// <summary>
@@ -818,7 +744,7 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GetJournalInClassTableAdapter : global::System.ComponentModel.Component {
+    public partial class GetJournalScheduleTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -832,7 +758,7 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public GetJournalInClassTableAdapter() {
+        public GetJournalScheduleTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -929,16 +855,13 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "GetJournalInClass";
+            tableMapping.DataSetTable = "GetJournalSchedule";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("Date", "Date");
-            tableMapping.ColumnMappings.Add("idProject", "idProject");
-            tableMapping.ColumnMappings.Add("idStudent", "idStudent");
-            tableMapping.ColumnMappings.Add("Cost", "Cost");
             tableMapping.ColumnMappings.Add("Name", "Name");
-            tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
-            tableMapping.ColumnMappings.Add("MidleName", "MidleName");
+            tableMapping.ColumnMappings.Add("NumberClass", "NumberClass");
+            tableMapping.ColumnMappings.Add("id1", "id1");
+            tableMapping.ColumnMappings.Add("id2", "id2");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -955,23 +878,37 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.GetJournalInClass";
+            this._commandCollection[0].CommandText = "dbo.GetJournalSchedule";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idClass", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateFrom", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateTo", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GetJournalInClassBDDataSet.GetJournalInClassDataTable dataTable, global::System.Nullable<int> idClass) {
+        public virtual int Fill(TrackingStudentProgressBDDataSet4.GetJournalScheduleDataTable dataTable, global::System.Nullable<int> idClass, global::System.Nullable<global::System.DateTime> dateFrom, global::System.Nullable<global::System.DateTime> dateTo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idClass.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idClass.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((dateFrom.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(dateFrom.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((dateTo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(dateTo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -984,7 +921,7 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GetJournalInClassBDDataSet.GetJournalInClassDataTable GetData(global::System.Nullable<int> idClass) {
+        public virtual TrackingStudentProgressBDDataSet4.GetJournalScheduleDataTable GetData(global::System.Nullable<int> idClass, global::System.Nullable<global::System.DateTime> dateFrom, global::System.Nullable<global::System.DateTime> dateTo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idClass.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idClass.Value));
@@ -992,7 +929,19 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            GetJournalInClassBDDataSet.GetJournalInClassDataTable dataTable = new GetJournalInClassBDDataSet.GetJournalInClassDataTable();
+            if ((dateFrom.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(dateFrom.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((dateTo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(dateTo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            TrackingStudentProgressBDDataSet4.GetJournalScheduleDataTable dataTable = new TrackingStudentProgressBDDataSet4.GetJournalScheduleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1066,7 +1015,7 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(GetJournalInClassBDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(TrackingStudentProgressBDDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1076,7 +1025,7 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(GetJournalInClassBDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(TrackingStudentProgressBDDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1086,7 +1035,7 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(GetJournalInClassBDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(TrackingStudentProgressBDDataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1120,7 +1069,7 @@ namespace TrackingStudentProgress.GetJournalInClassBDDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(GetJournalInClassBDDataSet dataSet) {
+        public virtual int UpdateAll(TrackingStudentProgressBDDataSet4 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
