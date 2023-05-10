@@ -138,5 +138,58 @@ namespace DBProvider
             return true;
         }
 
+        public bool SetHomeWork(HomeWorkModel HomeWork)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"INSERT INTO HomeWork VALUES ('{HomeWork.idProject}',{HomeWork.idClass}," +
+                        $"{HomeWork.DateFrom}," +
+                        $"{HomeWork.DateFrom}, {HomeWork.Description})";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool DeliteHomeWork(HomeWorkModel HomeWork)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"Delete from HomeWork Where id = '{HomeWork.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool UpdareHomeWork(HomeWorkModel HomeWork)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"Update HomeWork set idProject = '{HomeWork.idProject}' ,  idClass = '{HomeWork.idClass}' ,  DateFrom = '{HomeWork.DateFrom}' ,  DateTo = '{HomeWork.DateTo}' ,  Description = '{HomeWork.Description}'  Where id = '{HomeWork.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+
     }
 }

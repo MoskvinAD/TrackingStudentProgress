@@ -19,7 +19,6 @@ namespace TrackingStudentProgress.Forms
         ScheduleModel ScheduleModel;
         DBProvider.DBProvider DBProvider;
         List<ProjectModel> ProjectModelslist;
-        DataGridView DataGridViewSchedule;
         Account Account;
         public SheduleEdit(int index, ScheduleModel scheduleModel, DBProvider.DBProvider dBProvider, Account account)
         {           

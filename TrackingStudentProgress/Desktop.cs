@@ -48,7 +48,6 @@ namespace TrackingStudentProgress
             foreach (ProjectModel model in ProjectModelslist)
             {
                 ProjectComboBox.Items.Add(model.Name);
-                ProjectComboBox1.Items.Add(model.Name);
             }
         }
 
@@ -73,10 +72,7 @@ namespace TrackingStudentProgress
 
         private void ShowSchedule_Click(object sender, EventArgs e)
         {
-
-            //getJournalInClassTableAdapter.Fill(getJournalInClassBDDataSet.GetJournalInClass, 1);
             getJournalScheduleTableAdapter.Fill(trackingStudentProgressBDDataSet4.GetJournalSchedule, int.Parse(Account.Class), Raspisanietos.Value, Raspisanieto.Value);
-
         }
 
         private void dataGridViewSchedule_Click(object sender, EventArgs e)
@@ -94,27 +90,6 @@ namespace TrackingStudentProgress
                 SheduleEdit sheduleEdit = new SheduleEdit(IndexClick, scheduleModel, DBProvider, Account);
                 sheduleEdit.ShowDialog();
             }
-            else
-            {
-                MessageBox.Show("Выберите позицию которую необходимо удалить");
-                return;
-            }
-        }
-
-        private void AddProject_Click(object sender, EventArgs e)
-        {
-            //DataGridViewRow row = new DataGridViewRow();
-            //row.CreateCells(dataGridViewSchedule);
-
-
-            //row.Cells[0].Value = 1;
-            //row.Cells[1].Value = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss");
-            //row.Cells[2].Value = 1;
-            //row.Cells[3].Value = "ы";
-            //row.Cells[4].Value = 1;
-
-            //dataGridViewSchedule.Rows.Add(row);
-
         }
 
         private void ShowJournal_Click(object sender, EventArgs e)
@@ -122,9 +97,28 @@ namespace TrackingStudentProgress
             getJournalInClassTableAdapter.Fill(getJournalInClassBDDataSet.GetJournalInClass, int.Parse(Account.Class));
         }
 
-        private void dataGridViewSchedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewHomework_Click(object sender, EventArgs e)
         {
+            if (dataGridViewHomework.CurrentRow == null) { return; }
+            int IndexClick = dataGridViewHomework.CurrentRow.Index;
 
+            if (IndexClick > -1)
+            {
+                HomeWorkModel homeWork = new HomeWorkModel();
+                homeWork.Id = Convert.ToInt32(dataGridViewHomework[0, IndexClick].Value);
+                homeWork.idProject = Convert.ToInt32(dataGridViewHomework[1, IndexClick].Value);
+                homeWork.idClass = int.Parse(Account.Class);
+                homeWork.DateFrom = Convert.ToDateTime(dataGridViewHomework[5, IndexClick].Value);
+                homeWork.DateTo = Convert.ToDateTime(dataGridViewHomework[6, IndexClick].Value);
+                homeWork.Description = Convert.ToString(dataGridViewHomework[7, IndexClick].Value);
+                Homework homework = new Homework(IndexClick, homeWork, DBProvider, Account);
+                homework.ShowDialog();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            getHomeWorkTableAdapter1.Fill(trackingStudentProgressBDDataSet6.GetHomeWork, int.Parse(Account.Class));
         }
     }
 }

@@ -43,9 +43,12 @@
   <ItemGroup>
     <Compile Include="DBProvider.cs" />
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\HomeWorkModel.cs" />
     <Compile Include="Model\ProjectModel.cs" />
     <Compile Include="Model\ScheduleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SQL\GetJournalSchedule.sql" />
+    <Content Include="SQL\GetHomeWork.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
