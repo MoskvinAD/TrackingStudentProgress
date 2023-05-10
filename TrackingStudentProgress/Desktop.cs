@@ -62,10 +62,7 @@ namespace TrackingStudentProgress
         }
         private void RefreshStudent_Click(object sender, EventArgs e)
         {
-
-            studentTableAdapter.Fill(trackingStudentProgressBDDataSet.Student);
-
-
+            getStudentTableAdapter.Fill(getStudentsBDDataSet.GetStudent, int.Parse(Account.Class));
         }
 
 

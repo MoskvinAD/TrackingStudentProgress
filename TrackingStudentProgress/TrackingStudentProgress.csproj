@@ -76,6 +76,11 @@
     <Compile Include="Forms\Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetStudentsBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetStudentsBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Helper\GetJournalInClassBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -145,6 +150,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="GetStudentsBDDataSet.xsc">
+      <DependentUpon>GetStudentsBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GetStudentsBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetStudentsBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetStudentsBDDataSet.xss">
+      <DependentUpon>GetStudentsBDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Helper\GetJournalInClassBDDataSet.xsc">
       <DependentUpon>GetJournalInClassBDDataSet.xsd</DependentUpon>
     </None>
