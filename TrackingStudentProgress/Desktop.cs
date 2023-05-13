@@ -51,6 +51,11 @@ namespace TrackingStudentProgress
             }
         }
 
+        private void ProjectComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show();
+        }
+
         private void Desktop_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "trackingStudentProgressBDDataSet2.dataGridViewHomework". При необходимости она может быть перемещена или удалена.
@@ -90,8 +95,20 @@ namespace TrackingStudentProgress
         }
 
         private void ShowJournal_Click(object sender, EventArgs e)
-        {            
-            getJournalInClassTableAdapter.Fill(getJournalInClassBDDataSet.GetJournalInClass, int.Parse(Account.Class));
+        {
+            if (dateJuurnalContol.Value == null)
+            {
+                MessageBox.Show("Выберите дату");
+                return;
+            }
+            if (ProjectComboBox.SelectedIndex == -1) {
+                MessageBox.Show("Выберите предмет");
+                return;
+            }
+            getJournalTableAdapter.Fill(getJournalBDDataSet.GetJournal,
+                ProjectComboBox.SelectedIndex + 1,
+                int.Parse(Account.Class),                
+                dateJuurnalContol.Value);
         }
 
         private void dataGridViewHomework_Click(object sender, EventArgs e)

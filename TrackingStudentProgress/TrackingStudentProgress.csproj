@@ -64,6 +64,12 @@
     <Compile Include="Forms\Homework.Designer.cs">
       <DependentUpon>Homework.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\JournalEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JournalEdit.Designer.cs">
+      <DependentUpon>JournalEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SheduleEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Homework.resx">
       <DependentUpon>Homework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JournalEdit.resx">
+      <DependentUpon>JournalEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SheduleEdit.resx">
       <DependentUpon>SheduleEdit.cs</DependentUpon>

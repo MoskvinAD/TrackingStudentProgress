@@ -58,13 +58,22 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewJournal = new System.Windows.Forms.DataGridView();
-            this.getJournalInClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.getJournalInClassBDDataSet = new TrackingStudentProgress.Helper.GetJournalInClassBDDataSet();
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProjectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midleNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idStudentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getJournalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getJournalBDDataSet = new TrackingStudentProgress.GetJournalBDDataSet();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.ShowJournal = new System.Windows.Forms.Button();
             this.ProjectComboBox = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateJuurnalContol = new System.Windows.Forms.DateTimePicker();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridViewSchedule = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,6 +104,8 @@
             this.getHomeWorkBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.trackingStudentProgressBDDataSet6 = new TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet6();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.getJournalInClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.getJournalInClassBDDataSet = new TrackingStudentProgress.Helper.GetJournalInClassBDDataSet();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.trackingStudentProgressBDDataSet = new TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet();
             this.dataGridViewHomeworkBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -116,18 +127,7 @@
             this.ddGetReturnDelegationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getStudentTableAdapter = new TrackingStudentProgress.GetStudentsBDDataSetTableAdapters.GetStudentTableAdapter();
             this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.getJournalBDDataSet = new TrackingStudentProgress.GetJournalBDDataSet();
-            this.getJournalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getJournalTableAdapter = new TrackingStudentProgress.GetJournalBDDataSetTableAdapters.GetJournalTableAdapter();
-            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProjectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midleNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idStudentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).BeginInit();
@@ -135,8 +135,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.getStudentsBDDataSet)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJournal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getJournalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getJournalBDDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getJournalScheduleBindingSource)).BeginInit();
@@ -145,6 +145,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHomework)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getHomeWorkBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHomeworkBindingSource)).BeginInit();
@@ -155,8 +157,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.getHomeWorkBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddGetReturnDelegationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getJournalBDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getJournalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -169,7 +169,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 60);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(981, 641);
+            this.tabControl1.Size = new System.Drawing.Size(785, 641);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage5
@@ -182,7 +182,7 @@
             this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(973, 615);
+            this.tabPage5.Size = new System.Drawing.Size(777, 615);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Мой класс";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -213,8 +213,10 @@
             this.id2DataGridViewTextBoxColumn1});
             this.StudentGrid.DataSource = this.getStudentBindingSource;
             this.StudentGrid.Location = new System.Drawing.Point(17, 36);
+            this.StudentGrid.MultiSelect = false;
             this.StudentGrid.Name = "StudentGrid";
             this.StudentGrid.ReadOnly = true;
+            this.StudentGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.StudentGrid.Size = new System.Drawing.Size(746, 576);
             this.StudentGrid.TabIndex = 7;
             this.StudentGrid.Click += new System.EventHandler(this.StudentGrid_Click);
@@ -410,11 +412,11 @@
             this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.ShowJournal);
             this.tabPage1.Controls.Add(this.ProjectComboBox);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.dateJuurnalContol);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(973, 615);
+            this.tabPage1.Size = new System.Drawing.Size(777, 615);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Журнал";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -437,20 +439,88 @@
             this.costDataGridViewTextBoxColumn});
             this.dataGridViewJournal.DataSource = this.getJournalBindingSource;
             this.dataGridViewJournal.Location = new System.Drawing.Point(6, 53);
+            this.dataGridViewJournal.MultiSelect = false;
             this.dataGridViewJournal.Name = "dataGridViewJournal";
             this.dataGridViewJournal.ReadOnly = true;
+            this.dataGridViewJournal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewJournal.Size = new System.Drawing.Size(648, 556);
             this.dataGridViewJournal.TabIndex = 5;
             // 
-            // getJournalInClassBindingSource
+            // idDataGridViewTextBoxColumn3
             // 
-            this.getJournalInClassBindingSource.DataMember = "GetJournalInClass";
-            this.getJournalInClassBindingSource.DataSource = this.getJournalInClassBDDataSet;
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn3.Visible = false;
             // 
-            // getJournalInClassBDDataSet
+            // dateDataGridViewTextBoxColumn1
             // 
-            this.getJournalInClassBDDataSet.DataSetName = "GetJournalInClassBDDataSet";
-            this.getJournalInClassBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn2
+            // 
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "Предмет";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // idProjectDataGridViewTextBoxColumn1
+            // 
+            this.idProjectDataGridViewTextBoxColumn1.DataPropertyName = "idProject";
+            this.idProjectDataGridViewTextBoxColumn1.HeaderText = "idProject";
+            this.idProjectDataGridViewTextBoxColumn1.Name = "idProjectDataGridViewTextBoxColumn1";
+            this.idProjectDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idProjectDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // firstNameDataGridViewTextBoxColumn1
+            // 
+            this.firstNameDataGridViewTextBoxColumn1.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
+            this.firstNameDataGridViewTextBoxColumn1.Name = "firstNameDataGridViewTextBoxColumn1";
+            this.firstNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // midleNameDataGridViewTextBoxColumn1
+            // 
+            this.midleNameDataGridViewTextBoxColumn1.DataPropertyName = "MidleName";
+            this.midleNameDataGridViewTextBoxColumn1.HeaderText = "Имя";
+            this.midleNameDataGridViewTextBoxColumn1.Name = "midleNameDataGridViewTextBoxColumn1";
+            this.midleNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn1
+            // 
+            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Отчество";
+            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
+            this.lastNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // idStudentDataGridViewTextBoxColumn
+            // 
+            this.idStudentDataGridViewTextBoxColumn.DataPropertyName = "idStudent";
+            this.idStudentDataGridViewTextBoxColumn.HeaderText = "idStudent";
+            this.idStudentDataGridViewTextBoxColumn.Name = "idStudentDataGridViewTextBoxColumn";
+            this.idStudentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idStudentDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "Оценка";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // getJournalBindingSource
+            // 
+            this.getJournalBindingSource.DataMember = "GetJournal";
+            this.getJournalBindingSource.DataSource = this.getJournalBDDataSet;
+            // 
+            // getJournalBDDataSet
+            // 
+            this.getJournalBDDataSet.DataSetName = "GetJournalBDDataSet";
+            this.getJournalBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label24
             // 
@@ -487,13 +557,14 @@
             this.ProjectComboBox.Name = "ProjectComboBox";
             this.ProjectComboBox.Size = new System.Drawing.Size(121, 21);
             this.ProjectComboBox.TabIndex = 1;
+            this.ProjectComboBox.SelectedIndexChanged += new System.EventHandler(this.ProjectComboBox_SelectedIndexChanged);
             // 
-            // dateTimePicker1
+            // dateJuurnalContol
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(24, 24);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(140, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dateJuurnalContol.Location = new System.Drawing.Point(24, 24);
+            this.dateJuurnalContol.Name = "dateJuurnalContol";
+            this.dateJuurnalContol.Size = new System.Drawing.Size(140, 20);
+            this.dateJuurnalContol.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -507,7 +578,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(973, 615);
+            this.tabPage2.Size = new System.Drawing.Size(777, 615);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Расписание";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -655,7 +726,7 @@
             this.tabPage3.Controls.Add(this.dataGridViewHomework);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(973, 615);
+            this.tabPage3.Size = new System.Drawing.Size(777, 615);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Домашние задание";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -773,6 +844,16 @@
             this.tabPage4.Text = "Отчёты";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // getJournalInClassBindingSource
+            // 
+            this.getJournalInClassBindingSource.DataMember = "GetJournalInClass";
+            this.getJournalInClassBindingSource.DataSource = this.getJournalInClassBDDataSet;
+            // 
+            // getJournalInClassBDDataSet
+            // 
+            this.getJournalInClassBDDataSet.DataSetName = "GetJournalInClassBDDataSet";
+            this.getJournalInClassBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // studentBindingSource
             // 
             this.studentBindingSource.DataMember = "Student";
@@ -874,92 +955,16 @@
             this.studentBindingSource1.DataMember = "Student";
             this.studentBindingSource1.DataSource = this.trackingStudentProgressBDDataSet;
             // 
-            // getJournalBDDataSet
-            // 
-            this.getJournalBDDataSet.DataSetName = "GetJournalBDDataSet";
-            this.getJournalBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // getJournalBindingSource
-            // 
-            this.getJournalBindingSource.DataMember = "GetJournal";
-            this.getJournalBindingSource.DataSource = this.getJournalBDDataSet;
-            // 
             // getJournalTableAdapter
             // 
             this.getJournalTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn3
-            // 
-            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
-            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dateDataGridViewTextBoxColumn1
-            // 
-            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
-            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "Предмет";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // idProjectDataGridViewTextBoxColumn1
-            // 
-            this.idProjectDataGridViewTextBoxColumn1.DataPropertyName = "idProject";
-            this.idProjectDataGridViewTextBoxColumn1.HeaderText = "idProject";
-            this.idProjectDataGridViewTextBoxColumn1.Name = "idProjectDataGridViewTextBoxColumn1";
-            this.idProjectDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idProjectDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // firstNameDataGridViewTextBoxColumn1
-            // 
-            this.firstNameDataGridViewTextBoxColumn1.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
-            this.firstNameDataGridViewTextBoxColumn1.Name = "firstNameDataGridViewTextBoxColumn1";
-            this.firstNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // midleNameDataGridViewTextBoxColumn1
-            // 
-            this.midleNameDataGridViewTextBoxColumn1.DataPropertyName = "MidleName";
-            this.midleNameDataGridViewTextBoxColumn1.HeaderText = "Имя";
-            this.midleNameDataGridViewTextBoxColumn1.Name = "midleNameDataGridViewTextBoxColumn1";
-            this.midleNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn1
-            // 
-            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Отчество";
-            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
-            this.lastNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // idStudentDataGridViewTextBoxColumn
-            // 
-            this.idStudentDataGridViewTextBoxColumn.DataPropertyName = "idStudent";
-            this.idStudentDataGridViewTextBoxColumn.HeaderText = "idStudent";
-            this.idStudentDataGridViewTextBoxColumn.Name = "idStudentDataGridViewTextBoxColumn";
-            this.idStudentDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idStudentDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Оценка";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1000, 713);
+            this.ClientSize = new System.Drawing.Size(800, 713);
             this.Controls.Add(this.Class);
             this.Controls.Add(this.Post);
             this.Controls.Add(this.FIOTeacher);
@@ -977,8 +982,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJournal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getJournalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getJournalBDDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
@@ -988,6 +993,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHomework)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getHomeWorkBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHomeworkBindingSource)).EndInit();
@@ -998,8 +1005,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.getHomeWorkBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ddGetReturnDelegationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getJournalBDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getJournalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1025,7 +1030,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button ShowJournal;
         private System.Windows.Forms.ComboBox ProjectComboBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateJuurnalContol;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
