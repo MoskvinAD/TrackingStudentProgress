@@ -44,10 +44,12 @@
     <Compile Include="DBProvider.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\HomeWorkModel.cs" />
+    <Compile Include="Model\JournalModel.cs" />
     <Compile Include="Model\ProjectModel.cs" />
     <Compile Include="Model\ScheduleModel.cs" />
     <Compile Include="Model\StudentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SQL\GetJournal.sql" />
     <Content Include="SQL\GetStudent.sql" />
     <Content Include="SQL\GetJournalSchedule.sql" />
     <Content Include="SQL\GetHomeWork.sql" />
