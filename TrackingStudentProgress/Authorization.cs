@@ -12,10 +12,10 @@ using DBProvider.Model;
 
 namespace TrackingStudentProgress
 {
-    public partial class Form1 : Form
+    public partial class Authorization : Form
     {
         DBProvider.DBProvider DBProvider;
-        public Form1()
+        public Authorization()
         {
             InitializeComponent();
             DBProvider = new DBProvider.DBProvider();
