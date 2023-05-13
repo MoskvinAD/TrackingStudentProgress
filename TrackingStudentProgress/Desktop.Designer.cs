@@ -32,23 +32,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.StudentGrid = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateCreateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telegramDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberClassDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telegram1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id1DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fio1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emal1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telegram2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id2DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getStudentsBDDataSet = new TrackingStudentProgress.GetStudentsBDDataSet();
             this.RefreshStudent = new System.Windows.Forms.Button();
@@ -58,15 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewJournal = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProjectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midleNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idStudentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getJournalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getJournalBDDataSet = new TrackingStudentProgress.GetJournalBDDataSet();
             this.label24 = new System.Windows.Forms.Label();
@@ -128,6 +102,32 @@
             this.getStudentTableAdapter = new TrackingStudentProgress.GetStudentsBDDataSetTableAdapters.GetStudentTableAdapter();
             this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.getJournalTableAdapter = new TrackingStudentProgress.GetJournalBDDataSetTableAdapters.GetJournalTableAdapter();
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProjectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midleNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idStudentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateCreateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telegramDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idClassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberClassDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telegram1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id1DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fio1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emal1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telegram2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id2DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).BeginInit();
@@ -220,135 +220,6 @@
             this.StudentGrid.Size = new System.Drawing.Size(746, 576);
             this.StudentGrid.TabIndex = 7;
             this.StudentGrid.Click += new System.EventHandler(this.StudentGrid_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // midleNameDataGridViewTextBoxColumn
-            // 
-            this.midleNameDataGridViewTextBoxColumn.DataPropertyName = "MidleName";
-            this.midleNameDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.midleNameDataGridViewTextBoxColumn.Name = "midleNameDataGridViewTextBoxColumn";
-            this.midleNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateCreateDataGridViewTextBoxColumn
-            // 
-            this.dateCreateDataGridViewTextBoxColumn.DataPropertyName = "DateCreate";
-            this.dateCreateDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
-            this.dateCreateDataGridViewTextBoxColumn.Name = "dateCreateDataGridViewTextBoxColumn";
-            this.dateCreateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Почта";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telegramDataGridViewTextBoxColumn
-            // 
-            this.telegramDataGridViewTextBoxColumn.DataPropertyName = "Telegram";
-            this.telegramDataGridViewTextBoxColumn.HeaderText = "Телеграмм";
-            this.telegramDataGridViewTextBoxColumn.Name = "telegramDataGridViewTextBoxColumn";
-            this.telegramDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idClassDataGridViewTextBoxColumn
-            // 
-            this.idClassDataGridViewTextBoxColumn.DataPropertyName = "idClass";
-            this.idClassDataGridViewTextBoxColumn.HeaderText = "idClass";
-            this.idClassDataGridViewTextBoxColumn.Name = "idClassDataGridViewTextBoxColumn";
-            this.idClassDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idClassDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // numberClassDataGridViewTextBoxColumn2
-            // 
-            this.numberClassDataGridViewTextBoxColumn2.DataPropertyName = "NumberClass";
-            this.numberClassDataGridViewTextBoxColumn2.HeaderText = "Класс";
-            this.numberClassDataGridViewTextBoxColumn2.Name = "numberClassDataGridViewTextBoxColumn2";
-            this.numberClassDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // fioDataGridViewTextBoxColumn
-            // 
-            this.fioDataGridViewTextBoxColumn.DataPropertyName = "Fio";
-            this.fioDataGridViewTextBoxColumn.HeaderText = "Fio";
-            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
-            this.fioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // emalDataGridViewTextBoxColumn
-            // 
-            this.emalDataGridViewTextBoxColumn.DataPropertyName = "Emal";
-            this.emalDataGridViewTextBoxColumn.HeaderText = "Emal";
-            this.emalDataGridViewTextBoxColumn.Name = "emalDataGridViewTextBoxColumn";
-            this.emalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emalDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // telegram1DataGridViewTextBoxColumn
-            // 
-            this.telegram1DataGridViewTextBoxColumn.DataPropertyName = "Telegram1";
-            this.telegram1DataGridViewTextBoxColumn.HeaderText = "Telegram1";
-            this.telegram1DataGridViewTextBoxColumn.Name = "telegram1DataGridViewTextBoxColumn";
-            this.telegram1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.telegram1DataGridViewTextBoxColumn.Visible = false;
-            // 
-            // id1DataGridViewTextBoxColumn1
-            // 
-            this.id1DataGridViewTextBoxColumn1.DataPropertyName = "id1";
-            this.id1DataGridViewTextBoxColumn1.HeaderText = "id1";
-            this.id1DataGridViewTextBoxColumn1.Name = "id1DataGridViewTextBoxColumn1";
-            this.id1DataGridViewTextBoxColumn1.ReadOnly = true;
-            this.id1DataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // fio1DataGridViewTextBoxColumn
-            // 
-            this.fio1DataGridViewTextBoxColumn.DataPropertyName = "Fio1";
-            this.fio1DataGridViewTextBoxColumn.HeaderText = "Fio1";
-            this.fio1DataGridViewTextBoxColumn.Name = "fio1DataGridViewTextBoxColumn";
-            this.fio1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.fio1DataGridViewTextBoxColumn.Visible = false;
-            // 
-            // emal1DataGridViewTextBoxColumn
-            // 
-            this.emal1DataGridViewTextBoxColumn.DataPropertyName = "Emal1";
-            this.emal1DataGridViewTextBoxColumn.HeaderText = "Emal1";
-            this.emal1DataGridViewTextBoxColumn.Name = "emal1DataGridViewTextBoxColumn";
-            this.emal1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.emal1DataGridViewTextBoxColumn.Visible = false;
-            // 
-            // telegram2DataGridViewTextBoxColumn
-            // 
-            this.telegram2DataGridViewTextBoxColumn.DataPropertyName = "Telegram2";
-            this.telegram2DataGridViewTextBoxColumn.HeaderText = "Telegram2";
-            this.telegram2DataGridViewTextBoxColumn.Name = "telegram2DataGridViewTextBoxColumn";
-            this.telegram2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.telegram2DataGridViewTextBoxColumn.Visible = false;
-            // 
-            // id2DataGridViewTextBoxColumn1
-            // 
-            this.id2DataGridViewTextBoxColumn1.DataPropertyName = "id2";
-            this.id2DataGridViewTextBoxColumn1.HeaderText = "id2";
-            this.id2DataGridViewTextBoxColumn1.Name = "id2DataGridViewTextBoxColumn1";
-            this.id2DataGridViewTextBoxColumn1.ReadOnly = true;
-            this.id2DataGridViewTextBoxColumn1.Visible = false;
             // 
             // getStudentBindingSource
             // 
@@ -445,72 +316,7 @@
             this.dataGridViewJournal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewJournal.Size = new System.Drawing.Size(648, 556);
             this.dataGridViewJournal.TabIndex = 5;
-            // 
-            // idDataGridViewTextBoxColumn3
-            // 
-            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
-            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dateDataGridViewTextBoxColumn1
-            // 
-            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn1.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
-            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "Предмет";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // idProjectDataGridViewTextBoxColumn1
-            // 
-            this.idProjectDataGridViewTextBoxColumn1.DataPropertyName = "idProject";
-            this.idProjectDataGridViewTextBoxColumn1.HeaderText = "idProject";
-            this.idProjectDataGridViewTextBoxColumn1.Name = "idProjectDataGridViewTextBoxColumn1";
-            this.idProjectDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idProjectDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // firstNameDataGridViewTextBoxColumn1
-            // 
-            this.firstNameDataGridViewTextBoxColumn1.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
-            this.firstNameDataGridViewTextBoxColumn1.Name = "firstNameDataGridViewTextBoxColumn1";
-            this.firstNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // midleNameDataGridViewTextBoxColumn1
-            // 
-            this.midleNameDataGridViewTextBoxColumn1.DataPropertyName = "MidleName";
-            this.midleNameDataGridViewTextBoxColumn1.HeaderText = "Имя";
-            this.midleNameDataGridViewTextBoxColumn1.Name = "midleNameDataGridViewTextBoxColumn1";
-            this.midleNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn1
-            // 
-            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Отчество";
-            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
-            this.lastNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // idStudentDataGridViewTextBoxColumn
-            // 
-            this.idStudentDataGridViewTextBoxColumn.DataPropertyName = "idStudent";
-            this.idStudentDataGridViewTextBoxColumn.HeaderText = "idStudent";
-            this.idStudentDataGridViewTextBoxColumn.Name = "idStudentDataGridViewTextBoxColumn";
-            this.idStudentDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idStudentDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Оценка";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewJournal.Click += new System.EventHandler(this.dataGridViewJournal_Click);
             // 
             // getJournalBindingSource
             // 
@@ -839,7 +645,7 @@
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(973, 615);
+            this.tabPage4.Size = new System.Drawing.Size(777, 615);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Отчёты";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -959,6 +765,201 @@
             // 
             this.getJournalTableAdapter.ClearBeforeFill = true;
             // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dateDataGridViewTextBoxColumn1
+            // 
+            this.dateDataGridViewTextBoxColumn1.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn1.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn2
+            // 
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "Предмет";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // idProjectDataGridViewTextBoxColumn1
+            // 
+            this.idProjectDataGridViewTextBoxColumn1.DataPropertyName = "idProject";
+            this.idProjectDataGridViewTextBoxColumn1.HeaderText = "idProject";
+            this.idProjectDataGridViewTextBoxColumn1.Name = "idProjectDataGridViewTextBoxColumn1";
+            this.idProjectDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idProjectDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // firstNameDataGridViewTextBoxColumn1
+            // 
+            this.firstNameDataGridViewTextBoxColumn1.DataPropertyName = "LastName";
+            this.firstNameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
+            this.firstNameDataGridViewTextBoxColumn1.Name = "firstNameDataGridViewTextBoxColumn1";
+            this.firstNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // midleNameDataGridViewTextBoxColumn1
+            // 
+            this.midleNameDataGridViewTextBoxColumn1.DataPropertyName = "MidleName";
+            this.midleNameDataGridViewTextBoxColumn1.HeaderText = "Имя";
+            this.midleNameDataGridViewTextBoxColumn1.Name = "midleNameDataGridViewTextBoxColumn1";
+            this.midleNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn1
+            // 
+            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "FirstName";
+            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "Отчество";
+            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
+            this.lastNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // idStudentDataGridViewTextBoxColumn
+            // 
+            this.idStudentDataGridViewTextBoxColumn.DataPropertyName = "idStudent";
+            this.idStudentDataGridViewTextBoxColumn.HeaderText = "idStudent";
+            this.idStudentDataGridViewTextBoxColumn.Name = "idStudentDataGridViewTextBoxColumn";
+            this.idStudentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idStudentDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "Оценка";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "MidleName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Имя";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // midleNameDataGridViewTextBoxColumn
+            // 
+            this.midleNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.midleNameDataGridViewTextBoxColumn.HeaderText = "Отчество";
+            this.midleNameDataGridViewTextBoxColumn.Name = "midleNameDataGridViewTextBoxColumn";
+            this.midleNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateCreateDataGridViewTextBoxColumn
+            // 
+            this.dateCreateDataGridViewTextBoxColumn.DataPropertyName = "DateCreate";
+            this.dateCreateDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
+            this.dateCreateDataGridViewTextBoxColumn.Name = "dateCreateDataGridViewTextBoxColumn";
+            this.dateCreateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Почта";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telegramDataGridViewTextBoxColumn
+            // 
+            this.telegramDataGridViewTextBoxColumn.DataPropertyName = "Telegram";
+            this.telegramDataGridViewTextBoxColumn.HeaderText = "Телеграмм";
+            this.telegramDataGridViewTextBoxColumn.Name = "telegramDataGridViewTextBoxColumn";
+            this.telegramDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idClassDataGridViewTextBoxColumn
+            // 
+            this.idClassDataGridViewTextBoxColumn.DataPropertyName = "idClass";
+            this.idClassDataGridViewTextBoxColumn.HeaderText = "idClass";
+            this.idClassDataGridViewTextBoxColumn.Name = "idClassDataGridViewTextBoxColumn";
+            this.idClassDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idClassDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // numberClassDataGridViewTextBoxColumn2
+            // 
+            this.numberClassDataGridViewTextBoxColumn2.DataPropertyName = "NumberClass";
+            this.numberClassDataGridViewTextBoxColumn2.HeaderText = "Класс";
+            this.numberClassDataGridViewTextBoxColumn2.Name = "numberClassDataGridViewTextBoxColumn2";
+            this.numberClassDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // fioDataGridViewTextBoxColumn
+            // 
+            this.fioDataGridViewTextBoxColumn.DataPropertyName = "Fio";
+            this.fioDataGridViewTextBoxColumn.HeaderText = "Fio";
+            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
+            this.fioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // emalDataGridViewTextBoxColumn
+            // 
+            this.emalDataGridViewTextBoxColumn.DataPropertyName = "Emal";
+            this.emalDataGridViewTextBoxColumn.HeaderText = "Emal";
+            this.emalDataGridViewTextBoxColumn.Name = "emalDataGridViewTextBoxColumn";
+            this.emalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emalDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // telegram1DataGridViewTextBoxColumn
+            // 
+            this.telegram1DataGridViewTextBoxColumn.DataPropertyName = "Telegram1";
+            this.telegram1DataGridViewTextBoxColumn.HeaderText = "Telegram1";
+            this.telegram1DataGridViewTextBoxColumn.Name = "telegram1DataGridViewTextBoxColumn";
+            this.telegram1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.telegram1DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // id1DataGridViewTextBoxColumn1
+            // 
+            this.id1DataGridViewTextBoxColumn1.DataPropertyName = "id1";
+            this.id1DataGridViewTextBoxColumn1.HeaderText = "id1";
+            this.id1DataGridViewTextBoxColumn1.Name = "id1DataGridViewTextBoxColumn1";
+            this.id1DataGridViewTextBoxColumn1.ReadOnly = true;
+            this.id1DataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // fio1DataGridViewTextBoxColumn
+            // 
+            this.fio1DataGridViewTextBoxColumn.DataPropertyName = "Fio1";
+            this.fio1DataGridViewTextBoxColumn.HeaderText = "Fio1";
+            this.fio1DataGridViewTextBoxColumn.Name = "fio1DataGridViewTextBoxColumn";
+            this.fio1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.fio1DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // emal1DataGridViewTextBoxColumn
+            // 
+            this.emal1DataGridViewTextBoxColumn.DataPropertyName = "Emal1";
+            this.emal1DataGridViewTextBoxColumn.HeaderText = "Emal1";
+            this.emal1DataGridViewTextBoxColumn.Name = "emal1DataGridViewTextBoxColumn";
+            this.emal1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.emal1DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // telegram2DataGridViewTextBoxColumn
+            // 
+            this.telegram2DataGridViewTextBoxColumn.DataPropertyName = "Telegram2";
+            this.telegram2DataGridViewTextBoxColumn.HeaderText = "Telegram2";
+            this.telegram2DataGridViewTextBoxColumn.Name = "telegram2DataGridViewTextBoxColumn";
+            this.telegram2DataGridViewTextBoxColumn.ReadOnly = true;
+            this.telegram2DataGridViewTextBoxColumn.Visible = false;
+            // 
+            // id2DataGridViewTextBoxColumn1
+            // 
+            this.id2DataGridViewTextBoxColumn1.DataPropertyName = "id2";
+            this.id2DataGridViewTextBoxColumn1.HeaderText = "id2";
+            this.id2DataGridViewTextBoxColumn1.Name = "id2DataGridViewTextBoxColumn1";
+            this.id2DataGridViewTextBoxColumn1.ReadOnly = true;
+            this.id2DataGridViewTextBoxColumn1.Visible = false;
+            // 
             // Desktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1077,6 +1078,22 @@
         private System.Windows.Forms.BindingSource getHomeWorkBindingSource;
         private Helper.TrackingStudentProgressBDDataSet5TableAdapters.GetHomeWorkTableAdapter getHomeWorkTableAdapter;
         private Helper.TrackingStudentProgressBDDataSet6TableAdapters.GetHomeWorkTableAdapter getHomeWorkTableAdapter1;
+        private System.Windows.Forms.BindingSource getStudentBindingSource;
+        private GetStudentsBDDataSet getStudentsBDDataSet;
+        private GetStudentsBDDataSetTableAdapters.GetStudentTableAdapter getStudentTableAdapter;
+        private System.Windows.Forms.BindingSource getJournalBindingSource;
+        private GetJournalBDDataSet getJournalBDDataSet;
+        private System.Windows.Forms.BindingSource studentBindingSource1;
+        private GetJournalBDDataSetTableAdapters.GetJournalTableAdapter getJournalTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProjectDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midleNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idStudentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
@@ -1094,21 +1111,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emal1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telegram2DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn id2DataGridViewTextBoxColumn1;
-        private System.Windows.Forms.BindingSource getStudentBindingSource;
-        private GetStudentsBDDataSet getStudentsBDDataSet;
-        private GetStudentsBDDataSetTableAdapters.GetStudentTableAdapter getStudentTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProjectDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn midleNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idStudentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource getJournalBindingSource;
-        private GetJournalBDDataSet getJournalBDDataSet;
-        private System.Windows.Forms.BindingSource studentBindingSource1;
-        private GetJournalBDDataSetTableAdapters.GetJournalTableAdapter getJournalTableAdapter;
     }
 }

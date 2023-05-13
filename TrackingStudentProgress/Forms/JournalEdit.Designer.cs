@@ -76,6 +76,7 @@
             this.add.TabIndex = 17;
             this.add.Text = "Добавить";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // delite
             // 
@@ -85,6 +86,7 @@
             this.delite.TabIndex = 15;
             this.delite.Text = "Удалить";
             this.delite.UseVisualStyleBackColor = true;
+            this.delite.Click += new System.EventHandler(this.delite_Click);
             // 
             // edit
             // 
@@ -94,6 +96,7 @@
             this.edit.TabIndex = 14;
             this.edit.Text = "Изменить";
             this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // ProjectComboBox
             // 

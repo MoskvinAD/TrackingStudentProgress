@@ -145,8 +145,8 @@ namespace TrackingStudentProgress
                 StudentModel studentmodel = new StudentModel();
                 studentmodel.Id = Convert.ToInt32(StudentGrid[0, IndexClick].Value);
                 studentmodel.LastName = Convert.ToString(StudentGrid[1, IndexClick].Value);
-                studentmodel.FirstName = Convert.ToString(StudentGrid[2, IndexClick].Value);
-                studentmodel.MidleName = Convert.ToString(StudentGrid[3, IndexClick].Value);
+                studentmodel.MidleName = Convert.ToString(StudentGrid[2, IndexClick].Value);
+                studentmodel.FirstName = Convert.ToString(StudentGrid[3, IndexClick].Value);
                 studentmodel.DateCreate = Convert.ToDateTime(StudentGrid[4, IndexClick].Value);
                 studentmodel.Email = Convert.ToString(StudentGrid[5, IndexClick].Value);
                 studentmodel.Telegram = Convert.ToString(StudentGrid[6, IndexClick].Value);
@@ -164,6 +164,31 @@ namespace TrackingStudentProgress
                 Student student = new Student(IndexClick, studentmodel, DBProvider, Account);
                 student.ShowDialog();
             }
+        }
+
+        private void dataGridViewJournal_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewJournal.CurrentRow == null) { return; }
+            int IndexClick = dataGridViewJournal.CurrentRow.Index;
+
+            if (IndexClick > -1)
+            {
+                JournalModel journalModel = new JournalModel();
+                journalModel.Id = Convert.ToInt32(dataGridViewJournal[0, IndexClick].Value);
+                journalModel.Date = Convert.ToDateTime(dataGridViewJournal[1, IndexClick].Value);                
+                journalModel.nameProject = Convert.ToString(dataGridViewJournal[2, IndexClick].Value);
+                journalModel.idProject = Convert.ToInt32(dataGridViewJournal[3, IndexClick].Value);
+                journalModel.LastName = Convert.ToString(dataGridViewJournal[4, IndexClick].Value);
+                journalModel.MidleName = Convert.ToString(dataGridViewJournal[5, IndexClick].Value);
+                journalModel.FirstName = Convert.ToString(dataGridViewJournal[6, IndexClick].Value);
+                journalModel.idStudent = Convert.ToInt32(dataGridViewJournal[7, IndexClick].Value);
+                journalModel.Cost = Convert.ToString(dataGridViewJournal[8, IndexClick].Value);
+
+
+                JournalEdit student = new JournalEdit(IndexClick, journalModel, DBProvider, Account);
+                student.ShowDialog();
+            }
+
         }
     }
 }
