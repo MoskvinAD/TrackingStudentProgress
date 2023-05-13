@@ -92,14 +92,22 @@ namespace TrackingStudentProgress
             int IndexClick = dataGridViewSchedule.CurrentRow.Index;
             
             if (IndexClick > -1) {
-                ScheduleModel scheduleModel = new ScheduleModel();
-                scheduleModel.Id = Convert.ToInt32(dataGridViewSchedule[0, IndexClick].Value);
-                scheduleModel.Date = Convert.ToDateTime(dataGridViewSchedule[1, IndexClick].Value);
-                scheduleModel.idClass = int.Parse(Account.Class);
-                scheduleModel.idProject = Convert.ToInt32(dataGridViewSchedule[5, IndexClick].Value);
+                try
+                {
+                    ScheduleModel scheduleModel = new ScheduleModel();
+                    scheduleModel.Id = Convert.ToInt32(dataGridViewSchedule[0, IndexClick].Value);
+                    scheduleModel.Date = Convert.ToDateTime(dataGridViewSchedule[1, IndexClick].Value);
+                    scheduleModel.idClass = int.Parse(Account.Class);
+                    scheduleModel.idProject = Convert.ToInt32(dataGridViewSchedule[5, IndexClick].Value);
 
-                SheduleEdit sheduleEdit = new SheduleEdit(IndexClick, scheduleModel, DBProvider, Account);
-                sheduleEdit.ShowDialog();
+                    SheduleEdit sheduleEdit = new SheduleEdit(IndexClick, scheduleModel, DBProvider, Account);
+                    sheduleEdit.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
             }
         }
 
@@ -142,15 +150,23 @@ namespace TrackingStudentProgress
 
             if (IndexClick > -1)
             {
-                HomeWorkModel homeWork = new HomeWorkModel();
-                homeWork.Id = Convert.ToInt32(dataGridViewHomework[0, IndexClick].Value);
-                homeWork.idProject = Convert.ToInt32(dataGridViewHomework[1, IndexClick].Value);
-                homeWork.idClass = int.Parse(Account.Class);
-                homeWork.DateFrom = Convert.ToDateTime(dataGridViewHomework[5, IndexClick].Value);
-                homeWork.DateTo = Convert.ToDateTime(dataGridViewHomework[6, IndexClick].Value);
-                homeWork.Description = Convert.ToString(dataGridViewHomework[7, IndexClick].Value);
-                Homework homework = new Homework(IndexClick, homeWork, DBProvider, Account);
-                homework.ShowDialog();
+                try
+                {
+                    HomeWorkModel homeWork = new HomeWorkModel();
+                    homeWork.Id = Convert.ToInt32(dataGridViewHomework[0, IndexClick].Value);
+                    homeWork.idProject = Convert.ToInt32(dataGridViewHomework[1, IndexClick].Value);
+                    homeWork.idClass = int.Parse(Account.Class);
+                    homeWork.DateFrom = Convert.ToDateTime(dataGridViewHomework[5, IndexClick].Value);
+                    homeWork.DateTo = Convert.ToDateTime(dataGridViewHomework[6, IndexClick].Value);
+                    homeWork.Description = Convert.ToString(dataGridViewHomework[7, IndexClick].Value);
+                    Homework homework = new Homework(IndexClick, homeWork, DBProvider, Account);
+                    homework.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);                    
+                }
+                
             }
         }
 
@@ -166,27 +182,35 @@ namespace TrackingStudentProgress
 
             if (IndexClick > -1)
             {
-                StudentModel studentmodel = new StudentModel();
-                studentmodel.Id = Convert.ToInt32(StudentGrid[0, IndexClick].Value);
-                studentmodel.LastName = Convert.ToString(StudentGrid[1, IndexClick].Value);
-                studentmodel.MidleName = Convert.ToString(StudentGrid[2, IndexClick].Value);
-                studentmodel.FirstName = Convert.ToString(StudentGrid[3, IndexClick].Value);
-                studentmodel.DateCreate = Convert.ToDateTime(StudentGrid[4, IndexClick].Value);
-                studentmodel.Email = Convert.ToString(StudentGrid[5, IndexClick].Value);
-                studentmodel.Telegram = Convert.ToString(StudentGrid[6, IndexClick].Value);
-                studentmodel.idClass = int.Parse(Account.Class);
-                studentmodel.NumberClass = Convert.ToString(StudentGrid[8, IndexClick].Value);
-                studentmodel.FioM = Convert.ToString(StudentGrid[9, IndexClick].Value);
-                studentmodel.EmalM = Convert.ToString(StudentGrid[10, IndexClick].Value);
-                studentmodel.TelegramM = Convert.ToString(StudentGrid[11, IndexClick].Value);
-                studentmodel.idM = Convert.ToInt32(StudentGrid[12, IndexClick].Value);
-                studentmodel.FioF = Convert.ToString(StudentGrid[13, IndexClick].Value);
-                studentmodel.EmalF = Convert.ToString(StudentGrid[14, IndexClick].Value);
-                studentmodel.TelegramF = Convert.ToString(StudentGrid[15, IndexClick].Value);
-                studentmodel.idF = Convert.ToInt32(StudentGrid[16, IndexClick].Value);
+                try
+                {
+                    StudentModel studentmodel = new StudentModel();
+                    studentmodel.Id = Convert.ToInt32(StudentGrid[0, IndexClick].Value);
+                    studentmodel.LastName = Convert.ToString(StudentGrid[1, IndexClick].Value);
+                    studentmodel.MidleName = Convert.ToString(StudentGrid[2, IndexClick].Value);
+                    studentmodel.FirstName = Convert.ToString(StudentGrid[3, IndexClick].Value);
+                    studentmodel.DateCreate = Convert.ToDateTime(StudentGrid[4, IndexClick].Value);
+                    studentmodel.Email = Convert.ToString(StudentGrid[5, IndexClick].Value);
+                    studentmodel.Telegram = Convert.ToString(StudentGrid[6, IndexClick].Value);
+                    studentmodel.idClass = int.Parse(Account.Class);
+                    studentmodel.NumberClass = Convert.ToString(StudentGrid[8, IndexClick].Value);
+                    studentmodel.FioM = Convert.ToString(StudentGrid[9, IndexClick].Value);
+                    studentmodel.EmalM = Convert.ToString(StudentGrid[10, IndexClick].Value);
+                    studentmodel.TelegramM = Convert.ToString(StudentGrid[11, IndexClick].Value);
+                    studentmodel.idM = Convert.ToInt32(StudentGrid[12, IndexClick].Value);
+                    studentmodel.FioF = Convert.ToString(StudentGrid[13, IndexClick].Value);
+                    studentmodel.EmalF = Convert.ToString(StudentGrid[14, IndexClick].Value);
+                    studentmodel.TelegramF = Convert.ToString(StudentGrid[15, IndexClick].Value);
+                    studentmodel.idF = Convert.ToInt32(StudentGrid[16, IndexClick].Value);
 
-                Student student = new Student(IndexClick, studentmodel, DBProvider, Account);
-                student.ShowDialog();
+                    Student student = new Student(IndexClick, studentmodel, DBProvider, Account);
+                    student.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+               
             }
         }
 
@@ -197,20 +221,28 @@ namespace TrackingStudentProgress
 
             if (IndexClick > -1)
             {
-                JournalModel journalModel = new JournalModel();
-                journalModel.Id = Convert.ToInt32(dataGridViewJournal[0, IndexClick].Value);
-                journalModel.Date = Convert.ToDateTime(dataGridViewJournal[1, IndexClick].Value);                
-                journalModel.nameProject = Convert.ToString(dataGridViewJournal[2, IndexClick].Value);
-                journalModel.idProject = Convert.ToInt32(dataGridViewJournal[3, IndexClick].Value);
-                journalModel.LastName = Convert.ToString(dataGridViewJournal[4, IndexClick].Value);
-                journalModel.MidleName = Convert.ToString(dataGridViewJournal[5, IndexClick].Value);
-                journalModel.FirstName = Convert.ToString(dataGridViewJournal[6, IndexClick].Value);
-                journalModel.idStudent = Convert.ToInt32(dataGridViewJournal[7, IndexClick].Value);
-                journalModel.Cost = Convert.ToString(dataGridViewJournal[8, IndexClick].Value);
+                try
+                {
+                    JournalModel journalModel = new JournalModel();
+                    journalModel.Id = Convert.ToInt32(dataGridViewJournal[0, IndexClick].Value);
+                    journalModel.Date = Convert.ToDateTime(dataGridViewJournal[1, IndexClick].Value);
+                    journalModel.nameProject = Convert.ToString(dataGridViewJournal[2, IndexClick].Value);
+                    journalModel.idProject = Convert.ToInt32(dataGridViewJournal[3, IndexClick].Value);
+                    journalModel.LastName = Convert.ToString(dataGridViewJournal[4, IndexClick].Value);
+                    journalModel.MidleName = Convert.ToString(dataGridViewJournal[5, IndexClick].Value);
+                    journalModel.FirstName = Convert.ToString(dataGridViewJournal[6, IndexClick].Value);
+                    journalModel.idStudent = Convert.ToInt32(dataGridViewJournal[7, IndexClick].Value);
+                    journalModel.Cost = Convert.ToString(dataGridViewJournal[8, IndexClick].Value);
 
 
-                JournalEdit student = new JournalEdit(IndexClick, journalModel, DBProvider);
-                student.ShowDialog();
+                    JournalEdit student = new JournalEdit(IndexClick, journalModel, DBProvider);
+                    student.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
             }
 
         }
