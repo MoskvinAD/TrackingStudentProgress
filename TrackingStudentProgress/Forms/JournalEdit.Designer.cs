@@ -100,6 +100,7 @@
             // 
             // ProjectComboBox
             // 
+            this.ProjectComboBox.Enabled = false;
             this.ProjectComboBox.FormattingEnabled = true;
             this.ProjectComboBox.Location = new System.Drawing.Point(12, 113);
             this.ProjectComboBox.Name = "ProjectComboBox";
@@ -133,6 +134,7 @@
             // 
             // dateJuurnalContol
             // 
+            this.dateJuurnalContol.Enabled = false;
             this.dateJuurnalContol.Location = new System.Drawing.Point(12, 75);
             this.dateJuurnalContol.Name = "dateJuurnalContol";
             this.dateJuurnalContol.Size = new System.Drawing.Size(140, 20);

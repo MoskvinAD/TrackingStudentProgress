@@ -108,6 +108,36 @@ namespace DBProvider
             }
             return StudentList;
         }
+        public int GetScheduleCount(int idClass,int idProject, DateTime date)
+        {
+            int count = 0;
+            using (var cmd = _connection.CreateCommand())
+            {
+                cmd.CommandText = $"select count(*) as count from Schedule where Schedule.Date >= '{Helper.StartOfDay(date)}' and Schedule.Date <= '{Helper.EndOfDay(date)}' and Schedule.idClass = {idClass} and Schedule.idProject = {idProject}";
+                using (SqlDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        count = rdr.GetInt32(0);
+                    }
+                }
+            }
+            return count;
+        }
+
+        public void SetJournalStudent(int idProject, DateTime date, List<StudentModel> stModel )
+        {
+            foreach (StudentModel student in stModel)
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"INSERT INTO Journal VALUES ('{date}'," +
+                        $"{idProject}," +
+                        $"'{student.Id}', 'Nan')";
+                    cmd.ExecuteNonQuery();
+                }
+            }                        
+        }
 
         public bool SetSchedule(ScheduleModel schedule)
         {

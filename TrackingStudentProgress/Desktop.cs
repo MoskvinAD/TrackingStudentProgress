@@ -1,4 +1,5 @@
-﻿using DBProvider.Model;
+﻿using DBProvider;
+using DBProvider.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +42,7 @@ namespace TrackingStudentProgress
             if (account.Position != null) { Post.Text = "Должность: "+account.Position.ToString(); }
             if (account.Class != null) { Class.Text = "Класс: " + account.Class.ToString(); }
             AddProjectComboBox();
+            AddStudentInList();
         }
 
         private void AddProjectComboBox()
@@ -52,14 +54,9 @@ namespace TrackingStudentProgress
             }
         }
 
-        private void AddStudentComboBox()
+        private void AddStudentInList()
         {
             StudentModellist = DBProvider.GetStudent(int.Parse(Account.Class));
-            foreach (StudentModel model in StudentModellist)
-            {
-               // MessageBox.Show(model.Id + " " + model.LastName);
-               // ProjectComboBox.Items.Add(model.Name);
-            }
         }
 
         private void ProjectComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -107,6 +104,7 @@ namespace TrackingStudentProgress
 
         private void ShowJournal_Click(object sender, EventArgs e)
         {
+            
             if (dateJuurnalContol.Value == null)
             {
                 MessageBox.Show("Выберите дату");
@@ -116,12 +114,24 @@ namespace TrackingStudentProgress
                 MessageBox.Show("Выберите предмет");
                 return;
             }
-            var a = getJournalTableAdapter.Fill(getJournalBDDataSet.GetJournal,
+            int countReturnDataSet = getJournalTableAdapter.Fill(getJournalBDDataSet.GetJournal,
                 ProjectComboBox.SelectedIndex + 1,
                 int.Parse(Account.Class),                
                 dateJuurnalContol.Value);
+            int countReturnDBProvider = DBProvider.GetScheduleCount(int.Parse(Account.Class), ProjectComboBox.SelectedIndex + 1, dateJuurnalContol.Value);
 
-            MessageBox.Show(a + "");
+            if (countReturnDataSet == 0 &&
+                countReturnDBProvider > 0 &&
+                StudentModellist.Count > 0) {
+
+                DBProvider.SetJournalStudent(ProjectComboBox.SelectedIndex + 1, dateJuurnalContol.Value, StudentModellist);
+
+                getJournalTableAdapter.Fill(getJournalBDDataSet.GetJournal,
+               ProjectComboBox.SelectedIndex + 1,
+               int.Parse(Account.Class),
+               dateJuurnalContol.Value);
+            }
+
         }
 
         private void dataGridViewHomework_Click(object sender, EventArgs e)
