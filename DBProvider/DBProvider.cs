@@ -19,127 +19,183 @@ namespace DBProvider
 
         public DBProvider()
         {
-            _connection = new SqlConnection(sqlConnection);
-            _connection.Open();
+            try
+            {
+                _connection = new SqlConnection(sqlConnection);
+                _connection.Open();
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+            }                        
         }
 
         public void DBProviderClosed()
         {
-            _connection.Close();
+            try
+            {
+                _connection.Close();
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+            }
+            
         }
 
         public Account InputAccaunt(string Login, string pass)
         {
             log.Info($"START InputAccaunt: {Login} {pass}");
-            Account account = new Account();              
-            using (var cmd = _connection.CreateCommand())
-            {
-                cmd.CommandText = $"SELECT top 1 "
-                    + "Account.id, "
-                    + "Account.Login, "
-                    + "Account.Password, "
-                    + "Account.Surname, "
-                    + "Account.FirstName, "
-                    + "Account.MidlleName, "
-                    + "Position.Position_Name, "
-                    + "Class.NumberClass "
-                    + "FROM Account "
-                    + "left join Position "
-                    + "on Position.id = Account.Position "
-                    + "left join Class "
-                    + "on Class.id = Account.Class "
-                    + "where Login = 'admin' and Password = 'admin'";
-                using (SqlDataReader rdr = cmd.ExecuteReader())
+            Account account = new Account();
+            try
+            {                
+                using (var cmd = _connection.CreateCommand())
                 {
-                    while (rdr.Read())
+                    cmd.CommandText = $"SELECT top 1 "
+                        + "Account.id, "
+                        + "Account.Login, "
+                        + "Account.Password, "
+                        + "Account.Surname, "
+                        + "Account.FirstName, "
+                        + "Account.MidlleName, "
+                        + "Position.Position_Name, "
+                        + "Class.NumberClass "
+                        + "FROM Account "
+                        + "left join Position "
+                        + "on Position.id = Account.Position "
+                        + "left join Class "
+                        + "on Class.id = Account.Class "
+                        + "where Login = 'admin' and Password = 'admin'";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        account.Id = rdr.GetInt32(0);
-                        account.Login = rdr.GetString(1);
-                        account.Password = rdr.GetString(2);
-                        account.SurName = rdr.GetString(3);
-                        account.MidleName = rdr.GetString(4);
-                        account.LastName = rdr.GetString(5);
-                        account.Position = rdr.GetString(6);
-                        account.Class = rdr.GetString(7);
+                        while (rdr.Read())
+                        {
+                            account.Id = rdr.GetInt32(0);
+                            account.Login = rdr.GetString(1);
+                            account.Password = rdr.GetString(2);
+                            account.SurName = rdr.GetString(3);
+                            account.MidleName = rdr.GetString(4);
+                            account.LastName = rdr.GetString(5);
+                            account.Position = rdr.GetString(6);
+                            account.Class = rdr.GetString(7);
+                        }
                     }
-                }
+                }                
             }
-
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+            }
             return account;
         }
         public List<ProjectModel> GetProject()
         {
             List<ProjectModel> projectsList = new List<ProjectModel>();
-            using (var cmd = _connection.CreateCommand())
+            try
             {
-                cmd.CommandText = $"SELECT "                   
-                    + "Project.id,"
-                    + "Project.Name "
-                    + "FROM Project";
-                using (SqlDataReader rdr = cmd.ExecuteReader())
+                using (var cmd = _connection.CreateCommand())
                 {
-                    while (rdr.Read())
+                    cmd.CommandText = $"SELECT "
+                        + "Project.id,"
+                        + "Project.Name "
+                        + "FROM Project";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        ProjectModel project = new ProjectModel();
-                        project.Id = rdr.GetInt32(0);
-                        project.Name = rdr.GetString(1);
-                        projectsList.Add(project);
+                        while (rdr.Read())
+                        {
+                            ProjectModel project = new ProjectModel();
+                            project.Id = rdr.GetInt32(0);
+                            project.Name = rdr.GetString(1);
+                            projectsList.Add(project);
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+           
             return projectsList;
         }
 
         public List<StudentModel> GetStudent(int idClass)
         {
             List<StudentModel> StudentList = new List<StudentModel>();
-            using (var cmd = _connection.CreateCommand())
+            try
             {
-                cmd.CommandText = $"SELECT Student.id,Student.LastName, Student.FirstName, Student.MidleName FROM Student WHERE Student.idClass = {idClass} ";
-                using (SqlDataReader rdr = cmd.ExecuteReader())
+                using (var cmd = _connection.CreateCommand())
                 {
-                    while (rdr.Read())
+                    cmd.CommandText = $"SELECT Student.id,Student.LastName, Student.FirstName, Student.MidleName FROM Student WHERE Student.idClass = {idClass} ";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        StudentModel student = new StudentModel();
-                        student.Id = rdr.GetInt32(0);
-                        student.LastName = rdr.GetString(1);
-                        student.FirstName = rdr.GetString(2);
-                        student.MidleName = rdr.GetString(3);
-                        StudentList.Add(student);
+                        while (rdr.Read())
+                        {
+                            StudentModel student = new StudentModel();
+                            student.Id = rdr.GetInt32(0);
+                            student.LastName = rdr.GetString(1);
+                            student.FirstName = rdr.GetString(2);
+                            student.MidleName = rdr.GetString(3);
+                            StudentList.Add(student);
+                        }
                     }
                 }
             }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+           
             return StudentList;
         }
         public int GetScheduleCount(int idClass,int idProject, DateTime date)
         {
             int count = 0;
-            using (var cmd = _connection.CreateCommand())
+            try
             {
-                cmd.CommandText = $"select count(*) as count from Schedule where Schedule.Date >= '{Helper.StartOfDay(date)}' and Schedule.Date <= '{Helper.EndOfDay(date)}' and Schedule.idClass = {idClass} and Schedule.idProject = {idProject}";
-                using (SqlDataReader rdr = cmd.ExecuteReader())
+                using (var cmd = _connection.CreateCommand())
                 {
-                    while (rdr.Read())
+                    cmd.CommandText = $"select count(*) as count from Schedule where Schedule.Date >= '{Helper.StartOfDay(date)}' and Schedule.Date <= '{Helper.EndOfDay(date)}' and Schedule.idClass = {idClass} and Schedule.idProject = {idProject}";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
-                        count = rdr.GetInt32(0);
+                        while (rdr.Read())
+                        {
+                            count = rdr.GetInt32(0);
+                        }
                     }
                 }
             }
+            catch (Exception ex )
+            {
+
+                log.Error(ex.Message);
+            }
+           
             return count;
         }
 
         public void SetJournalStudent(int idProject, DateTime date, List<StudentModel> stModel )
         {
-            foreach (StudentModel student in stModel)
+            try
             {
-                using (var cmd = _connection.CreateCommand())
+                foreach (StudentModel student in stModel)
                 {
-                    cmd.CommandText = $"INSERT INTO Journal VALUES ('{date}'," +
-                        $"{idProject}," +
-                        $"'{student.Id}', 'Nan')";
-                    cmd.ExecuteNonQuery();
+                    using (var cmd = _connection.CreateCommand())
+                    {
+                        cmd.CommandText = $"INSERT INTO Journal VALUES ('{date}'," +
+                            $"{idProject}," +
+                            $"'{student.Id}', 'Nan')";
+                        cmd.ExecuteNonQuery();
+                    }
                 }
-            }                        
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+            }
+                          
         }
 
         public bool SetSchedule(ScheduleModel schedule)
