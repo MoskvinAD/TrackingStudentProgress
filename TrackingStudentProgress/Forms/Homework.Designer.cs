@@ -58,6 +58,7 @@
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(227, 89);
             this.Description.TabIndex = 8;
+            this.Description.TextChanged += new System.EventHandler(this.Description_TextChanged);
             // 
             // label18
             // 
@@ -92,6 +93,7 @@
             this.dateTimePickerDZpo.Name = "dateTimePickerDZpo";
             this.dateTimePickerDZpo.Size = new System.Drawing.Size(118, 20);
             this.dateTimePickerDZpo.TabIndex = 4;
+            this.dateTimePickerDZpo.ValueChanged += new System.EventHandler(this.dateTimePickerDZpo_ValueChanged);
             // 
             // dateTimePickerDZs
             // 
@@ -99,6 +101,7 @@
             this.dateTimePickerDZs.Name = "dateTimePickerDZs";
             this.dateTimePickerDZs.Size = new System.Drawing.Size(118, 20);
             this.dateTimePickerDZs.TabIndex = 3;
+            this.dateTimePickerDZs.ValueChanged += new System.EventHandler(this.dateTimePickerDZs_ValueChanged);
             // 
             // label13
             // 

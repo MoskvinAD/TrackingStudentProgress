@@ -19,7 +19,7 @@ namespace TrackingStudentProgress.Forms
         Account Account;
         JournalModel JournalModel;
         List<ProjectModel> ProjectModelslist;
-        public JournalEdit(int index, JournalModel journalModel, DBProvider.DBProvider dBProvider, Account account)
+        public JournalEdit(int index = 0, JournalModel journalModel = null, DBProvider.DBProvider dBProvider = null, Account account = null)
         {
             InitializeComponent();
 

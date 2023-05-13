@@ -192,5 +192,17 @@ namespace TrackingStudentProgress
             }
 
         }
+
+        private void addShedule_Click(object sender, EventArgs e)
+        {
+            SheduleEdit sheduleEdit = new SheduleEdit(0, null, DBProvider, Account, true);
+            sheduleEdit.ShowDialog();
+        }
+
+        private void addHomeWork_Click(object sender, EventArgs e)
+        {
+            Homework homework = new Homework(0, null, DBProvider, Account,true);
+            homework.ShowDialog();
+        }
     }
 }

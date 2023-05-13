@@ -144,9 +144,11 @@ namespace DBProvider
             {
                 using (var cmd = _connection.CreateCommand())
                 {
-                    cmd.CommandText = $"INSERT INTO HomeWork VALUES ('{HomeWork.idProject}',{HomeWork.idClass}," +
-                        $"{HomeWork.DateFrom}," +
-                        $"{HomeWork.DateFrom}, {HomeWork.Description})";
+                    cmd.CommandText = $"INSERT INTO HomeWork VALUES ({HomeWork.idProject}," +
+                        $"{HomeWork.idClass}," +
+                        $"'{HomeWork.DateFrom}'," +
+                        $"'{HomeWork.DateTo}'," +
+                        $"'{HomeWork.Description}')";
                     cmd.ExecuteNonQuery();
                 }
             }

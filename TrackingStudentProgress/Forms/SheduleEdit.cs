@@ -20,18 +20,33 @@ namespace TrackingStudentProgress.Forms
         DBProvider.DBProvider DBProvider;
         List<ProjectModel> ProjectModelslist;
         Account Account;
-        public SheduleEdit(int index, ScheduleModel scheduleModel, DBProvider.DBProvider dBProvider, Account account)
+        public SheduleEdit(int index = 0,
+            ScheduleModel scheduleModel = null,
+            DBProvider.DBProvider dBProvider = null,
+            Account account = null,
+            bool addcheck = false)
         {           
             InitializeComponent();
-            Account = account;
-            Index = index;
-            ScheduleModel = scheduleModel;
+
             DBProvider = dBProvider;
-            label1.Text = Index.ToString();
-            Class.Text = Account.Class.ToString();            
-            Date.Value = Convert.ToDateTime(ScheduleModel.Date);
+            Account = account;
+            Class.Text = Account.Class.ToString();
+
             AddProjectComboBox();
-            ProjectComboBox.Text = ProjectModelslist[ScheduleModel.idProject - 1].Name;
+            if (addcheck)
+            {
+                delite.Visible = false;
+                edit.Visible = false;
+                ScheduleModel = new ScheduleModel();
+                ScheduleModel.idClass = int.Parse(Account.Class);
+            }
+            else {
+                Index = index;
+                ScheduleModel = scheduleModel;                
+                Date.Value = Convert.ToDateTime(ScheduleModel.Date);
+                ProjectComboBox.Text = ProjectModelslist[ScheduleModel.idProject - 1].Name;
+                add.Visible = false;
+            }           
         }
 
         private void AddProjectComboBox() {
@@ -70,6 +85,11 @@ namespace TrackingStudentProgress.Forms
         private void ProjectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ScheduleModel.idProject = ProjectComboBox.SelectedIndex + 1;
+        }
+
+        private void Date_ValueChanged(object sender, EventArgs e)
+        {
+            ScheduleModel.Date = Date.Value;
         }
     }
 }
