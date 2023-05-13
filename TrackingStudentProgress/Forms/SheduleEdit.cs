@@ -67,7 +67,7 @@ namespace TrackingStudentProgress.Forms
 
         private void edit_Click(object sender, EventArgs e)
         {
-            if (DBProvider.UpdareSchedule(ScheduleModel))
+            if (DBProvider.UpdateSchedule(ScheduleModel))
             {
                 MessageBox.Show("Занятие было изменено");
             }

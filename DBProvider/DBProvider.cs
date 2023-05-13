@@ -173,7 +173,7 @@ namespace DBProvider
             return true;
         }
 
-        public bool UpdareSchedule(ScheduleModel schedule)
+        public bool UpdateSchedule(ScheduleModel schedule)
         {
             try
             {
@@ -190,7 +190,7 @@ namespace DBProvider
             return true;
         }
 
-        public bool UpdareRowJournal(JournalModel journal)
+        public bool UpdateRowJournal(JournalModel journal)
         {
             try
             {
@@ -245,7 +245,7 @@ namespace DBProvider
             return true;
         }
 
-        public bool UpdareHomeWork(HomeWorkModel HomeWork)
+        public bool UpdateHomeWork(HomeWorkModel HomeWork)
         {
             try
             {

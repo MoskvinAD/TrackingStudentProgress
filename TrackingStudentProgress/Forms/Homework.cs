@@ -77,7 +77,7 @@ namespace TrackingStudentProgress.Forms
             HomeWork.DateTo = dateTimePickerDZpo.Value;
             HomeWork.Description = Description.Text;
 
-            if (DBProvider.UpdareHomeWork(HomeWork))
+            if (DBProvider.UpdateHomeWork(HomeWork))
             {
                 MessageBox.Show("Задание было изменено");
             }

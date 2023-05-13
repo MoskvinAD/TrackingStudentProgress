@@ -44,7 +44,7 @@ namespace TrackingStudentProgress.Forms
             if (Cost.Text == string.Empty || Cost.Text == null) {
                 JournalModel.Cost = "Nan";
             }
-            if (DBProvider.UpdareRowJournal(JournalModel))
+            if (DBProvider.UpdateRowJournal(JournalModel))
             {
                 MessageBox.Show("Изменения применены");
             }
