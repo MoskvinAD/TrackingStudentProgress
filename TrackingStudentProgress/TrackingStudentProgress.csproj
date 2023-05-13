@@ -76,6 +76,11 @@
     <Compile Include="Forms\Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetJournalBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetJournalBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GetStudentsBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,6 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrackingStudentProgressBDDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrackingStudentProgressBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrackingStudentProgressBDDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Desktop.resx">
       <DependentUpon>Desktop.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +160,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="GetJournalBDDataSet.xsc">
+      <DependentUpon>GetJournalBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GetJournalBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetJournalBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetJournalBDDataSet.xss">
+      <DependentUpon>GetJournalBDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="GetStudentsBDDataSet.xsc">
       <DependentUpon>GetStudentsBDDataSet.xsd</DependentUpon>
     </None>
@@ -257,6 +278,17 @@
     </None>
     <None Include="Helper\TrackingStudentProgressBDDataSet6.xss">
       <DependentUpon>TrackingStudentProgressBDDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TrackingStudentProgressBDDataSet.xsc">
+      <DependentUpon>TrackingStudentProgressBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TrackingStudentProgressBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrackingStudentProgressBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrackingStudentProgressBDDataSet.xss">
+      <DependentUpon>TrackingStudentProgressBDDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
