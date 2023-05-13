@@ -43,6 +43,7 @@ namespace TrackingStudentProgress
             if (account.Class != null) { Class.Text = "Класс: " + account.Class.ToString(); }
             AddProjectComboBox();
             AddStudentInList();
+            getStudentTableAdapter.Fill(getStudentsBDDataSet.GetStudent, int.Parse(Account.Class));
         }
 
         private void AddProjectComboBox()
@@ -208,7 +209,7 @@ namespace TrackingStudentProgress
                 journalModel.Cost = Convert.ToString(dataGridViewJournal[8, IndexClick].Value);
 
 
-                JournalEdit student = new JournalEdit(IndexClick, journalModel, DBProvider, Account);
+                JournalEdit student = new JournalEdit(IndexClick, journalModel, DBProvider);
                 student.ShowDialog();
             }
 

@@ -16,15 +16,12 @@ namespace TrackingStudentProgress.Forms
     {
         int Index;
         DBProvider.DBProvider DBProvider;
-        Account Account;
         JournalModel JournalModel;
         List<ProjectModel> ProjectModelslist;
-        public JournalEdit(int index = 0, JournalModel journalModel = null, DBProvider.DBProvider dBProvider = null, Account account = null)
+        public JournalEdit(int index, JournalModel journalModel, DBProvider.DBProvider dBProvider)
         {
             InitializeComponent();
-
             DBProvider = dBProvider;
-            Account = account;
             JournalModel = journalModel;
             FIO.Text = journalModel.LastName + " " + journalModel.MidleName + " " + journalModel.FirstName;
             dateJuurnalContol.Value = journalModel.Date;
@@ -44,17 +41,18 @@ namespace TrackingStudentProgress.Forms
 
         private void edit_Click(object sender, EventArgs e)
         {
-
+            if (Cost.Text == string.Empty || Cost.Text == null) {
+                JournalModel.Cost = "Nan";
+            }
+            if (DBProvider.UpdareRowJournal(JournalModel))
+            {
+                MessageBox.Show("Изменения применены");
+            }
         }
 
-        private void delite_Click(object sender, EventArgs e)
+        private void Cost_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void add_Click(object sender, EventArgs e)
-        {
-
+            JournalModel.Cost = Cost.Text;  
         }
     }
 }

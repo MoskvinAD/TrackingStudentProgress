@@ -31,8 +31,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Class = new System.Windows.Forms.Label();
-            this.add = new System.Windows.Forms.Button();
-            this.delite = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.ProjectComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,31 +66,11 @@
             this.Class.Size = new System.Drawing.Size(0, 13);
             this.Class.TabIndex = 18;
             // 
-            // add
-            // 
-            this.add.Location = new System.Drawing.Point(186, 138);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(75, 23);
-            this.add.TabIndex = 17;
-            this.add.Text = "Добавить";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            // 
-            // delite
-            // 
-            this.delite.Location = new System.Drawing.Point(186, 58);
-            this.delite.Name = "delite";
-            this.delite.Size = new System.Drawing.Size(75, 23);
-            this.delite.TabIndex = 15;
-            this.delite.Text = "Удалить";
-            this.delite.UseVisualStyleBackColor = true;
-            this.delite.Click += new System.EventHandler(this.delite_Click);
-            // 
             // edit
             // 
             this.edit.Location = new System.Drawing.Point(186, 98);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(75, 23);
+            this.edit.Size = new System.Drawing.Size(75, 36);
             this.edit.TabIndex = 14;
             this.edit.Text = "Изменить";
             this.edit.UseVisualStyleBackColor = true;
@@ -131,6 +109,7 @@
             this.Cost.Name = "Cost";
             this.Cost.Size = new System.Drawing.Size(50, 20);
             this.Cost.TabIndex = 21;
+            this.Cost.TextChanged += new System.EventHandler(this.Cost_TextChanged);
             // 
             // dateJuurnalContol
             // 
@@ -160,8 +139,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Class);
-            this.Controls.Add(this.add);
-            this.Controls.Add(this.delite);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.ProjectComboBox);
             this.Controls.Add(this.label2);
@@ -178,8 +155,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Class;
-        private System.Windows.Forms.Button add;
-        private System.Windows.Forms.Button delite;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.ComboBox ProjectComboBox;
         private System.Windows.Forms.Label label2;

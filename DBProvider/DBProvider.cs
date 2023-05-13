@@ -190,6 +190,23 @@ namespace DBProvider
             return true;
         }
 
+        public bool UpdareRowJournal(JournalModel journal)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"Update Journal set Cost = '{journal.Cost}' Where id = '{journal.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public bool SetHomeWork(HomeWorkModel HomeWork)
         {
             try
