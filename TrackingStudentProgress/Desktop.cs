@@ -21,6 +21,7 @@ namespace TrackingStudentProgress
         DBProvider.DBProvider DBProvider;
         Account Account;
         List<ProjectModel> ProjectModelslist;
+        List<StudentModel> StudentModellist;
         private void Desktop_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (DBProvider != null)
@@ -48,6 +49,16 @@ namespace TrackingStudentProgress
             foreach (ProjectModel model in ProjectModelslist)
             {
                 ProjectComboBox.Items.Add(model.Name);
+            }
+        }
+
+        private void AddStudentComboBox()
+        {
+            StudentModellist = DBProvider.GetStudent(int.Parse(Account.Class));
+            foreach (StudentModel model in StudentModellist)
+            {
+               // MessageBox.Show(model.Id + " " + model.LastName);
+               // ProjectComboBox.Items.Add(model.Name);
             }
         }
 

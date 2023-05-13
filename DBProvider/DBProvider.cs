@@ -87,6 +87,28 @@ namespace DBProvider
             return projectsList;
         }
 
+        public List<StudentModel> GetStudent(int idClass)
+        {
+            List<StudentModel> StudentList = new List<StudentModel>();
+            using (var cmd = _connection.CreateCommand())
+            {
+                cmd.CommandText = $"SELECT Student.id,Student.LastName, Student.FirstName, Student.MidleName FROM Student WHERE Student.idClass = {idClass} ";
+                using (SqlDataReader rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        StudentModel student = new StudentModel();
+                        student.Id = rdr.GetInt32(0);
+                        student.LastName = rdr.GetString(1);
+                        student.FirstName = rdr.GetString(2);
+                        student.MidleName = rdr.GetString(3);
+                        StudentList.Add(student);
+                    }
+                }
+            }
+            return StudentList;
+        }
+
         public bool SetSchedule(ScheduleModel schedule)
         {
             try
