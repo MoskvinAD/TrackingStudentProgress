@@ -67,7 +67,7 @@ namespace TrackingStudentProgress
         }
         private void RefreshStudent_Click(object sender, EventArgs e)
         {
-            getStudentTableAdapter.Fill(getStudentsBDDataSet.GetStudent, int.Parse(Account.Class));
+            getStudentTableAdapter.Fill(getStudentsBDDataSet.GetStudent, int.Parse(Account.Class));            
         }
 
 
@@ -105,10 +105,12 @@ namespace TrackingStudentProgress
                 MessageBox.Show("Выберите предмет");
                 return;
             }
-            getJournalTableAdapter.Fill(getJournalBDDataSet.GetJournal,
+            var a = getJournalTableAdapter.Fill(getJournalBDDataSet.GetJournal,
                 ProjectComboBox.SelectedIndex + 1,
                 int.Parse(Account.Class),                
                 dateJuurnalContol.Value);
+
+            MessageBox.Show(a + "");
         }
 
         private void dataGridViewHomework_Click(object sender, EventArgs e)

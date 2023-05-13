@@ -37,8 +37,6 @@
             this.RefreshStudent = new System.Windows.Forms.Button();
             this.RemoveStudent = new System.Windows.Forms.Button();
             this.AddStudent = new System.Windows.Forms.Button();
-            this.CountStudent = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewJournal = new System.Windows.Forms.DataGridView();
             this.getJournalBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -178,8 +176,6 @@
             this.tabPage5.Controls.Add(this.RefreshStudent);
             this.tabPage5.Controls.Add(this.RemoveStudent);
             this.tabPage5.Controls.Add(this.AddStudent);
-            this.tabPage5.Controls.Add(this.CountStudent);
-            this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(777, 615);
@@ -258,23 +254,6 @@
             this.AddStudent.TabIndex = 4;
             this.AddStudent.Text = "+";
             this.AddStudent.UseVisualStyleBackColor = true;
-            // 
-            // CountStudent
-            // 
-            this.CountStudent.AutoSize = true;
-            this.CountStudent.Location = new System.Drawing.Point(103, 17);
-            this.CountStudent.Name = "CountStudent";
-            this.CountStudent.Size = new System.Drawing.Size(0, 13);
-            this.CountStudent.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Всего учеников: ";
             // 
             // tabPage1
             // 
@@ -976,7 +955,6 @@
             this.Load += new System.EventHandler(this.Desktop_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getStudentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getStudentsBDDataSet)).EndInit();
@@ -1021,8 +999,6 @@
         private System.Windows.Forms.Label FIOTeacher;
         private System.Windows.Forms.Label Post;
         private System.Windows.Forms.Label Class;
-        private System.Windows.Forms.Label CountStudent;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button RemoveStudent;
         private System.Windows.Forms.Button AddStudent;
         private System.Windows.Forms.DateTimePicker Raspisanietos;
