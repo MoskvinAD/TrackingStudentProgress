@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using NLog;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -14,6 +15,7 @@ namespace DBProvider
         SqlConnection _connection;
         string sqlConnection = @"Data Source=DESKTOP-7T5TKDF;Initial Catalog=TrackingStudentProgressBD;Integrated Security=True";
 
+        Logger log = LogManager.GetCurrentClassLogger();
 
         public DBProvider()
         {
@@ -28,6 +30,7 @@ namespace DBProvider
 
         public Account InputAccaunt(string Login, string pass)
         {
+            log.Info($"START InputAccaunt: {Login} {pass}");
             Account account = new Account();              
             using (var cmd = _connection.CreateCommand())
             {
@@ -151,7 +154,8 @@ namespace DBProvider
             }
             catch (Exception ex)
             {
-               return false;
+                log.Error(ex.Message);
+                return false;
             }
             return true;
         }
@@ -168,6 +172,7 @@ namespace DBProvider
             }
             catch (Exception ex)
             {
+                log.Error(ex.Message);
                 return false;
             }
             return true;
@@ -185,6 +190,7 @@ namespace DBProvider
             }
             catch (Exception ex)
             {
+                log.Error(ex.Message);
                 return false;
             }
             return true;
@@ -202,6 +208,7 @@ namespace DBProvider
             }
             catch (Exception ex)
             {
+                log.Error(ex.Message);
                 return false;
             }
             return true;
@@ -223,6 +230,7 @@ namespace DBProvider
             }
             catch (Exception ex)
             {
+                log.Error(ex.Message);
                 return false;
             }
             return true;
@@ -240,6 +248,7 @@ namespace DBProvider
             }
             catch (Exception ex)
             {
+                log.Error(ex.Message);
                 return false;
             }
             return true;
@@ -257,6 +266,7 @@ namespace DBProvider
             }
             catch (Exception ex)
             {
+                log.Error(ex.Message);
                 return false;
             }
             return true;
