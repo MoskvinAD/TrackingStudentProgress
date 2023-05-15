@@ -150,6 +150,72 @@ namespace DBProvider
             }
 
             return classList;
+        }       
+
+        public List<Account> GetAccount()
+        {
+            List<Account> AccountList = new List<Account>();
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"SELECT *"
+                        + "FROM Account";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            Account classM = new Account();
+                            classM.Id = rdr.GetInt32(0);
+                            classM.Login = rdr.GetString(1);
+                            classM.Password = rdr.GetString(2);
+                            classM.SurName = rdr.GetString(3);
+                            classM.MidleName = rdr.GetString(4);
+                            classM.LastName = rdr.GetString(5);
+                            classM.Position = rdr.GetInt32(6).ToString();
+                            classM.Class = rdr.GetInt32(7).ToString();                            
+                            AccountList.Add(classM);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return AccountList;
+        }
+
+        public List<PositionModel> GetPosition()
+        {
+            List<PositionModel> PositionList = new List<PositionModel>();
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"SELECT *"
+                        + "FROM Position";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            PositionModel Position = new PositionModel();
+                            Position.Id = rdr.GetInt32(0);
+                            Position.Name = rdr.GetString(1);                           
+                            PositionList.Add(Position);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return PositionList;
         }
 
         public List<StudentModel> GetStudent(int idClass)

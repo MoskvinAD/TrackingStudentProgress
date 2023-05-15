@@ -83,19 +83,19 @@ namespace TrackingStudentProgress
 
         private void AccountEditbt_Click(object sender, EventArgs e)
         {
-            AccountEdit accountEdit = new AccountEdit();
+            AccountEdit accountEdit = new AccountEdit(Account, DBProvider, ClassModellist);
             accountEdit.ShowDialog();
         }
 
         private void ParentsEditbt_Click(object sender, EventArgs e)
         {
-            ParentsEdit parentsEdit = new ParentsEdit();
+            ParentsEdit parentsEdit = new ParentsEdit(Account, DBProvider);
             parentsEdit.ShowDialog();
         }
 
         private void StudentEditbt_Click(object sender, EventArgs e)
         {
-            StudentEdit studentEdit = new StudentEdit();
+            StudentEdit studentEdit = new StudentEdit(Account, DBProvider);
             studentEdit.ShowDialog();
         }
     }
