@@ -120,6 +120,38 @@ namespace DBProvider
             return projectsList;
         }
 
+        public List<ClassModel> GetClass()
+        {
+            List<ClassModel> classList = new List<ClassModel>();
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"SELECT "
+                        + "Class.id,"
+                        + "Class.NumberClass "
+                        + "FROM Class";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            ClassModel classM = new ClassModel();
+                            classM.Id = rdr.GetInt32(0);
+                            classM.Name = rdr.GetString(1);
+                            classList.Add(classM);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return classList;
+        }
+
         public List<StudentModel> GetStudent(int idClass)
         {
             List<StudentModel> StudentList = new List<StudentModel>();

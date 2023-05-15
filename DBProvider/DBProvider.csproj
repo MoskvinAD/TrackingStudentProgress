@@ -49,8 +49,10 @@
     <Compile Include="DBProvider.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\ClassModel.cs" />
     <Compile Include="Model\HomeWorkModel.cs" />
     <Compile Include="Model\JournalModel.cs" />
+    <Compile Include="Model\PositionModel.cs" />
     <Compile Include="Model\ProjectModel.cs" />
     <Compile Include="Model\ScheduleModel.cs" />
     <Compile Include="Model\StudentModel.cs" />

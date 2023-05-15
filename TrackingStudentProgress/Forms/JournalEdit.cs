@@ -42,7 +42,7 @@ namespace TrackingStudentProgress.Forms
         private void edit_Click(object sender, EventArgs e)
         {
             if (Cost.Text == string.Empty || Cost.Text == null) {
-                JournalModel.Cost = "Nan";
+                JournalModel.Cost = "";
             }
             if (DBProvider.UpdateRowJournal(JournalModel))
             {

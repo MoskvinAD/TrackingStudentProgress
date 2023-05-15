@@ -58,6 +58,12 @@
     <Compile Include="Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AccountEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountEdit.Designer.cs">
+      <DependentUpon>AccountEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Homework.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     <Compile Include="Forms\JournalEdit.Designer.cs">
       <DependentUpon>JournalEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ParentsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParentsEdit.Designer.cs">
+      <DependentUpon>ParentsEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SheduleEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +93,12 @@
     </Compile>
     <Compile Include="Forms\Student.Designer.cs">
       <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentEdit.Designer.cs">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="GetJournalBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -34,11 +34,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.StudentEditbt = new System.Windows.Forms.Button();
+            this.ParentsEditbt = new System.Windows.Forms.Button();
+            this.AccountEditbt = new System.Windows.Forms.Button();
+            this.Desktopbt = new System.Windows.Forms.Button();
+            this.classcbox = new System.Windows.Forms.ComboBox();
+            this.panelAdmin = new System.Windows.Forms.Panel();
+            this.panelAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // Authorizationbt
             // 
-            this.Authorizationbt.Location = new System.Drawing.Point(185, 160);
+            this.Authorizationbt.Location = new System.Drawing.Point(117, 154);
             this.Authorizationbt.Name = "Authorizationbt";
             this.Authorizationbt.Size = new System.Drawing.Size(75, 23);
             this.Authorizationbt.TabIndex = 0;
@@ -48,7 +55,7 @@
             // 
             // Login
             // 
-            this.Login.Location = new System.Drawing.Point(153, 60);
+            this.Login.Location = new System.Drawing.Point(85, 54);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(140, 20);
             this.Login.TabIndex = 1;
@@ -56,7 +63,7 @@
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(153, 114);
+            this.Password.Location = new System.Drawing.Point(85, 108);
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(140, 20);
             this.Password.TabIndex = 2;
@@ -75,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 63);
+            this.label2.Location = new System.Drawing.Point(34, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 4;
@@ -84,18 +91,81 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(102, 117);
+            this.label3.Location = new System.Drawing.Point(34, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Пароль";
+            // 
+            // StudentEditbt
+            // 
+            this.StudentEditbt.Location = new System.Drawing.Point(3, 45);
+            this.StudentEditbt.Name = "StudentEditbt";
+            this.StudentEditbt.Size = new System.Drawing.Size(75, 23);
+            this.StudentEditbt.TabIndex = 8;
+            this.StudentEditbt.Text = "Ученики";
+            this.StudentEditbt.UseVisualStyleBackColor = true;
+            this.StudentEditbt.Click += new System.EventHandler(this.StudentEditbt_Click);
+            // 
+            // ParentsEditbt
+            // 
+            this.ParentsEditbt.Location = new System.Drawing.Point(96, 3);
+            this.ParentsEditbt.Name = "ParentsEditbt";
+            this.ParentsEditbt.Size = new System.Drawing.Size(75, 23);
+            this.ParentsEditbt.TabIndex = 7;
+            this.ParentsEditbt.Text = "Родители";
+            this.ParentsEditbt.UseVisualStyleBackColor = true;
+            this.ParentsEditbt.Click += new System.EventHandler(this.ParentsEditbt_Click);
+            // 
+            // AccountEditbt
+            // 
+            this.AccountEditbt.Location = new System.Drawing.Point(3, 3);
+            this.AccountEditbt.Name = "AccountEditbt";
+            this.AccountEditbt.Size = new System.Drawing.Size(75, 23);
+            this.AccountEditbt.TabIndex = 6;
+            this.AccountEditbt.Text = "Акаунты";
+            this.AccountEditbt.UseVisualStyleBackColor = true;
+            this.AccountEditbt.Click += new System.EventHandler(this.AccountEditbt_Click);
+            // 
+            // Desktopbt
+            // 
+            this.Desktopbt.Location = new System.Drawing.Point(96, 35);
+            this.Desktopbt.Name = "Desktopbt";
+            this.Desktopbt.Size = new System.Drawing.Size(75, 43);
+            this.Desktopbt.TabIndex = 9;
+            this.Desktopbt.Text = "Рабочее место";
+            this.Desktopbt.UseVisualStyleBackColor = true;
+            this.Desktopbt.Click += new System.EventHandler(this.Desktopbt_Click);
+            // 
+            // classcbox
+            // 
+            this.classcbox.FormattingEnabled = true;
+            this.classcbox.Location = new System.Drawing.Point(194, 10);
+            this.classcbox.Name = "classcbox";
+            this.classcbox.Size = new System.Drawing.Size(121, 21);
+            this.classcbox.TabIndex = 10;
+            this.classcbox.SelectedIndexChanged += new System.EventHandler(this.classcbox_SelectedIndexChanged);
+            // 
+            // panelAdmin
+            // 
+            this.panelAdmin.Controls.Add(this.AccountEditbt);
+            this.panelAdmin.Controls.Add(this.classcbox);
+            this.panelAdmin.Controls.Add(this.ParentsEditbt);
+            this.panelAdmin.Controls.Add(this.Desktopbt);
+            this.panelAdmin.Controls.Add(this.StudentEditbt);
+            this.panelAdmin.Location = new System.Drawing.Point(37, 43);
+            this.panelAdmin.Name = "panelAdmin";
+            this.panelAdmin.Size = new System.Drawing.Size(351, 134);
+            this.panelAdmin.TabIndex = 11;
+            this.panelAdmin.Visible = false;
             // 
             // Authorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(446, 204);
+            this.ClientSize = new System.Drawing.Size(403, 221);
+            this.Controls.Add(this.panelAdmin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -105,6 +175,7 @@
             this.Name = "Authorization";
             this.ShowIcon = false;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.panelAdmin.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,6 +189,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button StudentEditbt;
+        private System.Windows.Forms.Button ParentsEditbt;
+        private System.Windows.Forms.Button AccountEditbt;
+        private System.Windows.Forms.Button Desktopbt;
+        private System.Windows.Forms.ComboBox classcbox;
+        private System.Windows.Forms.Panel panelAdmin;
     }
 }
 

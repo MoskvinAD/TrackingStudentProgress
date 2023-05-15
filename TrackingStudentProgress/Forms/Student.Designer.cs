@@ -52,8 +52,6 @@
             this.OStudent = new System.Windows.Forms.TextBox();
             this.NStudent = new System.Windows.Forms.TextBox();
             this.FStudent = new System.Windows.Forms.TextBox();
-            this.add = new System.Windows.Forms.Button();
-            this.delite = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -142,9 +140,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(9, 152);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 13);
+            this.label9.Size = new System.Drawing.Size(33, 13);
             this.label9.TabIndex = 44;
-            this.label9.Text = "Родитель 2";
+            this.label9.Text = "Мать";
             // 
             // label8
             // 
@@ -160,9 +158,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 102);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 42;
-            this.label7.Text = "Родитель 1";
+            this.label7.Text = "Отец";
             // 
             // label6
             // 
@@ -249,29 +247,9 @@
             this.FStudent.Size = new System.Drawing.Size(100, 20);
             this.FStudent.TabIndex = 31;
             // 
-            // add
-            // 
-            this.add.Location = new System.Drawing.Point(514, 105);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(75, 23);
-            this.add.TabIndex = 57;
-            this.add.Text = "Добавить";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            // 
-            // delite
-            // 
-            this.delite.Location = new System.Drawing.Point(514, 25);
-            this.delite.Name = "delite";
-            this.delite.Size = new System.Drawing.Size(75, 23);
-            this.delite.TabIndex = 56;
-            this.delite.Text = "Удалить";
-            this.delite.UseVisualStyleBackColor = true;
-            this.delite.Click += new System.EventHandler(this.delite_Click);
-            // 
             // edit
             // 
-            this.edit.Location = new System.Drawing.Point(514, 65);
+            this.edit.Location = new System.Drawing.Point(522, 12);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(75, 23);
             this.edit.TabIndex = 55;
@@ -284,8 +262,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(620, 218);
-            this.Controls.Add(this.add);
-            this.Controls.Add(this.delite);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.Telegram);
@@ -344,8 +320,6 @@
         private System.Windows.Forms.TextBox OStudent;
         private System.Windows.Forms.TextBox NStudent;
         private System.Windows.Forms.TextBox FStudent;
-        private System.Windows.Forms.Button add;
-        private System.Windows.Forms.Button delite;
         private System.Windows.Forms.Button edit;
     }
 }
