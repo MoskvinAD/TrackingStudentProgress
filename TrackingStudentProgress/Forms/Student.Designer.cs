@@ -52,7 +52,6 @@
             this.OStudent = new System.Windows.Forms.TextBox();
             this.NStudent = new System.Windows.Forms.TextBox();
             this.FStudent = new System.Windows.Forms.TextBox();
-            this.edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label14
@@ -66,6 +65,7 @@
             // 
             // Telegram
             // 
+            this.Telegram.Enabled = false;
             this.Telegram.Location = new System.Drawing.Point(313, 70);
             this.Telegram.Name = "Telegram";
             this.Telegram.Size = new System.Drawing.Size(100, 20);
@@ -82,6 +82,7 @@
             // 
             // Email
             // 
+            this.Email.Enabled = false;
             this.Email.Location = new System.Drawing.Point(197, 70);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(100, 20);
@@ -89,6 +90,7 @@
             // 
             // DateBirth
             // 
+            this.DateBirth.Enabled = false;
             this.DateBirth.Location = new System.Drawing.Point(12, 71);
             this.DateBirth.Name = "DateBirth";
             this.DateBirth.Size = new System.Drawing.Size(168, 20);
@@ -114,6 +116,7 @@
             // 
             // Telegram1
             // 
+            this.Telegram1.Enabled = false;
             this.Telegram1.Location = new System.Drawing.Point(372, 118);
             this.Telegram1.Name = "Telegram1";
             this.Telegram1.Size = new System.Drawing.Size(100, 20);
@@ -121,6 +124,7 @@
             // 
             // Telegram2
             // 
+            this.Telegram2.Enabled = false;
             this.Telegram2.Location = new System.Drawing.Point(372, 168);
             this.Telegram2.Name = "Telegram2";
             this.Telegram2.Size = new System.Drawing.Size(100, 20);
@@ -200,6 +204,7 @@
             // 
             // Emal1
             // 
+            this.Emal1.Enabled = false;
             this.Emal1.Location = new System.Drawing.Point(256, 118);
             this.Emal1.Name = "Emal1";
             this.Emal1.Size = new System.Drawing.Size(100, 20);
@@ -207,6 +212,7 @@
             // 
             // Emal2
             // 
+            this.Emal2.Enabled = false;
             this.Emal2.Location = new System.Drawing.Point(256, 168);
             this.Emal2.Name = "Emal2";
             this.Emal2.Size = new System.Drawing.Size(100, 20);
@@ -214,6 +220,7 @@
             // 
             // Parent2
             // 
+            this.Parent2.Enabled = false;
             this.Parent2.Location = new System.Drawing.Point(12, 168);
             this.Parent2.Name = "Parent2";
             this.Parent2.Size = new System.Drawing.Size(238, 20);
@@ -221,6 +228,7 @@
             // 
             // Parent1
             // 
+            this.Parent1.Enabled = false;
             this.Parent1.Location = new System.Drawing.Point(12, 118);
             this.Parent1.Name = "Parent1";
             this.Parent1.Size = new System.Drawing.Size(238, 20);
@@ -228,6 +236,7 @@
             // 
             // OStudent
             // 
+            this.OStudent.Enabled = false;
             this.OStudent.Location = new System.Drawing.Point(246, 28);
             this.OStudent.Name = "OStudent";
             this.OStudent.Size = new System.Drawing.Size(100, 20);
@@ -235,6 +244,7 @@
             // 
             // NStudent
             // 
+            this.NStudent.Enabled = false;
             this.NStudent.Location = new System.Drawing.Point(130, 28);
             this.NStudent.Name = "NStudent";
             this.NStudent.Size = new System.Drawing.Size(100, 20);
@@ -242,27 +252,17 @@
             // 
             // FStudent
             // 
+            this.FStudent.Enabled = false;
             this.FStudent.Location = new System.Drawing.Point(12, 28);
             this.FStudent.Name = "FStudent";
             this.FStudent.Size = new System.Drawing.Size(100, 20);
             this.FStudent.TabIndex = 31;
             // 
-            // edit
-            // 
-            this.edit.Location = new System.Drawing.Point(522, 12);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(75, 23);
-            this.edit.TabIndex = 55;
-            this.edit.Text = "Изменить";
-            this.edit.UseVisualStyleBackColor = true;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
-            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 218);
-            this.Controls.Add(this.edit);
+            this.ClientSize = new System.Drawing.Size(498, 218);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.Telegram);
             this.Controls.Add(this.label16);
@@ -320,6 +320,5 @@
         private System.Windows.Forms.TextBox OStudent;
         private System.Windows.Forms.TextBox NStudent;
         private System.Windows.Forms.TextBox FStudent;
-        private System.Windows.Forms.Button edit;
     }
 }
