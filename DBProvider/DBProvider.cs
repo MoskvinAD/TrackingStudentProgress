@@ -145,10 +145,8 @@ namespace DBProvider
             }
             catch (Exception ex)
             {
-
                 log.Error(ex.Message);
             }
-
             return classList;
         }       
 
@@ -279,6 +277,52 @@ namespace DBProvider
 
             return StudentList;
         }
+
+        public List<StudentModel> GetAllStudentModel()
+        {
+            List<StudentModel> StudentList = new List<StudentModel>();
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"SELECT Student.id" +
+                        $",Student.LastName" +
+                        $", Student.FirstName" +
+                        $", Student.MidleName" +
+                        $", Student.DateCreate" +
+                        $", Student.Email" +
+                        $", Student.Telegram" +
+                        $", Student.idClass" +
+                        $", Student.idParentM" +
+                        $", Student.idParentF" +
+                        $" FROM Student";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            StudentModel student = new StudentModel();
+                            student.Id = rdr.GetInt32(0);
+                            student.LastName = rdr.GetString(1);
+                            student.FirstName = rdr.GetString(2);
+                            student.MidleName = rdr.GetString(3);
+                            student.DateCreate = rdr.GetDateTime(4);
+                            student.Email = rdr.GetString(5);
+                            student.Telegram = rdr.GetString(6);
+                            student.idClass = rdr.GetInt32(7);
+                            student.idM = rdr.GetInt32(8);
+                            student.idF = rdr.GetInt32(9);
+                            StudentList.Add(student);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+            }
+            return StudentList;
+        }
+
         public int GetScheduleCount(int idClass,int idProject, DateTime date)
         {
             int count = 0;
@@ -517,6 +561,62 @@ namespace DBProvider
                         $"  Telegram = '{parent.Telegram}' ," +
                         $"  idChild = '{parent.idChild}'" +
                         $"  Where id = '{parent.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+                return false;
+            }
+            return true;
+        }
+
+        public bool UpdateStudent(StudentModel student)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"Update Student set" +
+                        $" LastName = '{student.LastName}' ," +
+                        $"  FirstName = '{student.FirstName}' ," +
+                        $"  MidleName = '{student.MidleName}' ," +
+                        $"  DateCreate = '{student.DateCreate}' ," +
+                        $"  Email = '{student.Email}' ," +
+                        $"  Telegram = '{student.Telegram}' ," +
+                        $"  idClass = '{student.idClass}' ," +
+                        $"  idParentM = '{student.idM}' ," +
+                        $"  idParentF = '{student.idF}'" +
+                        $"  Where id = '{student.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+                return false;
+            }
+            return true;
+        }
+
+        public bool AddStudent(StudentModel student)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"INSERT INTO Student VALUES (" +
+                        $"'{student.LastName}'," +
+                        $"'{student.FirstName}'," +
+                        $"'{student.MidleName}'," +
+                        $"'1'," +
+                        $"'{student.DateCreate}'," +
+                        $"'{student.Email}'," +
+                        $"'{student.Telegram}'," +
+                        $"'{student.idClass}'," +
+                        $"'{student.idM}'," +
+                        $"'{student.idF}')";
                     cmd.ExecuteNonQuery();
                 }
             }

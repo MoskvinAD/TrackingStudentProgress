@@ -17,11 +17,11 @@ namespace DBProvider.Model
         /// </summary>
         public string LastName { get; set; }
         /// <summary>
-        /// Имя
+        /// Оттчество
         /// </summary>
         public string FirstName { get; set; }
         /// <summary>
-        /// Отчество
+        /// имя
         /// </summary>
         public string MidleName { get; set; }
         /// <summary>
