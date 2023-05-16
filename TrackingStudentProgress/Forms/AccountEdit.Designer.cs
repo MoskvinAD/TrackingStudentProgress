@@ -73,6 +73,7 @@
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(121, 20);
             this.FirstName.TabIndex = 12;
+            this.FirstName.TextChanged += new System.EventHandler(this.FirstName_TextChanged);
             // 
             // MidlName
             // 
@@ -80,6 +81,7 @@
             this.MidlName.Name = "MidlName";
             this.MidlName.Size = new System.Drawing.Size(121, 20);
             this.MidlName.TabIndex = 13;
+            this.MidlName.TextChanged += new System.EventHandler(this.MidlName_TextChanged);
             // 
             // LastName
             // 
@@ -87,6 +89,7 @@
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(121, 20);
             this.LastName.TabIndex = 14;
+            this.LastName.TextChanged += new System.EventHandler(this.LastName_TextChanged);
             // 
             // Login
             // 
@@ -94,6 +97,7 @@
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(122, 20);
             this.Login.TabIndex = 15;
+            this.Login.TextChanged += new System.EventHandler(this.Login_TextChanged);
             // 
             // Password
             // 
@@ -101,6 +105,7 @@
             this.Password.Name = "Password";
             this.Password.Size = new System.Drawing.Size(121, 20);
             this.Password.TabIndex = 16;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // Position
             // 

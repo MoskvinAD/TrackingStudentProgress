@@ -426,5 +426,54 @@ namespace DBProvider
             return true;
         }
 
+        public bool AddAccount(Account account)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"INSERT INTO Account VALUES ('{account.Login}'," +
+                        $"'{account.Password}'," +
+                        $"'{account.SurName}'," +
+                        $"'{account.MidleName}'," +
+                         $"'{account.LastName}'," +
+                          $"'{account.Position}'," +
+                        $"'{account.Class}')";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+                return false;
+            }
+            return true;
+        }
+
+        public bool UpdateAccount(Account account)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"Update Account set Login = '{account.Login}' ," +
+                        $"  Password = '{account.Password}' ," +
+                        $"  SurName = '{account.SurName}' ," +
+                        $"  MidlleName = '{account.LastName}' ," +
+                        $"  FirstName = '{account.MidleName}' ," +
+                        $"  Position = '{account.Position}' ," +
+                        $"  Class = '{account.Class}'" +
+                        $"  Where id = '{account.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+                return false;
+            }
+            return true;
+        }
+
     }
 }

@@ -175,6 +175,9 @@
     <EmbeddedResource Include="Forms\JournalEdit.resx">
       <DependentUpon>JournalEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParentsEdit.resx">
+      <DependentUpon>ParentsEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SheduleEdit.resx">
       <DependentUpon>SheduleEdit.cs</DependentUpon>
     </EmbeddedResource>
