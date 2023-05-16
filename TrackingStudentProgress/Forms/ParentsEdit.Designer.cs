@@ -30,7 +30,6 @@
         {
             this.deletebt = new System.Windows.Forms.Button();
             this.addbt = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,41 +38,33 @@
             this.FIO = new System.Windows.Forms.TextBox();
             this.telegram = new System.Windows.Forms.TextBox();
             this.emal = new System.Windows.Forms.TextBox();
-            this.studentbox = new System.Windows.Forms.ComboBox();
             this.comboBoxParent = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // deletebt
             // 
-            this.deletebt.Location = new System.Drawing.Point(267, 92);
+            this.deletebt.Location = new System.Drawing.Point(265, 100);
             this.deletebt.Name = "deletebt";
             this.deletebt.Size = new System.Drawing.Size(85, 28);
             this.deletebt.TabIndex = 47;
             this.deletebt.Text = "Удалить";
             this.deletebt.UseVisualStyleBackColor = true;
+            this.deletebt.Click += new System.EventHandler(this.deletebt_Click);
             // 
             // addbt
             // 
-            this.addbt.Location = new System.Drawing.Point(267, 53);
+            this.addbt.Location = new System.Drawing.Point(265, 59);
             this.addbt.Name = "addbt";
             this.addbt.Size = new System.Drawing.Size(85, 28);
             this.addbt.TabIndex = 46;
             this.addbt.Text = "Добавить";
             this.addbt.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 148);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Ученик";
+            this.addbt.Click += new System.EventHandler(this.addbt_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 68);
+            this.label5.Location = new System.Drawing.Point(12, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 42;
@@ -82,7 +73,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(137, 107);
+            this.label3.Location = new System.Drawing.Point(140, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 40;
@@ -91,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 107);
+            this.label2.Location = new System.Drawing.Point(13, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 39;
@@ -100,7 +91,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 21);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 38;
@@ -108,58 +99,54 @@
             // 
             // editbt
             // 
-            this.editbt.Location = new System.Drawing.Point(267, 14);
+            this.editbt.Location = new System.Drawing.Point(265, 20);
             this.editbt.Name = "editbt";
             this.editbt.Size = new System.Drawing.Size(85, 28);
             this.editbt.TabIndex = 37;
             this.editbt.Text = "Изменить";
             this.editbt.UseVisualStyleBackColor = true;
+            this.editbt.Click += new System.EventHandler(this.editbt_Click);
             // 
             // FIO
             // 
-            this.FIO.Location = new System.Drawing.Point(12, 84);
+            this.FIO.Location = new System.Drawing.Point(15, 64);
             this.FIO.Name = "FIO";
             this.FIO.Size = new System.Drawing.Size(244, 20);
             this.FIO.TabIndex = 34;
+            this.FIO.TextChanged += new System.EventHandler(this.FIO_TextChanged);
             // 
             // telegram
             // 
-            this.telegram.Location = new System.Drawing.Point(140, 125);
+            this.telegram.Location = new System.Drawing.Point(143, 108);
             this.telegram.Name = "telegram";
             this.telegram.Size = new System.Drawing.Size(116, 20);
             this.telegram.TabIndex = 32;
+            this.telegram.TextChanged += new System.EventHandler(this.telegram_TextChanged);
             // 
             // emal
             // 
-            this.emal.Location = new System.Drawing.Point(13, 125);
+            this.emal.Location = new System.Drawing.Point(16, 108);
             this.emal.Name = "emal";
             this.emal.Size = new System.Drawing.Size(121, 20);
             this.emal.TabIndex = 31;
-            // 
-            // studentbox
-            // 
-            this.studentbox.FormattingEnabled = true;
-            this.studentbox.Location = new System.Drawing.Point(12, 164);
-            this.studentbox.Name = "studentbox";
-            this.studentbox.Size = new System.Drawing.Size(121, 21);
-            this.studentbox.TabIndex = 30;
+            this.emal.TextChanged += new System.EventHandler(this.emal_TextChanged);
             // 
             // comboBoxParent
             // 
             this.comboBoxParent.FormattingEnabled = true;
-            this.comboBoxParent.Location = new System.Drawing.Point(12, 37);
+            this.comboBoxParent.Location = new System.Drawing.Point(15, 25);
             this.comboBoxParent.Name = "comboBoxParent";
             this.comboBoxParent.Size = new System.Drawing.Size(244, 21);
             this.comboBoxParent.TabIndex = 29;
+            this.comboBoxParent.SelectedIndexChanged += new System.EventHandler(this.comboBoxParent_SelectedIndexChanged);
             // 
             // ParentsEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 211);
+            this.ClientSize = new System.Drawing.Size(362, 146);
             this.Controls.Add(this.deletebt);
             this.Controls.Add(this.addbt);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -168,7 +155,6 @@
             this.Controls.Add(this.FIO);
             this.Controls.Add(this.telegram);
             this.Controls.Add(this.emal);
-            this.Controls.Add(this.studentbox);
             this.Controls.Add(this.comboBoxParent);
             this.Name = "ParentsEdit";
             this.ShowIcon = false;
@@ -181,7 +167,6 @@
 
         private System.Windows.Forms.Button deletebt;
         private System.Windows.Forms.Button addbt;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -190,7 +175,6 @@
         private System.Windows.Forms.TextBox FIO;
         private System.Windows.Forms.TextBox telegram;
         private System.Windows.Forms.TextBox emal;
-        private System.Windows.Forms.ComboBox studentbox;
         private System.Windows.Forms.ComboBox comboBoxParent;
     }
 }

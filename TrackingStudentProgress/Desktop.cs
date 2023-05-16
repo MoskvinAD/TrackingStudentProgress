@@ -57,7 +57,7 @@ namespace TrackingStudentProgress
 
         private void AddStudentInList()
         {
-            StudentModellist = DBProvider.GetStudent(int.Parse(Account.Class));
+            StudentModellist = DBProvider.GetStudentinidClass(int.Parse(Account.Class));
         }
 
         private void ProjectComboBox_SelectedIndexChanged(object sender, EventArgs e)

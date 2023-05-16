@@ -218,7 +218,7 @@ namespace DBProvider
             return PositionList;
         }
 
-        public List<StudentModel> GetStudent(int idClass)
+        public List<StudentModel> GetStudentinidClass(int idClass)
         {
             List<StudentModel> StudentList = new List<StudentModel>();
             try
@@ -246,6 +246,37 @@ namespace DBProvider
                 log.Error(ex.Message);
             }
            
+            return StudentList;
+        }
+
+        public List<StudentModel> GetAllStudent()
+        {
+            List<StudentModel> StudentList = new List<StudentModel>();
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"SELECT Student.id,Student.LastName, Student.FirstName, Student.MidleName FROM Student";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            StudentModel student = new StudentModel();
+                            student.Id = rdr.GetInt32(0);
+                            student.LastName = rdr.GetString(1);
+                            student.FirstName = rdr.GetString(2);
+                            student.MidleName = rdr.GetString(3);
+                            StudentList.Add(student);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
             return StudentList;
         }
         public int GetScheduleCount(int idClass,int idProject, DateTime date)
@@ -473,6 +504,80 @@ namespace DBProvider
                 return false;
             }
             return true;
+        }
+
+        public bool UpdateParent(ParentModel parent)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"Update Parent set FIO = '{parent.FIO}' ," +
+                        $"  Emal = '{parent.Emal}' ," +
+                        $"  Telegram = '{parent.Telegram}' ," +
+                        $"  idChild = '{parent.idChild}'" +
+                        $"  Where id = '{parent.Id}'";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+                return false;
+            }
+            return true;
+        }
+
+        public bool AddParent(ParentModel parent)
+        {
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"INSERT INTO Parent VALUES ('{parent.FIO}'," +
+                        $"'{parent.Emal}'," +
+                        $"'{parent.Telegram}'," +
+                        $"'{parent.idChild}')";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+                return false;
+            }
+            return true;
+        }
+
+        public List<ParentModel> GetParentList()
+        {
+            List<ParentModel> ParentList = new List<ParentModel>();
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"SELECT *"
+                        + "FROM Parent";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            ParentModel parent = new ParentModel();
+                            parent.Id = rdr.GetInt32(0);
+                            parent.FIO = rdr.GetString(1);
+                            parent.Emal = rdr.GetString(2);
+                            parent.Telegram = rdr.GetString(3);
+                            parent.idChild = rdr.GetInt32(4).ToString();
+                            ParentList.Add(parent);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+            }
+            return ParentList;
         }
 
     }
