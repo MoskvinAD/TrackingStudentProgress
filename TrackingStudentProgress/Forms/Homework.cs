@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackingStudentProgress.Notifications;
 
 namespace TrackingStudentProgress.Forms
 {
@@ -61,9 +62,15 @@ namespace TrackingStudentProgress.Forms
 
         private void add_Click(object sender, EventArgs e)
         {
+            if (dateTimePickerDZpo.Value < dateTimePickerDZs.Value)
+            {
+                MessageBox.Show("Дата начала больше даты окончания");
+                return;
+            }
             if (DBProvider.SetHomeWork(HomeWork))
             {
                 MessageBox.Show("Задание добавлено");
+                NotificationCreater.CreateMessageHomeWork(DBProvider, HomeWork, ProjectModelslist[HomeWork.idProject - 1].Name);
             }
         }
 
@@ -80,6 +87,7 @@ namespace TrackingStudentProgress.Forms
             if (DBProvider.UpdateHomeWork(HomeWork))
             {
                 MessageBox.Show("Задание было изменено");
+                NotificationCreater.CreateMessageHomeWork(DBProvider, HomeWork, ProjectModelslist[HomeWork.idProject - 1].Name);
             }
 
         }

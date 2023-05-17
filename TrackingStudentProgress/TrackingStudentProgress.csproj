@@ -115,6 +115,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GetJournalInClassBDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Notifications\NotificationCreater.cs" />
+    <Compile Include="Notifications\Notifications.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper\TrackingStudentProgressBDDataSet.Designer.cs">

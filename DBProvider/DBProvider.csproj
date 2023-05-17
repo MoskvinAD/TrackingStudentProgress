@@ -52,6 +52,7 @@
     <Compile Include="Model\ClassModel.cs" />
     <Compile Include="Model\HomeWorkModel.cs" />
     <Compile Include="Model\JournalModel.cs" />
+    <Compile Include="Model\NotificationModel.cs" />
     <Compile Include="Model\ParentModel.cs" />
     <Compile Include="Model\PositionModel.cs" />
     <Compile Include="Model\ProjectModel.cs" />

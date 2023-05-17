@@ -680,5 +680,57 @@ namespace DBProvider
             return ParentList;
         }
 
+        public List<string> GetEmailsInHomeWork(int idClass)
+        {
+            List<string> Emails = new List<string>();
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"select Email from Student where Student.idClass = '{idClass}'";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            Emails.Add(rdr.GetString(0));
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return Emails;
+        }
+
+        public List<string> GetEmailsInidStudent(int idStudent)
+        {
+            List<string> Emails = new List<string>();
+            try
+            {
+                using (var cmd = _connection.CreateCommand())
+                {
+                    cmd.CommandText = $"select Email from Student where Student.id = '{idStudent}'";
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            Emails.Add(rdr.GetString(0));
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return Emails;
+        }
+
     }
 }

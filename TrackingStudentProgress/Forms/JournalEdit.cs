@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackingStudentProgress.Notifications;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace TrackingStudentProgress.Forms
@@ -47,6 +48,7 @@ namespace TrackingStudentProgress.Forms
             if (DBProvider.UpdateRowJournal(JournalModel))
             {
                 MessageBox.Show("Изменения применены");
+                NotificationCreater.CreateMessageJournal(DBProvider, JournalModel);
             }
         }
 

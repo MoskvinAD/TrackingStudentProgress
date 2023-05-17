@@ -124,9 +124,9 @@ namespace TrackingStudentProgress
                 return;
             }
             int countReturnDataSet = getJournalTableAdapter.Fill(getJournalBDDataSet.GetJournal,
-                ProjectComboBox.SelectedIndex + 1,
-                int.Parse(Account.Class),                
-                dateJuurnalContol.Value);
+                  int.Parse(Account.Class),
+               ProjectComboBox.SelectedIndex + 1,
+               dateJuurnalContol.Value);
             int countReturnDBProvider = DBProvider.GetScheduleCount(int.Parse(Account.Class), ProjectComboBox.SelectedIndex + 1, dateJuurnalContol.Value);
 
             if (countReturnDataSet == 0 &&
@@ -136,8 +136,8 @@ namespace TrackingStudentProgress
                 DBProvider.SetJournalStudent(ProjectComboBox.SelectedIndex + 1, dateJuurnalContol.Value, StudentModellist);
 
                 getJournalTableAdapter.Fill(getJournalBDDataSet.GetJournal,
+                     int.Parse(Account.Class),
                ProjectComboBox.SelectedIndex + 1,
-               int.Parse(Account.Class),
                dateJuurnalContol.Value);
             }
 
