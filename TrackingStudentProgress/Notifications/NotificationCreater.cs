@@ -15,7 +15,7 @@ namespace TrackingStudentProgress.Notifications
     {
         public static void CreateMessageHomeWork(DBProvider.DBProvider DBProvider, HomeWorkModel HomeWork, string projectName) {
             NotificationModel notification = new NotificationModel();
-            notification.Subject = $"Домашние задание по {projectName} ({HomeWork.DateFrom.ToString("yyyy.dd.MM")} - {HomeWork.DateTo.ToString("yyyy.dd.MM")})";
+            notification.Subject = $"Домашние задание по предмету ' {projectName}' ({HomeWork.DateFrom.ToString("yyyy.dd.MM")} - {HomeWork.DateTo.ToString("yyyy.dd.MM")})";
             notification.Body = $"<h2>{HomeWork.Description}</h2>";
             notification.Email = DBProvider.GetEmailsInHomeWork(HomeWork.idClass);          
             Notifications.Send(notification);
