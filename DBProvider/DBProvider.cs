@@ -846,5 +846,58 @@ namespace DBProvider
             return listStr;
         }
 
+        public List<TrackingStudentProgressModel> GetTrackingStudentProgress(int idClass)
+        {
+            List<TrackingStudentProgressModel> listStr = new List<TrackingStudentProgressModel>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetTrackingStudentProgress";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@idClass",
+                    Value = idClass
+                };
+                // добавляем параметр
+                command.Parameters.Add(nameParam);
+                var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        TrackingStudentProgressModel Str = new TrackingStudentProgressModel();
+                        Str.Fio = reader.GetString(0);
+                        Str.NameProject1 = reader.GetString(1);
+                        Str.Resul1 = reader.GetString(2);
+                        Str.NameProject2 = reader.GetString(3);
+                        Str.Resul2 = reader.GetString(4);
+                        Str.NameProject3 = reader.GetString(5);
+                        Str.Resul3 = reader.GetString(6);
+                        Str.NameProject4 = reader.GetString(7);
+                        Str.Resul4 = reader.GetString(8);
+                        Str.NameProject5 = reader.GetString(9);
+                        Str.Resul5 = reader.GetString(10);
+                        Str.NameProject6 = reader.GetString(11);
+                        Str.Resul6 = reader.GetString(12);
+                        Str.NameProject7 = reader.GetString(13);
+                        Str.Resul7 = reader.GetString(14);
+                        listStr.Add(Str);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
+        }
+
     }
 }

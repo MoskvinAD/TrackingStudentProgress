@@ -58,7 +58,9 @@
     <Compile Include="Model\ProjectModel.cs" />
     <Compile Include="Model\ScheduleModel.cs" />
     <Compile Include="Model\StudentModel.cs" />
+    <Compile Include="Model\TrackingStudentProgressModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SQL\GetTrackingStudentProgress.sql" />
     <Content Include="SQL\GetScheduletByTelegram.sql" />
     <Content Include="SQL\GetHomeWorktByTelegram.sql" />
     <Content Include="SQL\GetJournalCostByTelegram.sql" />

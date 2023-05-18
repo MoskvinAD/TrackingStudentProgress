@@ -5,15 +5,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using TrackingStudentProgress.Forms;
 using TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet3TableAdapters;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.AxHost;
 
 namespace TrackingStudentProgress
 {
@@ -23,6 +26,7 @@ namespace TrackingStudentProgress
         Account Account;
         List<ProjectModel> ProjectModelslist;
         List<StudentModel> StudentModellist;
+        int TypeReport = -1;
         private void Desktop_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (DBProvider != null)
@@ -257,6 +261,41 @@ namespace TrackingStudentProgress
         {
             Homework homework = new Homework(0, null, DBProvider, Account,true);
             homework.ShowDialog();
+        }
+
+        private void typeReport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TypeReport = typeReport.SelectedIndex;
+        }
+
+        private void LoadReport_Click(object sender, EventArgs e)
+        {
+            if (TypeReport == -1) { MessageBox.Show("Выберите отчёт"); return; }
+
+            if (TypeReport == 0) {
+                List<TrackingStudentProgressModel> listStr = DBProvider.GetTrackingStudentProgress(int.Parse(Account.Class));
+                if (listStr.Count > 0) {
+                    try
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        sb.AppendLine("ФИО" + ";" + listStr[0].NameProject1 + ";" + listStr[0].NameProject2 + ";" + listStr[0].NameProject3 + ";" + listStr[0].NameProject4 + ";" + listStr[0].NameProject5 + ";" + listStr[0].NameProject6 + ";" + listStr[0].NameProject7);
+                        foreach (TrackingStudentProgressModel item in listStr)
+                        {
+                            sb.AppendLine(item.Fio + ";" + item.Resul1 + ";" + item.Resul2 + ";" + item.Resul3 + ";" + item.Resul4 + ";" + item.Resul5 + ";" + item.Resul6 + ";" + item.Resul7);
+                        }
+                        var createdir = System.IO.Directory.CreateDirectory("C:\\Выгрузка\\");
+                        string filePathOut = "\\TrackingStudentProgress_report.csv";
+                        File.WriteAllText(createdir.FullName + filePathOut, sb.ToString(), System.Text.Encoding.GetEncoding(1251));
+                        MessageBox.Show($"Отчёт создан по пути {createdir.FullName + filePathOut}");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    
+                }
+            }
+                       
         }
     }
 }

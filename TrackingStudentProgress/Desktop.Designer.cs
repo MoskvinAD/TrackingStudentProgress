@@ -90,6 +90,7 @@
             this.Raspisanieto = new System.Windows.Forms.DateTimePicker();
             this.Raspisanietos = new System.Windows.Forms.DateTimePicker();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.addHomeWork = new System.Windows.Forms.Button();
             this.ShowHomeWork = new System.Windows.Forms.Button();
             this.dataGridViewHomework = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,7 +128,8 @@
             this.getStudentTableAdapter = new TrackingStudentProgress.GetStudentsBDDataSetTableAdapters.GetStudentTableAdapter();
             this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.getJournalTableAdapter = new TrackingStudentProgress.GetJournalBDDataSetTableAdapters.GetJournalTableAdapter();
-            this.addHomeWork = new System.Windows.Forms.Button();
+            this.typeReport = new System.Windows.Forms.ComboBox();
+            this.LoadReport = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).BeginInit();
@@ -145,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHomework)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getHomeWorkBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet6)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
@@ -725,6 +728,16 @@
             this.tabPage3.Text = "Домашние задание";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // addHomeWork
+            // 
+            this.addHomeWork.Location = new System.Drawing.Point(559, 42);
+            this.addHomeWork.Name = "addHomeWork";
+            this.addHomeWork.Size = new System.Drawing.Size(75, 23);
+            this.addHomeWork.TabIndex = 10;
+            this.addHomeWork.Text = "Добавить";
+            this.addHomeWork.UseVisualStyleBackColor = true;
+            this.addHomeWork.Click += new System.EventHandler(this.addHomeWork_Click);
+            // 
             // ShowHomeWork
             // 
             this.ShowHomeWork.Location = new System.Drawing.Point(559, 13);
@@ -831,6 +844,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.LoadReport);
+            this.tabPage4.Controls.Add(this.typeReport);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(777, 615);
@@ -953,15 +968,27 @@
             // 
             this.getJournalTableAdapter.ClearBeforeFill = true;
             // 
-            // addHomeWork
+            // typeReport
             // 
-            this.addHomeWork.Location = new System.Drawing.Point(559, 42);
-            this.addHomeWork.Name = "addHomeWork";
-            this.addHomeWork.Size = new System.Drawing.Size(75, 23);
-            this.addHomeWork.TabIndex = 10;
-            this.addHomeWork.Text = "Добавить";
-            this.addHomeWork.UseVisualStyleBackColor = true;
-            this.addHomeWork.Click += new System.EventHandler(this.addHomeWork_Click);
+            this.typeReport.FormattingEnabled = true;
+            this.typeReport.Items.AddRange(new object[] {
+            "Отчёт успеваемости",
+            "Отчёт посещяемости"});
+            this.typeReport.Location = new System.Drawing.Point(20, 24);
+            this.typeReport.Name = "typeReport";
+            this.typeReport.Size = new System.Drawing.Size(167, 21);
+            this.typeReport.TabIndex = 0;
+            this.typeReport.SelectedIndexChanged += new System.EventHandler(this.typeReport_SelectedIndexChanged);
+            // 
+            // LoadReport
+            // 
+            this.LoadReport.Location = new System.Drawing.Point(203, 24);
+            this.LoadReport.Name = "LoadReport";
+            this.LoadReport.Size = new System.Drawing.Size(75, 23);
+            this.LoadReport.TabIndex = 1;
+            this.LoadReport.Text = "Выгрузить";
+            this.LoadReport.UseVisualStyleBackColor = true;
+            this.LoadReport.Click += new System.EventHandler(this.LoadReport_Click);
             // 
             // Desktop
             // 
@@ -996,6 +1023,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHomework)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getHomeWorkBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet6)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getJournalInClassBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
@@ -1113,5 +1141,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id2DataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button addShedule;
         private System.Windows.Forms.Button addHomeWork;
+        private System.Windows.Forms.Button LoadReport;
+        private System.Windows.Forms.ComboBox typeReport;
     }
 }

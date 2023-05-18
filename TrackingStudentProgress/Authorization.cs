@@ -32,7 +32,7 @@ namespace TrackingStudentProgress
             if (Password.Text.Length == 0) { MessageBox.Show("Введите Пароль"); return; }
             if (DBProvider == null) { MessageBox.Show("Ошибка соединения"); return; }
             Account = DBProvider.InputAccaunt(Login.Text, Password.Text);
-            if (Account.Id == 0) { MessageBox.Show("Пользователь не найден"); return; }
+            if (Account.Id == 0) { MessageBox.Show("Пользователь не найден, проверьте правильность в веденых данных."); return; }
             if (Account.Position == "Преподаватель") {
                 Hide();
                 Desktop desktop = new Desktop(Account, DBProvider);
@@ -99,8 +99,5 @@ namespace TrackingStudentProgress
             studentEdit.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
     }
 }
