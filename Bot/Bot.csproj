@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Bot</RootNamespace>
     <AssemblyName>Bot</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -190,8 +191,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bot.cs" />
+    <Compile Include="Controllers\InlineKeyboardController.cs" />
+    <Compile Include="Controllers\LentghTextController.cs" />
+    <Compile Include="Models\Session.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IStorage.cs" />
+    <Compile Include="Services\MemoryStorages.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
