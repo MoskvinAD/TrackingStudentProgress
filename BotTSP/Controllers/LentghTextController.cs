@@ -30,31 +30,32 @@ namespace BotTSP.Controllers
                     var buttons = new List<InlineKeyboardButton[]>();
                     buttons.Add(new[]
                     {
-                        InlineKeyboardButton.WithCallbackData($"Информация о оценке",$"CS"),
-                        InlineKeyboardButton.WithCallbackData($"Отменить заказ",$"SN")
+                        InlineKeyboardButton.WithCallbackData($"Информация о оценках",$"Ocen"),
+                        InlineKeyboardButton.WithCallbackData($"Расписание на неделю",$"Raspisanie"),
+                        InlineKeyboardButton.WithCallbackData($"Домашние задание на завтра",$"Dz"),
                     });
-                    await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"<b> Бот умеет выводить информацию по заказу и отменять заказ</b> ", cancellationToken: ct, parseMode: ParseMode.Html, replyMarkup: new InlineKeyboardMarkup(buttons));
-                    break;
-                default:
-                    string userChoocuType = _memoryStorage.GetSession(message.Chat.Id).ChooiceType;
-                    int a = 0;
-                    if (userChoocuType == "CS")
-                    {
-                        
-                        await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"Заказ на сумму {message.Text} {message.Chat.Username}", cancellationToken: ct);
-                        //message.Text = "/start";
-                        //await Handle(message, ct); повторно вызывает кнопки
+                    await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"<b>Меню</b> ",
+                        cancellationToken: ct, parseMode: ParseMode.Html, replyMarkup: new InlineKeyboardMarkup(buttons));
+                    break;               
+                //default:
+                //    string userChoocuType = _memoryStorage.GetSession(message.Chat.Id).ChooiceType;
+                //    int a = 0;
+                //    if (userChoocuType == "Ocen")
+                //    {
+                //        //await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"<b>Информация о оценках<br> {message.Text} {message.Chat.Username}</b>");
 
-                    }
-                    else
-                    {
-                        //await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"Заказ {message.Text} отменен", cancellationToken: ct);
-                        //message.Text = "/start";
-                        //await Handle(message, ct);
-                    }
+                //        ////await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"Заказ на сумму {message.Text} {message.Chat.Username}", cancellationToken: ct);
+                //        //message.Text = "/start";
+                //        //await Handle(message, ct); 
 
-
-                    break;
+                //    }
+                //    else
+                //    {
+                //        //await _telegramClient.SendTextMessageAsync(message.Chat.Id, $"Заказ {message.Text} отменен", cancellationToken: ct);
+                //        //message.Text = "/start";
+                //        //await Handle(message, ct);
+                //    }
+                //    break;
             }
         }
     }

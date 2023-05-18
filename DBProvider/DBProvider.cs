@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DBProvider
 {
@@ -730,6 +731,119 @@ namespace DBProvider
             }
 
             return Emails;
+        }
+        public List<string> GetJournalCostByTelegram(string telegram)
+        {
+            List<string> listStr = new List<string>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetJournalCostByTelegram";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@telegram",
+                    Value = telegram
+                };
+                // добавляем параметр
+                 command.Parameters.Add(nameParam);
+                 var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        log.Error($"{reader.GetDateTime(0).ToString("yyyy-dd-MM")} {reader.GetString(1)} {reader.GetString(2)}");
+                        listStr.Add($"{reader.GetDateTime(0).ToString("yyyy-dd-MM")} {reader.GetString(1)} : {reader.GetString(2)}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
+        }
+
+        public List<string> GetHomeWorktByTelegram(string telegram)
+        {
+            List<string> listStr = new List<string>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetHomeWorktByTelegram";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@telegram",
+                    Value = telegram
+                };
+                // добавляем параметр
+                command.Parameters.Add(nameParam);
+                var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        log.Error($"{reader.GetDateTime(0).ToString("yyyy-dd-MM")} {reader.GetString(1)} {reader.GetString(2)}");
+                        listStr.Add($"{reader.GetDateTime(0).ToString("yyyy-dd-MM")} {reader.GetString(1)} : {reader.GetString(2)}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
+        }
+
+        public List<string> GetScheduletByTelegram(string telegram)
+        {
+            List<string> listStr = new List<string>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetScheduletByTelegram";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@telegram",
+                    Value = telegram
+                };
+                // добавляем параметр
+                command.Parameters.Add(nameParam);
+                var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        log.Error($"{reader.GetDateTime(0).ToString("yyyy-dd-MM")} {reader.GetString(1)}");
+                        listStr.Add($"{reader.GetDateTime(0).ToString("yyyy-dd-MM")} {reader.GetString(1)}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
         }
 
     }

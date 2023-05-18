@@ -98,5 +98,9 @@ namespace TrackingStudentProgress
             StudentEdit studentEdit = new StudentEdit(Account, DBProvider);
             studentEdit.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
