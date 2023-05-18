@@ -49,6 +49,7 @@
     <Compile Include="DBProvider.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\AttendanceReportModel.cs" />
     <Compile Include="Model\ClassModel.cs" />
     <Compile Include="Model\HomeWorkModel.cs" />
     <Compile Include="Model\JournalModel.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Model\StudentModel.cs" />
     <Compile Include="Model\TrackingStudentProgressModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SQL\GetAttendanceReport.sql" />
     <Content Include="SQL\GetTrackingStudentProgress.sql" />
     <Content Include="SQL\GetScheduletByTelegram.sql" />
     <Content Include="SQL\GetHomeWorktByTelegram.sql" />

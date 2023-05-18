@@ -270,11 +270,11 @@ namespace TrackingStudentProgress
 
         private void LoadReport_Click(object sender, EventArgs e)
         {
-            if (TypeReport == -1) { MessageBox.Show("Выберите отчёт"); return; }
-
-            if (TypeReport == 0) {
+            if (TypeReport == 0)
+            {
                 List<TrackingStudentProgressModel> listStr = DBProvider.GetTrackingStudentProgress(int.Parse(Account.Class));
-                if (listStr.Count > 0) {
+                if (listStr.Count > 0)
+                {
                     try
                     {
                         StringBuilder sb = new StringBuilder();
@@ -292,8 +292,35 @@ namespace TrackingStudentProgress
                     {
                         MessageBox.Show(ex.Message);
                     }
-                    
                 }
+            }
+            else if (TypeReport == 1)
+            {
+                List<AttendanceReportModel> listStr = DBProvider.GetAttendanceReport(int.Parse(Account.Class));
+                if (listStr.Count > 0)
+                {
+                    try
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        sb.AppendLine("ФИО" + ";" + "Количество пропусков" + ";");
+                        foreach (AttendanceReportModel item in listStr)
+                        {
+                            sb.AppendLine(item.FIO + ";" + item.Count + ";");
+                        }
+                        var createdir = System.IO.Directory.CreateDirectory("C:\\Выгрузка\\");
+                        string filePathOut = "\\Attendance_report.csv";
+                        File.WriteAllText(createdir.FullName + filePathOut, sb.ToString(), System.Text.Encoding.GetEncoding(1251));
+                        MessageBox.Show($"Отчёт создан по пути {createdir.FullName + filePathOut}");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+            else {
+                MessageBox.Show("Выберите отчёт"); 
+                return;
             }
                        
         }

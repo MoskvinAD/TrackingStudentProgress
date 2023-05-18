@@ -836,6 +836,7 @@ namespace DBProvider
                         listStr.Add($"{reader.GetDateTime(0).ToString("yyyy-dd-MM")} {reader.GetString(1)}");
                     }
                 }
+                reader.Close();
             }
             catch (Exception ex)
             {
@@ -889,6 +890,48 @@ namespace DBProvider
                         listStr.Add(Str);
                     }
                 }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
+        }
+
+        public List<AttendanceReportModel> GetAttendanceReport(int idClass)
+        {
+            List<AttendanceReportModel> listStr = new List<AttendanceReportModel>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetAttendanceReport";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@idClass",
+                    Value = idClass
+                };
+                // добавляем параметр
+                command.Parameters.Add(nameParam);
+                var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        AttendanceReportModel Str = new AttendanceReportModel();
+                        Str.FIO = reader.GetString(0);
+                        Str.Count = reader.GetInt32(1);
+                        listStr.Add(Str);
+                    }
+                }
+                reader.Close();
             }
             catch (Exception ex)
             {

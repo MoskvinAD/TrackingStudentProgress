@@ -973,7 +973,7 @@
             this.typeReport.FormattingEnabled = true;
             this.typeReport.Items.AddRange(new object[] {
             "Отчёт успеваемости",
-            "Отчёт посещяемости"});
+            "Отчёт посещаемости"});
             this.typeReport.Location = new System.Drawing.Point(20, 24);
             this.typeReport.Name = "typeReport";
             this.typeReport.Size = new System.Drawing.Size(167, 21);
