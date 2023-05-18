@@ -22,7 +22,7 @@ FROM[dbo].[Journal]
 	ON Student.id = dbo.Journal.idStudent
 left join dbo.Project 
 	ON Project.id = dbo.Journal.idProject
-	where Student.Telegram = 'moskvin_ad' 
+	where Student.Telegram = @telegram
 	and Journal.[Date] >= '2023-05-22'--DATEADD(dd, 0 - (@@DATEFIRST + 5 + DATEPART(dw, @d)) % 7, @d)
 
     and Journal.[Date] <= '2023-05-26'--DATEADD(dd, 4 - (@@DATEFIRST + 5 + DATEPART(dw, @d)) % 7, @d)
