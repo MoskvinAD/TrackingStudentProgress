@@ -324,5 +324,15 @@ namespace TrackingStudentProgress
             }
                        
         }
+
+        private void AddStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RemoveStudent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

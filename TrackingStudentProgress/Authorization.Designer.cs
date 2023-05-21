@@ -34,12 +34,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.StudentEditbt = new System.Windows.Forms.Button();
-            this.ParentsEditbt = new System.Windows.Forms.Button();
-            this.AccountEditbt = new System.Windows.Forms.Button();
-            this.Desktopbt = new System.Windows.Forms.Button();
             this.classcbox = new System.Windows.Forms.ComboBox();
             this.panelAdmin = new System.Windows.Forms.Panel();
+            this.AccountEditbt = new System.Windows.Forms.Button();
+            this.ParentsEditbt = new System.Windows.Forms.Button();
+            this.Desktopbt = new System.Windows.Forms.Button();
+            this.StudentEditbt = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,50 +98,10 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Пароль";
             // 
-            // StudentEditbt
-            // 
-            this.StudentEditbt.Location = new System.Drawing.Point(3, 45);
-            this.StudentEditbt.Name = "StudentEditbt";
-            this.StudentEditbt.Size = new System.Drawing.Size(75, 23);
-            this.StudentEditbt.TabIndex = 8;
-            this.StudentEditbt.Text = "Ученики";
-            this.StudentEditbt.UseVisualStyleBackColor = true;
-            this.StudentEditbt.Click += new System.EventHandler(this.StudentEditbt_Click);
-            // 
-            // ParentsEditbt
-            // 
-            this.ParentsEditbt.Location = new System.Drawing.Point(96, 3);
-            this.ParentsEditbt.Name = "ParentsEditbt";
-            this.ParentsEditbt.Size = new System.Drawing.Size(75, 23);
-            this.ParentsEditbt.TabIndex = 7;
-            this.ParentsEditbt.Text = "Родители";
-            this.ParentsEditbt.UseVisualStyleBackColor = true;
-            this.ParentsEditbt.Click += new System.EventHandler(this.ParentsEditbt_Click);
-            // 
-            // AccountEditbt
-            // 
-            this.AccountEditbt.Location = new System.Drawing.Point(3, 3);
-            this.AccountEditbt.Name = "AccountEditbt";
-            this.AccountEditbt.Size = new System.Drawing.Size(75, 23);
-            this.AccountEditbt.TabIndex = 6;
-            this.AccountEditbt.Text = "Акаунты";
-            this.AccountEditbt.UseVisualStyleBackColor = true;
-            this.AccountEditbt.Click += new System.EventHandler(this.AccountEditbt_Click);
-            // 
-            // Desktopbt
-            // 
-            this.Desktopbt.Location = new System.Drawing.Point(96, 35);
-            this.Desktopbt.Name = "Desktopbt";
-            this.Desktopbt.Size = new System.Drawing.Size(75, 43);
-            this.Desktopbt.TabIndex = 9;
-            this.Desktopbt.Text = "Рабочее место";
-            this.Desktopbt.UseVisualStyleBackColor = true;
-            this.Desktopbt.Click += new System.EventHandler(this.Desktopbt_Click);
-            // 
             // classcbox
             // 
             this.classcbox.FormattingEnabled = true;
-            this.classcbox.Location = new System.Drawing.Point(194, 10);
+            this.classcbox.Location = new System.Drawing.Point(207, 14);
             this.classcbox.Name = "classcbox";
             this.classcbox.Size = new System.Drawing.Size(121, 21);
             this.classcbox.TabIndex = 10;
@@ -148,6 +109,7 @@
             // 
             // panelAdmin
             // 
+            this.panelAdmin.Controls.Add(this.label4);
             this.panelAdmin.Controls.Add(this.AccountEditbt);
             this.panelAdmin.Controls.Add(this.classcbox);
             this.panelAdmin.Controls.Add(this.ParentsEditbt);
@@ -155,9 +117,67 @@
             this.panelAdmin.Controls.Add(this.StudentEditbt);
             this.panelAdmin.Location = new System.Drawing.Point(37, 43);
             this.panelAdmin.Name = "panelAdmin";
-            this.panelAdmin.Size = new System.Drawing.Size(351, 134);
+            this.panelAdmin.Size = new System.Drawing.Size(351, 166);
             this.panelAdmin.TabIndex = 11;
             this.panelAdmin.Visible = false;
+            // 
+            // AccountEditbt
+            // 
+            this.AccountEditbt.FlatAppearance.BorderSize = 0;
+            this.AccountEditbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AccountEditbt.Image = global::TrackingStudentProgress.Properties.Resources.contacts_profile_account_connection_icon_124666;
+            this.AccountEditbt.Location = new System.Drawing.Point(3, 3);
+            this.AccountEditbt.Name = "AccountEditbt";
+            this.AccountEditbt.Size = new System.Drawing.Size(75, 44);
+            this.AccountEditbt.TabIndex = 6;
+            this.AccountEditbt.UseVisualStyleBackColor = true;
+            this.AccountEditbt.Click += new System.EventHandler(this.AccountEditbt_Click);
+            // 
+            // ParentsEditbt
+            // 
+            this.ParentsEditbt.FlatAppearance.BorderSize = 0;
+            this.ParentsEditbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ParentsEditbt.Image = global::TrackingStudentProgress.Properties.Resources.addusergroup_1251;
+            this.ParentsEditbt.Location = new System.Drawing.Point(96, 3);
+            this.ParentsEditbt.Name = "ParentsEditbt";
+            this.ParentsEditbt.Size = new System.Drawing.Size(59, 44);
+            this.ParentsEditbt.TabIndex = 7;
+            this.ParentsEditbt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ParentsEditbt.UseVisualStyleBackColor = true;
+            this.ParentsEditbt.Click += new System.EventHandler(this.ParentsEditbt_Click);
+            // 
+            // Desktopbt
+            // 
+            this.Desktopbt.FlatAppearance.BorderSize = 0;
+            this.Desktopbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Desktopbt.Image = global::TrackingStudentProgress.Properties.Resources.workspace_computer_desktop_office_icon_177095;
+            this.Desktopbt.Location = new System.Drawing.Point(96, 53);
+            this.Desktopbt.Name = "Desktopbt";
+            this.Desktopbt.Size = new System.Drawing.Size(59, 47);
+            this.Desktopbt.TabIndex = 9;
+            this.Desktopbt.UseVisualStyleBackColor = true;
+            this.Desktopbt.Click += new System.EventHandler(this.Desktopbt_Click);
+            // 
+            // StudentEditbt
+            // 
+            this.StudentEditbt.FlatAppearance.BorderSize = 0;
+            this.StudentEditbt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StudentEditbt.Image = global::TrackingStudentProgress.Properties.Resources.user_kids_avatar_user_profile_icon_149314;
+            this.StudentEditbt.Location = new System.Drawing.Point(3, 53);
+            this.StudentEditbt.Name = "StudentEditbt";
+            this.StudentEditbt.Size = new System.Drawing.Size(75, 47);
+            this.StudentEditbt.TabIndex = 8;
+            this.StudentEditbt.UseVisualStyleBackColor = true;
+            this.StudentEditbt.Click += new System.EventHandler(this.StudentEditbt_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(163, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Класс";
             // 
             // Authorization
             // 
@@ -176,6 +196,7 @@
             this.ShowIcon = false;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.panelAdmin.ResumeLayout(false);
+            this.panelAdmin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,6 +216,7 @@
         private System.Windows.Forms.Button Desktopbt;
         private System.Windows.Forms.ComboBox classcbox;
         private System.Windows.Forms.Panel panelAdmin;
+        private System.Windows.Forms.Label label4;
     }
 }
 

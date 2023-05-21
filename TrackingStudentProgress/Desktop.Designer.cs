@@ -51,9 +51,6 @@
             this.id2DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getStudentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getStudentsBDDataSet = new TrackingStudentProgress.GetStudentsBDDataSet();
-            this.RefreshStudent = new System.Windows.Forms.Button();
-            this.RemoveStudent = new System.Windows.Forms.Button();
-            this.AddStudent = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewJournal = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,8 +87,6 @@
             this.Raspisanieto = new System.Windows.Forms.DateTimePicker();
             this.Raspisanietos = new System.Windows.Forms.DateTimePicker();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.addHomeWork = new System.Windows.Forms.Button();
-            this.ShowHomeWork = new System.Windows.Forms.Button();
             this.dataGridViewHomework = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idProjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,6 +99,7 @@
             this.getHomeWorkBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.trackingStudentProgressBDDataSet6 = new TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet6();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.typeReport = new System.Windows.Forms.ComboBox();
             this.getJournalInClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getJournalInClassBDDataSet = new TrackingStudentProgress.Helper.GetJournalInClassBDDataSet();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -124,12 +120,13 @@
             this.getHomeWorkBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getHomeWorkTableAdapter = new TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet5TableAdapters.GetHomeWorkTableAdapter();
             this.getHomeWorkTableAdapter1 = new TrackingStudentProgress.Helper.TrackingStudentProgressBDDataSet6TableAdapters.GetHomeWorkTableAdapter();
-            this.ddGetReturnDelegationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.getStudentTableAdapter = new TrackingStudentProgress.GetStudentsBDDataSetTableAdapters.GetStudentTableAdapter();
             this.studentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.getJournalTableAdapter = new TrackingStudentProgress.GetJournalBDDataSetTableAdapters.GetJournalTableAdapter();
-            this.typeReport = new System.Windows.Forms.ComboBox();
+            this.addHomeWork = new System.Windows.Forms.Button();
+            this.ShowHomeWork = new System.Windows.Forms.Button();
             this.LoadReport = new System.Windows.Forms.Button();
+            this.ddGetReturnDelegationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGrid)).BeginInit();
@@ -158,8 +155,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getHomeWorkBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ddGetReturnDelegationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddGetReturnDelegationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -172,18 +169,15 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 60);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(785, 641);
+            this.tabControl1.Size = new System.Drawing.Size(764, 641);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.StudentGrid);
-            this.tabPage5.Controls.Add(this.RefreshStudent);
-            this.tabPage5.Controls.Add(this.RemoveStudent);
-            this.tabPage5.Controls.Add(this.AddStudent);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(777, 615);
+            this.tabPage5.Size = new System.Drawing.Size(756, 615);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Мой класс";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -213,12 +207,12 @@
             this.telegram2DataGridViewTextBoxColumn,
             this.id2DataGridViewTextBoxColumn1});
             this.StudentGrid.DataSource = this.getStudentBindingSource;
-            this.StudentGrid.Location = new System.Drawing.Point(17, 36);
+            this.StudentGrid.Location = new System.Drawing.Point(3, 3);
             this.StudentGrid.MultiSelect = false;
             this.StudentGrid.Name = "StudentGrid";
             this.StudentGrid.ReadOnly = true;
             this.StudentGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.StudentGrid.Size = new System.Drawing.Size(746, 576);
+            this.StudentGrid.Size = new System.Drawing.Size(746, 609);
             this.StudentGrid.TabIndex = 7;
             this.StudentGrid.Click += new System.EventHandler(this.StudentGrid_Click);
             // 
@@ -361,34 +355,6 @@
             this.getStudentsBDDataSet.DataSetName = "GetStudentsBDDataSet";
             this.getStudentsBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // RefreshStudent
-            // 
-            this.RefreshStudent.Location = new System.Drawing.Point(613, 3);
-            this.RefreshStudent.Name = "RefreshStudent";
-            this.RefreshStudent.Size = new System.Drawing.Size(40, 23);
-            this.RefreshStudent.TabIndex = 6;
-            this.RefreshStudent.Text = "0";
-            this.RefreshStudent.UseVisualStyleBackColor = true;
-            this.RefreshStudent.Click += new System.EventHandler(this.RefreshStudent_Click);
-            // 
-            // RemoveStudent
-            // 
-            this.RemoveStudent.Location = new System.Drawing.Point(570, 3);
-            this.RemoveStudent.Name = "RemoveStudent";
-            this.RemoveStudent.Size = new System.Drawing.Size(37, 23);
-            this.RemoveStudent.TabIndex = 5;
-            this.RemoveStudent.Text = "-";
-            this.RemoveStudent.UseVisualStyleBackColor = true;
-            // 
-            // AddStudent
-            // 
-            this.AddStudent.Location = new System.Drawing.Point(524, 3);
-            this.AddStudent.Name = "AddStudent";
-            this.AddStudent.Size = new System.Drawing.Size(40, 23);
-            this.AddStudent.TabIndex = 4;
-            this.AddStudent.Text = "+";
-            this.AddStudent.UseVisualStyleBackColor = true;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dataGridViewJournal);
@@ -400,7 +366,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(777, 615);
+            this.tabPage1.Size = new System.Drawing.Size(756, 615);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Журнал";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -527,11 +493,13 @@
             // 
             // ShowJournal
             // 
-            this.ShowJournal.Location = new System.Drawing.Point(330, 21);
+            this.ShowJournal.FlatAppearance.BorderSize = 0;
+            this.ShowJournal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowJournal.Image = global::TrackingStudentProgress.Properties.Resources.blue_upgrade_recyclearrows_arrow_azul_12426;
+            this.ShowJournal.Location = new System.Drawing.Point(330, 8);
             this.ShowJournal.Name = "ShowJournal";
-            this.ShowJournal.Size = new System.Drawing.Size(75, 23);
+            this.ShowJournal.Size = new System.Drawing.Size(58, 36);
             this.ShowJournal.TabIndex = 2;
-            this.ShowJournal.Text = "Обновить";
             this.ShowJournal.UseVisualStyleBackColor = true;
             this.ShowJournal.Click += new System.EventHandler(this.ShowJournal_Click);
             // 
@@ -564,18 +532,20 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(777, 615);
+            this.tabPage2.Size = new System.Drawing.Size(756, 615);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Расписание";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // addShedule
             // 
-            this.addShedule.Location = new System.Drawing.Point(343, 39);
+            this.addShedule.FlatAppearance.BorderSize = 0;
+            this.addShedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addShedule.Image = global::TrackingStudentProgress.Properties.Resources.Plus_36851;
+            this.addShedule.Location = new System.Drawing.Point(350, 33);
             this.addShedule.Name = "addShedule";
-            this.addShedule.Size = new System.Drawing.Size(82, 27);
+            this.addShedule.Size = new System.Drawing.Size(57, 38);
             this.addShedule.TabIndex = 8;
-            this.addShedule.Text = "Добавить";
             this.addShedule.UseVisualStyleBackColor = true;
             this.addShedule.Click += new System.EventHandler(this.addShedule_Click);
             // 
@@ -688,11 +658,13 @@
             // 
             // ShowSchedule
             // 
-            this.ShowSchedule.Location = new System.Drawing.Point(343, 6);
+            this.ShowSchedule.FlatAppearance.BorderSize = 0;
+            this.ShowSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowSchedule.Image = global::TrackingStudentProgress.Properties.Resources.blue_upgrade_recyclearrows_arrow_azul_12426;
+            this.ShowSchedule.Location = new System.Drawing.Point(346, 6);
             this.ShowSchedule.Name = "ShowSchedule";
-            this.ShowSchedule.Size = new System.Drawing.Size(82, 27);
+            this.ShowSchedule.Size = new System.Drawing.Size(65, 27);
             this.ShowSchedule.TabIndex = 3;
-            this.ShowSchedule.Text = "Загрузить";
             this.ShowSchedule.UseVisualStyleBackColor = true;
             this.ShowSchedule.Click += new System.EventHandler(this.ShowSchedule_Click);
             // 
@@ -723,30 +695,10 @@
             this.tabPage3.Controls.Add(this.dataGridViewHomework);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(777, 615);
+            this.tabPage3.Size = new System.Drawing.Size(756, 615);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Домашние задание";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // addHomeWork
-            // 
-            this.addHomeWork.Location = new System.Drawing.Point(559, 42);
-            this.addHomeWork.Name = "addHomeWork";
-            this.addHomeWork.Size = new System.Drawing.Size(75, 23);
-            this.addHomeWork.TabIndex = 10;
-            this.addHomeWork.Text = "Добавить";
-            this.addHomeWork.UseVisualStyleBackColor = true;
-            this.addHomeWork.Click += new System.EventHandler(this.addHomeWork_Click);
-            // 
-            // ShowHomeWork
-            // 
-            this.ShowHomeWork.Location = new System.Drawing.Point(559, 13);
-            this.ShowHomeWork.Name = "ShowHomeWork";
-            this.ShowHomeWork.Size = new System.Drawing.Size(75, 23);
-            this.ShowHomeWork.TabIndex = 9;
-            this.ShowHomeWork.Text = "Обновить";
-            this.ShowHomeWork.UseVisualStyleBackColor = true;
-            this.ShowHomeWork.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewHomework
             // 
@@ -848,10 +800,22 @@
             this.tabPage4.Controls.Add(this.typeReport);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(777, 615);
+            this.tabPage4.Size = new System.Drawing.Size(756, 615);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Отчёты";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // typeReport
+            // 
+            this.typeReport.FormattingEnabled = true;
+            this.typeReport.Items.AddRange(new object[] {
+            "Отчёт успеваемости",
+            "Отчёт посещаемости"});
+            this.typeReport.Location = new System.Drawing.Point(20, 24);
+            this.typeReport.Name = "typeReport";
+            this.typeReport.Size = new System.Drawing.Size(167, 21);
+            this.typeReport.TabIndex = 0;
+            this.typeReport.SelectedIndexChanged += new System.EventHandler(this.typeReport_SelectedIndexChanged);
             // 
             // getJournalInClassBindingSource
             // 
@@ -968,25 +932,39 @@
             // 
             this.getJournalTableAdapter.ClearBeforeFill = true;
             // 
-            // typeReport
+            // addHomeWork
             // 
-            this.typeReport.FormattingEnabled = true;
-            this.typeReport.Items.AddRange(new object[] {
-            "Отчёт успеваемости",
-            "Отчёт посещаемости"});
-            this.typeReport.Location = new System.Drawing.Point(20, 24);
-            this.typeReport.Name = "typeReport";
-            this.typeReport.Size = new System.Drawing.Size(167, 21);
-            this.typeReport.TabIndex = 0;
-            this.typeReport.SelectedIndexChanged += new System.EventHandler(this.typeReport_SelectedIndexChanged);
+            this.addHomeWork.FlatAppearance.BorderSize = 0;
+            this.addHomeWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addHomeWork.Image = global::TrackingStudentProgress.Properties.Resources.Plus_36851;
+            this.addHomeWork.Location = new System.Drawing.Point(559, 42);
+            this.addHomeWork.Name = "addHomeWork";
+            this.addHomeWork.Size = new System.Drawing.Size(51, 38);
+            this.addHomeWork.TabIndex = 10;
+            this.addHomeWork.UseVisualStyleBackColor = true;
+            this.addHomeWork.Click += new System.EventHandler(this.addHomeWork_Click);
+            // 
+            // ShowHomeWork
+            // 
+            this.ShowHomeWork.FlatAppearance.BorderSize = 0;
+            this.ShowHomeWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowHomeWork.Image = global::TrackingStudentProgress.Properties.Resources.blue_upgrade_recyclearrows_arrow_azul_12426;
+            this.ShowHomeWork.Location = new System.Drawing.Point(559, 3);
+            this.ShowHomeWork.Name = "ShowHomeWork";
+            this.ShowHomeWork.Size = new System.Drawing.Size(51, 33);
+            this.ShowHomeWork.TabIndex = 9;
+            this.ShowHomeWork.UseVisualStyleBackColor = true;
+            this.ShowHomeWork.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoadReport
             // 
-            this.LoadReport.Location = new System.Drawing.Point(203, 24);
+            this.LoadReport.FlatAppearance.BorderSize = 0;
+            this.LoadReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadReport.Image = global::TrackingStudentProgress.Properties.Resources._1497559914_44_85031;
+            this.LoadReport.Location = new System.Drawing.Point(193, 16);
             this.LoadReport.Name = "LoadReport";
-            this.LoadReport.Size = new System.Drawing.Size(75, 23);
+            this.LoadReport.Size = new System.Drawing.Size(49, 35);
             this.LoadReport.TabIndex = 1;
-            this.LoadReport.Text = "Выгрузить";
             this.LoadReport.UseVisualStyleBackColor = true;
             this.LoadReport.Click += new System.EventHandler(this.LoadReport_Click);
             // 
@@ -995,7 +973,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 713);
+            this.ClientSize = new System.Drawing.Size(777, 713);
             this.Controls.Add(this.Class);
             this.Controls.Add(this.Post);
             this.Controls.Add(this.FIOTeacher);
@@ -1034,8 +1012,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackingStudentProgressBDDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getHomeWorkBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ddGetReturnDelegationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ddGetReturnDelegationBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1051,8 +1029,6 @@
         private System.Windows.Forms.Label FIOTeacher;
         private System.Windows.Forms.Label Post;
         private System.Windows.Forms.Label Class;
-        private System.Windows.Forms.Button RemoveStudent;
-        private System.Windows.Forms.Button AddStudent;
         private System.Windows.Forms.DateTimePicker Raspisanietos;
         private System.Windows.Forms.DateTimePicker Raspisanieto;
         private System.Windows.Forms.Label label24;
@@ -1065,7 +1041,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button ShowSchedule;
         private System.Windows.Forms.DataGridView StudentGrid;
-        private System.Windows.Forms.Button RefreshStudent;
         private Helper.TrackingStudentProgressBDDataSet trackingStudentProgressBDDataSet;
         private System.Windows.Forms.BindingSource studentBindingSource;
         private Helper.TrackingStudentProgressBDDataSetTableAdapters.StudentTableAdapter studentTableAdapter;
