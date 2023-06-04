@@ -33,6 +33,10 @@ namespace BotTSP.Controllers
                 "Ocen" => "Информация о оценках",
                 "Raspisanie" => "Расписание на неделю",
                 "Dz" => "Домашние задание на завтра",
+                "Period1" => "Первая Четверть",
+                "Period2" => "Вторая Четверть",
+                "Period3" => "Третья Четверть",
+                "Period4" => "Четвёртая Четверть",
                 _ => String.Empty
             };
             // Отправляем в ответ уведомление о выборе
@@ -42,20 +46,30 @@ namespace BotTSP.Controllers
 
 
             if (ChoiceType == "Информация о оценках") {
-                var DBProvider = new DBProvider.DBProvider();
-                string htmlJournal =  $"<b>Список оценок за неделю</b>";
-                List<string> listStr = DBProvider.GetJournalCostByTelegram(callbackQuery.From.Username);
-                if (listStr.Count == 0)
+                var buttonsJournal = new List<InlineKeyboardButton[]>();
+                buttonsJournal.Add(new[]
                 {
-                    htmlJournal += $"{Environment.NewLine}Оценки не найдены";
-                }
-                foreach (string str in listStr)
-                {
-                    htmlJournal += $"{Environment.NewLine}{str}";
+                        InlineKeyboardButton.WithCallbackData($"Первая",$"Period1"),
+                        InlineKeyboardButton.WithCallbackData($"Вторая",$"Period2"),
+                        InlineKeyboardButton.WithCallbackData($"Третья",$"Period3"),
+                        InlineKeyboardButton.WithCallbackData($"Четвёртая",$"Period4")
+                    });
+                await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id, $"<b>Четверть</b> ",
+                    cancellationToken: ct, parseMode: ParseMode.Html, replyMarkup: new InlineKeyboardMarkup(buttonsJournal));
+                //var DBProvider = new DBProvider.DBProvider();
+                //string htmlJournal =  $"<b>Список оценок за неделю</b>";
+                //List<string> listStr = DBProvider.GetJournalCostByTelegram(callbackQuery.From.Username);
+                //if (listStr.Count == 0)
+                //{
+                //    htmlJournal += $"{Environment.NewLine}Оценки не найдены";
+                //}
+                //foreach (string str in listStr)
+                //{
+                //    htmlJournal += $"{Environment.NewLine}{str}";
 
-                }
-                await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id,$"{htmlJournal}", parseMode: ParseMode.Html);
-                DBProvider.DBProviderClosed();
+                //}
+                //await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id,$"{htmlJournal}", parseMode: ParseMode.Html);
+                //DBProvider.DBProviderClosed();
             }
 
             if (ChoiceType == "Расписание на неделю")
@@ -88,6 +102,79 @@ namespace BotTSP.Controllers
                 await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id, $"{htmlJournal}", parseMode: ParseMode.Html);
                 DBProvider.DBProviderClosed();
             }
+            if (ChoiceType == "Первая Четверть")
+            {
+                var DBProvider = new DBProvider.DBProvider();
+                string htmlJournal = $"<b>Первая Четверть</b>";
+                List<string> listStr = DBProvider.GetJournalCostByTelegramByQuarter(callbackQuery.From.Username,1);
+                if (listStr.Count == 0)
+                {
+                    htmlJournal += $"{Environment.NewLine}Записей не найдено";
+                }
+                foreach (string str in listStr)
+                {
+                    htmlJournal += $"{Environment.NewLine}{str}";
+
+                }
+                await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id, $"{htmlJournal}", parseMode: ParseMode.Html);
+                DBProvider.DBProviderClosed();
+            }
+
+            if (ChoiceType == "Вторая Четверть")
+            {
+                var DBProvider = new DBProvider.DBProvider();
+                string htmlJournal = $"<b>Вторая Четверть</b>";
+                List<string> listStr = DBProvider.GetJournalCostByTelegramByQuarter(callbackQuery.From.Username, 2);
+                if (listStr.Count == 0)
+                {
+                    htmlJournal += $"{Environment.NewLine}Записей не найдено";
+                }
+                foreach (string str in listStr)
+                {
+                    htmlJournal += $"{Environment.NewLine}{str}";
+
+                }
+                await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id, $"{htmlJournal}", parseMode: ParseMode.Html);
+                DBProvider.DBProviderClosed();
+            }
+
+            if (ChoiceType == "Третья Четверть")
+            {
+                var DBProvider = new DBProvider.DBProvider();
+                string htmlJournal = $"<b>Третья Четверть</b>";
+                List<string> listStr = DBProvider.GetJournalCostByTelegramByQuarter(callbackQuery.From.Username, 3);
+                if (listStr.Count == 0)
+                {
+                    htmlJournal += $"{Environment.NewLine}Записей не найдено";
+                }
+                foreach (string str in listStr)
+                {
+                    htmlJournal += $"{Environment.NewLine}{str}";
+
+                }
+                await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id, $"{htmlJournal}", parseMode: ParseMode.Html);
+                DBProvider.DBProviderClosed();
+            }
+
+            if (ChoiceType == "Четвёртая Четверть")
+            {
+                var DBProvider = new DBProvider.DBProvider();
+                string htmlJournal = $"<b>Четвёртая Четверть</b>";
+                List<string> listStr = DBProvider.GetJournalCostByTelegramByQuarter(callbackQuery.From.Username, 4);
+                if (listStr.Count == 0)
+                {
+                    htmlJournal += $"{Environment.NewLine}Записей не найдено";
+                }
+                foreach (string str in listStr)
+                {
+                    htmlJournal += $"{Environment.NewLine}{str}";
+
+                }
+                await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id, $"{htmlJournal}", parseMode: ParseMode.Html);
+                DBProvider.DBProviderClosed();
+            }
+
+
 
             var buttons = new List<InlineKeyboardButton[]>();
             buttons.Add(new[]

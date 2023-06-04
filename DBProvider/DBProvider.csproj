@@ -61,6 +61,7 @@
     <Compile Include="Model\StudentModel.cs" />
     <Compile Include="Model\TrackingStudentProgressModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SQL\GetJournalCostByTelegramByQuarter.sql" />
     <Content Include="SQL\GetAttendanceReport.sql" />
     <Content Include="SQL\GetTrackingStudentProgress.sql" />
     <Content Include="SQL\GetScheduletByTelegram.sql" />

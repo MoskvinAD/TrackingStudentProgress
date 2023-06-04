@@ -808,6 +808,52 @@ namespace DBProvider
             return listStr;
         }
 
+        public List<string> GetJournalCostByTelegramByQuarter(string telegram, int period)
+        {
+            List<string> listStr = new List<string>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetJournalCostByTelegramByQuarter";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@telegram",
+                    Value = telegram
+                };
+                // добавляем параметр
+                command.Parameters.Add(nameParam);
+                // параметр для ввода имени
+                SqlParameter periodParam = new SqlParameter
+                {
+                    ParameterName = "@period",
+                    Value = period
+                };
+                // добавляем параметр
+                command.Parameters.Add(periodParam);
+                var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        log.Error($"{reader.GetString(0)} {reader.GetString(1)}");
+                        listStr.Add($"{reader.GetString(0)} {reader.GetString(1)}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
+        }
+
         public List<string> GetScheduletByTelegram(string telegram)
         {
             List<string> listStr = new List<string>();
