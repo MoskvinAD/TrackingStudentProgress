@@ -82,6 +82,12 @@
     <Compile Include="Forms\ParentsEdit.Designer.cs">
       <DependentUpon>ParentsEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\quarterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\quarterReport.Designer.cs">
+      <DependentUpon>quarterReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SheduleEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ParentsEdit.resx">
       <DependentUpon>ParentsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quarterReport.resx">
+      <DependentUpon>quarterReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SheduleEdit.resx">
       <DependentUpon>SheduleEdit.cs</DependentUpon>
@@ -344,6 +353,12 @@
     <Content Include="Icon\addusergroup_1251.ico" />
     <Content Include="Icon\blue_upgrade_recyclearrows_arrow_azul_12426.ico" />
     <Content Include="Icon\contacts_profile_account_connection_icon_124666.ico" />
+    <Content Include="Icon\export.png" />
+    <Content Include="Icon\free-icon-15-minutes-523143 %282%29.png" />
+    <Content Include="Icon\free-icon-15-minutes-523143 %283%29.png" />
+    <Content Include="Icon\free-icon-15-minutes-523143.png" />
+    <Content Include="Icon\free-icon-good-mark-7931326.png" />
+    <Content Include="Icon\free-icon-quarter-5582259.png" />
     <Content Include="Icon\Plus_36851.ico" />
     <Content Include="Icon\user_kids_avatar_user_profile_icon_149314.ico" />
     <Content Include="Icon\workspace_computer_desktop_office_icon_177095.ico" />

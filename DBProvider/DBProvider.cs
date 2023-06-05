@@ -854,6 +854,53 @@ namespace DBProvider
             return listStr;
         }
 
+        public List<string> GetJournalCostByTelegramByQuarterImColum(string telegram, int period)
+        {
+            List<string> listStr = new List<string>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetJournalCostByTelegramByQuarter";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@telegram",
+                    Value = telegram
+                };
+                // добавляем параметр
+                command.Parameters.Add(nameParam);
+                // параметр для ввода имени
+                SqlParameter periodParam = new SqlParameter
+                {
+                    ParameterName = "@period",
+                    Value = period
+                };
+                // добавляем параметр
+                command.Parameters.Add(periodParam);
+                var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        log.Error($"{reader.GetString(0)} {reader.GetString(1)}");
+                        listStr.Add($"{reader.GetString(0)} {";"} {reader.GetString(1)}");
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
+        }
+
         public List<string> GetAverageScoreForQuarterByTelegram(string telegram, int period)
         {
             List<string> listStr = new List<string>();
@@ -890,6 +937,53 @@ namespace DBProvider
                         listStr.Add($"{reader.GetString(0)} {reader.GetInt32(1).ToString()}");
                     }
                 }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
+        }
+        public List<string> GetAverageScoreForQuarterByTelegramInColum(string telegram, int period)
+        {
+            List<string> listStr = new List<string>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetAverageScoreForQuarterByTelegram";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@telegram",
+                    Value = telegram
+                };
+                // добавляем параметр
+                command.Parameters.Add(nameParam);
+                // параметр для ввода имени
+                SqlParameter periodParam = new SqlParameter
+                {
+                    ParameterName = "@period",
+                    Value = period
+                };
+                // добавляем параметр
+                command.Parameters.Add(periodParam);
+                var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        log.Error($"{reader.GetString(0)} {reader.GetInt32(1).ToString()}");
+                        listStr.Add($"{reader.GetString(0)} {";"} {reader.GetInt32(1).ToString()}");
+                    }
+                }
+                reader.Close();
             }
             catch (Exception ex)
             {
@@ -928,6 +1022,46 @@ namespace DBProvider
                         listStr.Add($"{reader.GetString(0)} {reader.GetInt32(1).ToString()}");
                     }
                 }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+
+                log.Error(ex.Message);
+            }
+
+            return listStr;
+        }
+
+        public List<string> GetAverageScoreForByTelegramByColum(string telegram)
+        {
+            List<string> listStr = new List<string>();
+            try
+            {
+                // название процедуры
+                string sqlExpression = "GetAverageScoreForByTelegram";
+
+                SqlCommand command = new SqlCommand(sqlExpression, _connection);
+                // указываем, что команда представляет хранимую процедуру
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                // параметр для ввода имени
+                SqlParameter nameParam = new SqlParameter
+                {
+                    ParameterName = "@telegram",
+                    Value = telegram
+                };
+                // добавляем параметр
+                command.Parameters.Add(nameParam);
+                var reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        log.Error($"{reader.GetString(0)} {reader.GetInt32(1).ToString()}");
+                        listStr.Add($"{reader.GetString(0)} {";"} {reader.GetInt32(1).ToString()}");
+                    }
+                }
+                reader.Close();
             }
             catch (Exception ex)
             {
