@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ProjectComboBox = new System.Windows.Forms.ComboBox();
             this.edit = new System.Windows.Forms.Button();
@@ -39,15 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Номер строки";
             // 
             // label2
             // 
@@ -96,10 +86,11 @@
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(141, 20);
             this.Date.TabIndex = 6;
+            this.Date.ValueChanged += new System.EventHandler(this.Date_ValueChanged);
             // 
             // add
             // 
-            this.add.Location = new System.Drawing.Point(174, 92);
+            this.add.Location = new System.Drawing.Point(174, 36);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(75, 23);
             this.add.TabIndex = 7;
@@ -137,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 146);
+            this.ClientSize = new System.Drawing.Size(265, 108);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Class);
@@ -147,7 +138,6 @@
             this.Controls.Add(this.edit);
             this.Controls.Add(this.ProjectComboBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "SheduleEdit";
             this.ShowIcon = false;
             this.ResumeLayout(false);
@@ -156,8 +146,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ProjectComboBox;
         private System.Windows.Forms.Button edit;

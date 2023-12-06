@@ -52,11 +52,17 @@
     <Compile Include="Desktop.Designer.cs">
       <DependentUpon>Desktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccountEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountEdit.Designer.cs">
+      <DependentUpon>AccountEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Homework.cs">
       <SubType>Form</SubType>
@@ -64,17 +70,59 @@
     <Compile Include="Forms\Homework.Designer.cs">
       <DependentUpon>Homework.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\JournalEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JournalEdit.Designer.cs">
+      <DependentUpon>JournalEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParentsEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParentsEdit.Designer.cs">
+      <DependentUpon>ParentsEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\quarterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\quarterReport.Designer.cs">
+      <DependentUpon>quarterReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SheduleEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SheduleEdit.Designer.cs">
       <DependentUpon>SheduleEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentEdit.Designer.cs">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetJournalBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetJournalBDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GetStudentsBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetStudentsBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Helper\GetJournalInClassBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GetJournalInClassBDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Notifications\NotificationCreater.cs" />
+    <Compile Include="Notifications\Notifications.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper\TrackingStudentProgressBDDataSet.Designer.cs">
@@ -115,17 +163,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrackingStudentProgressBDDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrackingStudentProgressBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrackingStudentProgressBDDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Desktop.resx">
       <DependentUpon>Desktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccountEdit.resx">
+      <DependentUpon>AccountEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Homework.resx">
       <DependentUpon>Homework.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JournalEdit.resx">
+      <DependentUpon>JournalEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParentsEdit.resx">
+      <DependentUpon>ParentsEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\quarterReport.resx">
+      <DependentUpon>quarterReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SheduleEdit.resx">
       <DependentUpon>SheduleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentEdit.resx">
+      <DependentUpon>StudentEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,7 +206,30 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="GetJournalBDDataSet.xsc">
+      <DependentUpon>GetJournalBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GetJournalBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetJournalBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetJournalBDDataSet.xss">
+      <DependentUpon>GetJournalBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GetStudentsBDDataSet.xsc">
+      <DependentUpon>GetStudentsBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GetStudentsBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetStudentsBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GetStudentsBDDataSet.xss">
+      <DependentUpon>GetStudentsBDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Helper\GetJournalInClassBDDataSet.xsc">
       <DependentUpon>GetJournalInClassBDDataSet.xsd</DependentUpon>
     </None>
@@ -233,6 +327,17 @@
     <None Include="Helper\TrackingStudentProgressBDDataSet6.xss">
       <DependentUpon>TrackingStudentProgressBDDataSet6.xsd</DependentUpon>
     </None>
+    <None Include="TrackingStudentProgressBDDataSet.xsc">
+      <DependentUpon>TrackingStudentProgressBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TrackingStudentProgressBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrackingStudentProgressBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrackingStudentProgressBDDataSet.xss">
+      <DependentUpon>TrackingStudentProgressBDDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -242,6 +347,21 @@
       <Project>{74E94642-414D-43B3-861A-FE86B5675E73}</Project>
       <Name>DBProvider</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\1497559914-44_85031.ico" />
+    <Content Include="Icon\addusergroup_1251.ico" />
+    <Content Include="Icon\blue_upgrade_recyclearrows_arrow_azul_12426.ico" />
+    <Content Include="Icon\contacts_profile_account_connection_icon_124666.ico" />
+    <Content Include="Icon\export.png" />
+    <Content Include="Icon\free-icon-15-minutes-523143 %282%29.png" />
+    <Content Include="Icon\free-icon-15-minutes-523143 %283%29.png" />
+    <Content Include="Icon\free-icon-15-minutes-523143.png" />
+    <Content Include="Icon\free-icon-good-mark-7931326.png" />
+    <Content Include="Icon\free-icon-quarter-5582259.png" />
+    <Content Include="Icon\Plus_36851.ico" />
+    <Content Include="Icon\user_kids_avatar_user_profile_icon_149314.ico" />
+    <Content Include="Icon\workspace_computer_desktop_office_icon_177095.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

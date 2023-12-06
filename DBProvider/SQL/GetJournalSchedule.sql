@@ -17,6 +17,6 @@ BEGIN
 			FROM            dbo.Schedule INNER JOIN
                          dbo.Project ON dbo.Schedule.idProject = dbo.Project.id INNER JOIN
                          dbo.Class ON dbo.Schedule.idClass = dbo.Class.id
-						 where dbo.Class.id = 1 and dbo.Schedule.Date >= @dateFrom and dbo.Schedule.Date <= @dateTo
+						 where dbo.Class.id = @idClass and dbo.Schedule.Date >= @dateFrom and dbo.Schedule.Date <= @dateTo
 						 --год день месяц
 END

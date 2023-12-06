@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackingStudentProgress.Notifications;
 
 namespace TrackingStudentProgress.Forms
 {
@@ -19,18 +20,30 @@ namespace TrackingStudentProgress.Forms
         List<ProjectModel> ProjectModelslist;
         Account Account;
         HomeWorkModel HomeWork;
-        public Homework(int index, HomeWorkModel homeWork, DBProvider.DBProvider dBProvider, Account account)
+        public Homework(int index = 0, HomeWorkModel homeWork = null, DBProvider.DBProvider dBProvider = null, Account account = null, bool addcheck = false)
         {
             InitializeComponent();
+
             Account = account;
             Index = index;
             DBProvider = dBProvider;
-            HomeWork = homeWork;
-            dateTimePickerDZs.Value = Convert.ToDateTime(homeWork.DateFrom);
-            dateTimePickerDZpo.Value = Convert.ToDateTime(homeWork.DateTo);
-            Description.Text = homeWork.Description;
             AddProjectComboBox();
-            ProjectComboBox.Text = ProjectModelslist[homeWork.idProject - 1].Name;
+            if (addcheck)
+            {
+                HomeWork = new HomeWorkModel();
+                delite.Visible = false;
+                edit.Visible = false;
+                HomeWork.idClass = int.Parse(Account.Class);
+            }
+            else {
+                HomeWork = homeWork;
+                dateTimePickerDZs.Value = Convert.ToDateTime(homeWork.DateFrom);
+                dateTimePickerDZpo.Value = Convert.ToDateTime(homeWork.DateTo);
+                Description.Text = homeWork.Description;                
+                ProjectComboBox.Text = ProjectModelslist[homeWork.idProject - 1].Name;
+                add.Visible = false;
+            }
+            
         }
 
         private void AddProjectComboBox()
@@ -49,21 +62,32 @@ namespace TrackingStudentProgress.Forms
 
         private void add_Click(object sender, EventArgs e)
         {
+            if (dateTimePickerDZpo.Value < dateTimePickerDZs.Value)
+            {
+                MessageBox.Show("Дата начала больше даты окончания");
+                return;
+            }
             if (DBProvider.SetHomeWork(HomeWork))
             {
                 MessageBox.Show("Задание добавлено");
+                NotificationCreater.CreateMessageHomeWork(DBProvider, HomeWork, ProjectModelslist[HomeWork.idProject - 1].Name);
             }
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
+            if (dateTimePickerDZpo.Value < dateTimePickerDZs.Value) {
+                MessageBox.Show("Дата начала больше даты окончания");
+                return;
+            }
             HomeWork.DateFrom = dateTimePickerDZs.Value;
             HomeWork.DateTo = dateTimePickerDZpo.Value;
             HomeWork.Description = Description.Text;
 
-            if (DBProvider.UpdareHomeWork(HomeWork))
+            if (DBProvider.UpdateHomeWork(HomeWork))
             {
                 MessageBox.Show("Задание было изменено");
+                NotificationCreater.CreateMessageHomeWork(DBProvider, HomeWork, ProjectModelslist[HomeWork.idProject - 1].Name);
             }
 
         }
@@ -74,6 +98,21 @@ namespace TrackingStudentProgress.Forms
             {
                 MessageBox.Show("Задание удалено");
             }
+        }
+
+        private void Description_TextChanged(object sender, EventArgs e)
+        {
+            HomeWork.Description = Description.Text;
+        }
+
+        private void dateTimePickerDZs_ValueChanged(object sender, EventArgs e)
+        {
+            HomeWork.DateFrom = dateTimePickerDZs.Value;
+        }
+
+        private void dateTimePickerDZpo_ValueChanged(object sender, EventArgs e)
+        {
+            HomeWork.DateTo = dateTimePickerDZpo.Value;
         }
     }
 }

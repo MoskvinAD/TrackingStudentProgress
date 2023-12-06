@@ -31,8 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.5.1.4\lib\net46\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,13 +47,44 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBProvider.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\AttendanceReportModel.cs" />
+    <Compile Include="Model\ClassModel.cs" />
     <Compile Include="Model\HomeWorkModel.cs" />
+    <Compile Include="Model\JournalModel.cs" />
+    <Compile Include="Model\NotificationModel.cs" />
+    <Compile Include="Model\ParentModel.cs" />
+    <Compile Include="Model\PositionModel.cs" />
     <Compile Include="Model\ProjectModel.cs" />
     <Compile Include="Model\ScheduleModel.cs" />
+    <Compile Include="Model\StudentModel.cs" />
+    <Compile Include="Model\TrackingStudentProgressModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="SQL\GetAverageScoreForByTelegram.sql" />
+    <Content Include="SQL\GetAverageScoreForQuarterByTelegram.sql" />
+    <Content Include="SQL\GetJournalCostByTelegramByQuarter.sql" />
+    <Content Include="SQL\GetAttendanceReport.sql" />
+    <Content Include="SQL\GetTrackingStudentProgress.sql" />
+    <Content Include="SQL\GetScheduletByTelegram.sql" />
+    <Content Include="SQL\GetHomeWorktByTelegram.sql" />
+    <Content Include="SQL\GetJournalCostByTelegram.sql" />
+    <Content Include="SQL\GetJournal.sql" />
+    <Content Include="SQL\GetStudent.sql" />
     <Content Include="SQL\GetJournalSchedule.sql" />
     <Content Include="SQL\GetHomeWork.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BDBackup\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
